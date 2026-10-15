@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenMeme — 今日打新关注 · Meme 雷达 · 热度突增</title>
-  <meta name="description" content="零预算币圈情报站, AI 实时聚合 Meme 新币 / IDO 打新 / 热度突增, 一键发推分享。" />
-  <meta name="keywords" content="meme, IDO, ICO, 打新, 币圈情报, 加密货币, dex, pump.fun, four.meme" />
+  <title data-i18n="site_title">OpenMeme — 1-2 周内 TGE 速递 · 新 Meme / NFT / 铭文 / 空投</title>
+  <meta name="description" content="新 Meme/NFT/铭文/Launchpad/空投 速递站, 大白话分享, 一键发推引流转评, 币圈散户首选" />
+  <meta name="keywords" content="meme, NFT, mint, 铭文, inscription, launchpad, 空投, airdrop, 打新, TGE, 币安, OKX, 推特大V" />
   <meta name="author" content="@ruoxi01" />
 
-  <!-- Open Graph / X Card -->
-  <meta property="og:title" content="OpenMeme — 今日打新关注 · Meme 雷达 · 热度突增" />
-  <meta property="og:description" content="零预算币圈情报站, AI 实时聚合, 一键发推。" />
+  <meta property="og:title" content="OpenMeme — 1-2 周内 TGE 速递" />
+  <meta property="og:description" content="新 Meme/NFT/铭文/Launchpad/空投 速递站, 大白话分享" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://openmeme.art" />
   <meta property="og:image" content="https://openmeme.art/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ruoxi01" />
-  <meta name="twitter:title" content="OpenMeme — 今日打新关注 · Meme 雷达" />
-  <meta name="twitter:description" content="零预算币圈情报站, 一键发推。" />
-  <meta name="twitter:image" content="https://openmeme.art/og-image.png" />
 
   <link rel="canonical" href="https://openmeme.art" />
-  <link rel="stylesheet" href="style.css?v=2" />
-  <link rel="stylesheet" href="ido.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="cards.css?v=3" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%97%88%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
+  <!-- 动态粒子背景 -->
+  <canvas id="particles"></canvas>
+  <div class="bg-gradient"></div>
+
   <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="brand" href="/">
@@ -34,22 +34,33 @@
         <span class="brand-tag">.art</span>
       </a>
       <nav class="nav">
-        <a href="#meme">Meme 雷达</a>
-        <a href="#ido">打新关注</a>
-        <a href="#trending">热度突增</a>
+        <a href="#kol">🐦 KOL</a>
+        <a href="#meme">🔥 Meme</a>
+        <a href="#nft">🎨 NFT</a>
+        <a href="#inscription">📜 铭文</a>
+        <a href="#launchpad">🚀 Launchpad</a>
+        <a href="#airdrop">🎁 空投</a>
+        <a href="#scam">⚠️ 防骗</a>
         <a href="https://x.com/ruoxi01" target="_blank" rel="noopener" class="x-link">𝕏 @ruoxi01</a>
+        <button id="lang-toggle" class="lang-btn" title="Switch language">🌐 <span id="lang-label">EN</span></button>
       </nav>
     </div>
   </header>
 
   <section class="hero">
+    <div class="hero-bg-glow"></div>
     <div class="container">
-      <h1 class="hero-title">今日 <span class="accent">打新关注</span> · Meme 雷达 · 热度突增</h1>
-      <p class="hero-sub">由 AI 实时聚合 · DexScreener + Coingecko + 公开 Launchpad · 一键发推分享</p>
+      <h1 class="hero-title">
+        <span data-i18n="hero_line1">1-2 周内</span>
+        <span class="accent" data-i18n="hero_line2">TGE 速递</span>
+        <span data-i18n="hero_line3">·</span>
+        <span data-i18n="hero_line4">新 Meme / NFT / 铭文 / 空投</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">服务推特 + 币安广场的大众币圈人, 大白话分享, 一键发推引流转评</p>
       <div class="hero-meta">
-        <span class="badge live">实时更新</span>
-        <span class="badge">数据源: DexScreener · Coingecko · 公开 API</span>
-        <span class="badge risk">⚠ 非投资建议 · DYOR</span>
+        <span class="badge live">● <span data-i18n="live">实时更新</span></span>
+        <span class="badge" data-i18n="data_sources">数据源: DexScreener · MagicEden · 20 大V 推特 · 币安/OKX/Bybit</span>
+        <span class="badge risk">⚠ <span data-i18n="not_advice">非投资建议 · DYOR</span></span>
       </div>
     </div>
   </section>
@@ -57,60 +68,118 @@
   <!-- 实时统计 -->
   <section class="container">
     <div class="stats-bar" id="stats-bar">
-      <div class="stat-card"><div class="num" id="stat-meme">—</div><div class="label">Meme 雷达</div></div>
-      <div class="stat-card"><div class="num" id="stat-ido">—</div><div class="label">打新关注</div></div>
-      <div class="stat-card"><div class="num" id="stat-trending">—</div><div class="label">热度突增</div></div>
-      <div class="stat-card"><div class="num" id="stat-updated">—</div><div class="label">最后更新</div></div>
+      <div class="stat-card"><div class="num" id="stat-meme">—</div><div class="label" data-i18n="stat_meme">Meme 速递</div></div>
+      <div class="stat-card"><div class="num" id="stat-nft">—</div><div class="label" data-i18n="stat_nft">NFT Mint</div></div>
+      <div class="stat-card"><div class="num" id="stat-inscription">—</div><div class="label" data-i18n="stat_insc">铭文</div></div>
+      <div class="stat-card"><div class="num" id="stat-launchpad">—</div><div class="label" data-i18n="stat_lp">Launchpad</div></div>
+      <div class="stat-card"><div class="num" id="stat-airdrop">—</div><div class="label" data-i18n="stat_air">空投</div></div>
+      <div class="stat-card"><div class="num" id="stat-kol">—</div><div class="label" data-i18n="stat_kol">KOL 推文</div></div>
     </div>
   </section>
 
   <main class="container">
 
-    <!-- Meme 雷达 -->
+    <!-- 🐦 KOL Radar (主推) -->
+    <section id="kol" class="section">
+      <div class="section-head">
+        <div class="section-title-group">
+          <span class="section-icon-svg" data-icon="kol"></span>
+          <h2 data-i18n="sec_kol">🐦 KOL Radar</h2>
+        </div>
+        <p class="section-sub" data-i18n="sec_kol_sub">20 个推特大V, 过去 24h 推了什么新项目 · AI 信誉分析</p>
+        <span class="section-updated" id="kol-updated">—</span>
+      </div>
+      <div id="kol-list" class="kol-grid"></div>
+    </section>
+
+    <!-- 🔥 Meme 速递 -->
     <section id="meme" class="section">
       <div class="section-head">
-        <div>
-          <h2><span class="section-icon">🔥</span> Meme 雷达</h2>
-          <p class="section-sub">Solana pump.fun · BSC four.meme · Base 等链新上线且有流动性的 Meme</p>
+        <div class="section-title-group">
+          <span class="section-icon-svg" data-icon="meme"></span>
+          <h2 data-i18n="sec_meme">🔥 Meme 速递</h2>
         </div>
-        <span class="section-updated" id="meme-updated">加载中...</span>
+        <p class="section-sub" data-i18n="sec_meme_sub">新 Meme 币首发 · Solana Pump.fun · BSC 4.meme · Base 等</p>
+        <span class="section-updated" id="meme-updated">—</span>
       </div>
-      <div id="meme-list" class="card-grid"></div>
+      <div id="meme-list" class="meme-grid"></div>
     </section>
 
-    <!-- 打新关注 -->
-    <section id="ido" class="section">
+    <!-- 🎨 NFT Mint -->
+    <section id="nft" class="section">
       <div class="section-head">
-        <div>
-          <h2><span class="section-icon">🚀</span> 打新关注</h2>
-          <p class="section-sub">ICO · IEO · IDO · NFT Presale · 新上线项目</p>
+        <div class="section-title-group">
+          <span class="section-icon-svg" data-icon="nft"></span>
+          <h2 data-i18n="sec_nft">🎨 NFT Mint 名单</h2>
         </div>
-        <span class="section-updated" id="ido-updated">加载中...</span>
+        <p class="section-sub" data-i18n="sec_nft_sub">蓝筹续作 + 免费 mint · 倒计时提醒</p>
+        <span class="section-updated" id="nft-updated">—</span>
       </div>
-      <div id="ido-list" class="ido-grid"></div>
+      <div id="nft-list" class="nft-grid"></div>
     </section>
 
-    <!-- 热度突增 -->
-    <section id="trending" class="section">
+    <!-- 📜 铭文 -->
+    <section id="inscription" class="section">
       <div class="section-head">
-        <div>
-          <h2><span class="section-icon">📈</span> 热度突增</h2>
-          <p class="section-sub">Coingecko trending + 交易量短期激增 + KOL 讨论密集</p>
+        <div class="section-title-group">
+          <span class="section-icon-svg" data-icon="inscription"></span>
+          <h2 data-i18n="sec_insc">📜 铭文 / BTC 生态</h2>
         </div>
-        <span class="section-updated" id="trending-updated">加载中...</span>
+        <p class="section-sub" data-i18n="sec_insc_sub">BRC-20 / SRC-20 / Runes · 进度条实时</p>
+        <span class="section-updated" id="inscription-updated">—</span>
       </div>
-      <div id="trending-list" class="card-grid"></div>
+      <div id="inscription-list" class="insc-grid"></div>
+    </section>
+
+    <!-- 🚀 Launchpad -->
+    <section id="launchpad" class="section">
+      <div class="section-head">
+        <div class="section-title-group">
+          <span class="section-icon-svg" data-icon="launchpad"></span>
+          <h2 data-i18n="sec_lp">🚀 Launchpad / 拍卖</h2>
+        </div>
+        <p class="section-sub" data-i18n="sec_lp_sub">币安 Launchpad · OKX Jumpstart · Bybit</p>
+        <span class="section-updated" id="launchpad-updated">—</span>
+      </div>
+      <div id="launchpad-list" class="lp-grid"></div>
+    </section>
+
+    <!-- 🎁 空投 -->
+    <section id="airdrop" class="section">
+      <div class="section-head">
+        <div class="section-title-group">
+          <span class="section-icon-svg" data-icon="airdrop"></span>
+          <h2 data-i18n="sec_air">🎁 免费空投</h2>
+        </div>
+        <p class="section-sub" data-i18n="sec_air_sub">Galxe / Zealy / Layer3 任务 · 5-30 分钟搞定</p>
+        <span class="section-updated" id="airdrop-updated">—</span>
+      </div>
+      <div id="airdrop-list" class="air-grid"></div>
+    </section>
+
+    <!-- ⚠️ 防骗 -->
+    <section id="scam" class="section scam-section">
+      <div class="section-head">
+        <div class="section-title-group">
+          <span class="section-icon-svg" data-icon="scam"></span>
+          <h2 data-i18n="sec_scam">⚠️ 防骗预警</h2>
+        </div>
+        <p class="section-sub" data-i18n="sec_scam_sub">慢雾 + CertiK + 推特举报 · 假推特 / 钓鱼 / 貔貅</p>
+        <span class="section-updated" id="scam-updated">—</span>
+      </div>
+      <div id="scam-list" class="scam-grid"></div>
     </section>
 
     <!-- 免责声明 -->
     <section class="disclaimer">
-      <h3>⚠ 免责声明</h3>
-      <p>本站所有内容仅供<strong>信息聚合与研究参考</strong>, <strong>不构成任何投资建议</strong>。</p>
+      <h3>⚠ <span data-i18n="disc_title">免责声明</span></h3>
+      <p data-i18n="disc_text">本站所有内容仅供<strong>信息聚合与研究参考</strong>, <strong>不构成任何投资建议</strong>。</p>
       <ul>
-        <li>加密资产价格波动剧烈, <strong>可能损失全部本金</strong></li>
-        <li>Meme 币风险极高, 多数最终归零</li>
-        <li>请 <strong>DYOR</strong> (Do Your Own Research), 自行评估风险</li>
-        <li>数据来自第三方公开 API, 不保证 100% 准确</li>
+        <li data-i18n="disc_1">加密资产价格波动剧烈, <strong>可能损失全部本金</strong></li>
+        <li data-i18n="disc_2">Meme 币 / NFT / 铭文风险极高, 多数最终归零</li>
+        <li data-i18n="disc_3">请 <strong>DYOR</strong> (Do Your Own Research), 自行评估风险</li>
+        <li data-i18n="disc_4">3 天后自动归档 (TGE 跟踪期)</li>
+        <li data-i18n="disc_5">数据来自第三方公开 API + 推特大V, 不保证 100% 准确</li>
       </ul>
     </section>
   </main>
@@ -120,13 +189,17 @@
       <div class="footer-social">
         <a href="https://x.com/ruoxi01" target="_blank" rel="noopener">𝕏 @ruoxi01</a>
         <a href="https://github.com/wudong6120415/openmeme" target="_blank" rel="noopener">GitHub</a>
+        <a href="/stats/" data-i18n="footer_stats">📊 访问统计</a>
       </div>
-      <p>© 2026 OpenMeme.art · 由 MiniMax M3 AI 驱动 · Powered by Hermes Agent</p>
+      <p>© 2026 OpenMeme.art · <span data-i18n="footer_ai">由 MiniMax M3 AI 驱动</span> · Powered by Hermes Agent</p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+  <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
 
-  <script src="script.js?v=2"></script>
+  <script src="i18n.js?v=3"></script>
+  <script src="particles.js?v=3"></script>
+  <script src="stats.js?v=3"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

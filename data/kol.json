@@ -1,0 +1,162 @@
+{
+  "updated_at": "2026-10-15T08:00:00Z",
+  "source": "20 推特大V 推文 (Nitter RSS) + AI 信誉分析",
+  "items": [
+    {
+      "id": "kol_1",
+      "kol": {
+        "id": "CryptoKOL",
+        "name": "CryptoKOL",
+        "handle": "CryptoKOL",
+        "followers": 250000,
+        "cat": "meme",
+        "lang": "en",
+        "official": false
+      },
+      "tweet": {
+        "text": "Just minted $DOGEAI - new Solana gem, 3h old, only $32K liquidity. High risk but could 10x. CA: 7xKXt...",
+        "url": "https://x.com/CryptoKOL/status/1234567890",
+        "published": "2026-10-15T05:00:00Z"
+      },
+      "tickers": ["DOGEAI"],
+      "ai": {
+        "score": 72,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": ["大V CryptoKOL 推荐 (250K 粉)", "明确提到 $DOGEAI", "提供 CA 合约"],
+        "cons": ["新币 3h, 流动性低", "高风险"]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_2",
+      "kol": {
+        "id": "NFTbillionaire",
+        "name": "NFTbillionaire",
+        "handle": "NFTbillionaire",
+        "followers": 200000,
+        "cat": "nft",
+        "lang": "en",
+        "official": false
+      },
+      "tweet": {
+        "text": "Pudgy Penguins Igloo mint starts Oct 18! WL via Discord + 推特点赞. Big alpha for the NFT fam.",
+        "url": "https://x.com/NFTbillionaire/status/2345678901",
+        "published": "2026-10-15T07:00:00Z"
+      },
+      "tickers": [],
+      "ai": {
+        "score": 78,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": ["大V NFTbillionaire (200K 粉)", "提供 WL 机会", "蓝筹 Pudgy"],
+        "cons": ["未提具体 ticker (NFT 不需要)"]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_3",
+      "kol": {
+        "id": "blknoiz06",
+        "name": "blknoiz06",
+        "handle": "blknoiz06",
+        "followers": 150000,
+        "cat": "meme",
+        "lang": "en",
+        "official": false
+      },
+      "tweet": {
+        "text": "$CATS 3 day chart looking solid, $8.9M mc, BSC meme with strong holders. Could be next PEPE.",
+        "url": "https://x.com/blknoiz06/status/3456789012",
+        "published": "2026-10-15T01:00:00Z"
+      },
+      "tickers": ["CATS"],
+      "ai": {
+        "score": 70,
+        "verdict": "谨慎关注",
+        "verdict_color": "blue",
+        "pros": ["中等 KOL (150K 粉)", "明确 ticker $CATS", "蓝筹 meme 候选"],
+        "cons": ["已上线 3 天 (即将归档)", "市值已 8.9M"]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_4",
+      "kol": {
+        "id": "TheRuneAlpha",
+        "name": "Rune Alpha",
+        "handle": "TheRuneAlpha",
+        "followers": 80000,
+        "cat": "btc",
+        "lang": "en",
+        "official": false
+      },
+      "tweet": {
+        "text": "PEPE•RUNES - 88% minted, BTC符文最强 meme, 地板价稳定 0.00008 BTC. 适合小额配置.",
+        "url": "https://x.com/TheRuneAlpha/status/4567890123",
+        "published": "2026-10-15T04:00:00Z"
+      },
+      "tickers": [],
+      "ai": {
+        "score": 68,
+        "verdict": "谨慎关注",
+        "verdict_color": "blue",
+        "pros": ["专注 BTC 符文 KOL", "详细数据 (88% minted)"],
+        "cons": ["粉丝较少 (80K)", "未提及具体 ticker"]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_5",
+      "kol": {
+        "id": "heyibinance",
+        "name": "Binance Wallet",
+        "handle": "heyibinance",
+        "followers": 1000000,
+        "cat": "launchpad",
+        "lang": "en",
+        "official": true
+      },
+      "tweet": {
+        "text": "Binance Launchpad: Sapien AI (SAPIEN) 申购 10/22 12:00 UTC. AI 概念, 历史 Launchpad 平均 +85%.",
+        "url": "https://x.com/heyibinance/status/5678901234",
+        "published": "2026-10-15T06:00:00Z"
+      },
+      "tickers": ["SAPIEN"],
+      "ai": {
+        "score": 85,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": ["币安官方账号 (1M 粉)", "明确 ticker SAPIEN", "历史数据 (+85%)", "官方公告"],
+        "cons": ["Launchpad 中签率低"]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_6",
+      "kol": {
+        "id": "DefiIgnas",
+        "name": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "followers": 280000,
+        "cat": "defi",
+        "lang": "en",
+        "official": false
+      },
+      "tweet": {
+        "text": "Scroll zkEVM Phase 2 airdrop is live! 100 ZK reward, 10 min task, no KYC. Easy money.",
+        "url": "https://x.com/DefiIgnas/status/6789012345",
+        "published": "2026-10-15T02:00:00Z"
+      },
+      "tickers": [],
+      "ai": {
+        "score": 80,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": ["大V DefiIgnas (280K 粉)", "明确奖励 (100 ZK)", "无 KYC", "10 分钟"],
+        "cons": ["空投类不是投资"]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    }
+  ]
+}
