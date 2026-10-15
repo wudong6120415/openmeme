@@ -185,70 +185,83 @@ async def main():
 
     for kol in KOLS:
         handle = kol["handle"]
-        try:
-            tweets = await s.aget_profile_tweets(
-                users=[handle],
-                limit=15
-            )
-            if not tweets:
-                kol_status[handle] = {"ok": 0, "relevant": 0}
-                print(f"  @{handle}: 0 条")
-                continue
-
-            # 找最新 1 条相关推文 (避免重复)
-            relevant_added = 0
-            for t in tweets:
-                if not isinstance(t, dict):
-                    continue
-                text = t.get("text", t.get("full_text", ""))
-                if not is_relevant(text):
-                    continue
-
-                tickers = extract_ticker(text)
-                ai = ai_score_tweet(kol, text, tickers)
-
-                # 推文 ID 用于 URL
-                tweet_id = t.get("id_str") or t.get("id") or t.get("tweet_id", "")
-                tweet_url = f"https://x.com/{handle}/status/{tweet_id}" if tweet_id else f"https://x.com/{handle}"
-
-                # 时间
-                ts = t.get("created_at", "")
-                published = ts if ts else ""
-
-                item = {
-                    "id": f"kol_{handle}_{tweet_id}",
-                    "kol": {
-                        "id": handle,
-                        "name": kol["name"],
-                        "handle": handle,
-                        "followers": kol["followers"],
-                        "verified": kol.get("verified", False),
-                        "official": kol.get("official", False),
-                        "cat": kol["cat"],
-                        "lang": kol.get("lang", "en"),
-                    },
-                    "tweet": {
-                        "text": text,
-                        "url": tweet_url,
-                        "published": published,
-                    },
-                    "tickers": tickers,
-                    "ai": ai,
-                    "added_at": now,
-                }
-                all_items.append(item)
-                relevant_added += 1
-                if relevant_added >= 2:  # 每 KOL 最多 2 条
+        # 重试 3 次, 指数退避
+        tweets = None
+        for attempt in range(3):
+            try:
+                tweets = await s.aget_profile_tweets(
+                    users=[handle],
+                    limit=15
+                )
+                if tweets is not None:
+                    break
+            except Exception as e:
+                err_str = str(e)
+                if "429" in err_str or "rate" in err_str.lower():
+                    wait = 60 * (attempt + 1)
+                    print(f"  @{handle}: 限流, 等 {wait}s (尝试 {attempt+1}/3)")
+                    await asyncio.sleep(wait)
+                else:
+                    print(f"  @{handle}: ❌ {e}")
                     break
 
-            kol_status[handle] = {"ok": len(tweets), "relevant": relevant_added}
-            print(f"  @{handle}: 总 {len(tweets)} / 相关 {relevant_added}")
+        if not tweets:
+            kol_status[handle] = {"ok": 0, "relevant": 0}
+            print(f"  @{handle}: 0 条")
+            await asyncio.sleep(3)  # 失败也延迟
+            continue
 
-        except Exception as e:
-            kol_status[handle] = {"error": str(e)}
-            print(f"  @{handle}: ❌ {e}")
+        # 找最新 1 条相关推文 (避免重复)
+        relevant_added = 0
+        for t in tweets:
+            if not isinstance(t, dict):
+                continue
+            text = t.get("text", t.get("full_text", ""))
+            if not is_relevant(text):
+                continue
 
-        await asyncio.sleep(0.5)  # 礼貌延迟
+            tickers = extract_ticker(text)
+            ai = ai_score_tweet(kol, text, tickers)
+
+            # 推文 ID 用于 URL
+            tweet_id = t.get("id_str") or t.get("id") or t.get("tweet_id", "")
+            tweet_url = f"https://x.com/{handle}/status/{tweet_id}" if tweet_id else f"https://x.com/{handle}"
+
+            # 时间
+            ts = t.get("created_at", "")
+            published = ts if ts else ""
+
+            item = {
+                "id": f"kol_{handle}_{tweet_id}",
+                "kol": {
+                    "id": handle,
+                    "name": kol["name"],
+                    "handle": handle,
+                    "followers": kol["followers"],
+                    "verified": kol.get("verified", False),
+                    "official": kol.get("official", False),
+                    "cat": kol["cat"],
+                    "lang": kol.get("lang", "en"),
+                },
+                "tweet": {
+                    "text": text,
+                    "url": tweet_url,
+                    "published": published,
+                },
+                "tickers": tickers,
+                "ai": ai,
+                "added_at": now,
+            }
+            all_items.append(item)
+            relevant_added += 1
+            if relevant_added >= 2:  # 每 KOL 最多 2 条
+                break
+
+        kol_status[handle] = {"ok": len(tweets), "relevant": relevant_added}
+        print(f"  @{handle}: 总 {len(tweets)} / 相关 {relevant_added}")
+
+        # 关键: 加大延迟防限流 (3 秒)
+        await asyncio.sleep(3)
 
     # 按 AI 评分排序
     all_items.sort(key=lambda x: x["ai"]["score"], reverse=True)

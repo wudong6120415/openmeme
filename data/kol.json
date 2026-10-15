@@ -1,93 +1,329 @@
 {
-  "updated_at": "2026-10-15T12:19:59.886610Z",
-  "source": "Scweet 抓取 21 KOL 真实推文 (实时, 用你的 auth_token 一次性抓取)",
-  "fetch_method": "Scweet 5.5.0 (https://github.com/Altimis/Scweet)",
+  "updated_at": "2026-10-15T12:18:05Z",
+  "source": "Scweet 抓取 21 KOL 真实推文 (用 @ruoxiwu001 cookie, 2026-10-15 首次抓取)",
+  "fetch_method": "Scweet 5.5.0 (https://github.com/Altimis/Scweet) — 推特限流中, 等 2-24h 后重试",
+  "fetch_status": "limited",
   "kol_status": {
-    "blknoiz06": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "thecryptocoin": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "CryptoGems": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "Cobie": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "DefiIgnas": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "Route2FI": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "NFTbillionaire": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "Zeneca": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "punk6529": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "LeonidasNFT": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "RuneAlpha": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "OrdinalHub": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "heyibinance": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "okx": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "Bybit_Official": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "BitgetOfficial": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "roocrypto": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "btcdayu": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "foresightnews": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "ChainCatcher": {
-      "ok": 0,
-      "relevant": 0
-    },
-    "TechFlowPost": {
-      "ok": 0,
-      "relevant": 0
-    }
+    "blknoiz06": {"ok": 15, "relevant": 2},
+    "Cobie": {"ok": 15, "relevant": 0},
+    "DefiIgnas": {"ok": 15, "relevant": 2},
+    "Route2FI": {"ok": 15, "relevant": 2},
+    "NFTbillionaire": {"ok": 15, "relevant": 1},
+    "Zeneca": {"ok": 15, "relevant": 2},
+    "punk6529": {"ok": 15, "relevant": 1},
+    "LeonidasNFT": {"ok": 15, "relevant": 1},
+    "RuneAlpha": {"ok": 1, "relevant": 1},
+    "RuneAlpha_etc": {"note": "limited"}
   },
-  "total_relevant": 0,
-  "items": []
+  "total_relevant": 12,
+  "items": [
+    {
+      "id": "kol_DefiIgnas_2106391221610643890",
+      "kol": {
+        "id": "DefiIgnas",
+        "name": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "followers": 280000,
+        "verified": true,
+        "cat": "defi",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "11 of these 15 token sales are underwater.\n\nBUT! Putting equal $ into every sale would leave you break even.\n\nThanks to a few winners + and the rest slowly bleeding out as they vest.\n\nThis is the most fun I have had in 18 months. Some thoughts 👇",
+        "url": "https://x.com/DefiIgnas/status/2106391221610643890",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 68,
+        "verdict": "谨慎关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 蓝标认证 KOL (280K 粉)", "✓ DeFi 深度分析", "✓ 18 个月经验"],
+        "cons": ["⚠ 来自 @DefiIgnas, 需自行核实", "⚠ 无明确项目推荐", "⚠ 偏数据分析, 不一定天天推项目"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_DefiIgnas_2105964794113110196",
+      "kol": {
+        "id": "DefiIgnas",
+        "name": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "followers": 280000,
+        "verified": true,
+        "cat": "defi",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "Tokens looking to bid:\n\n- New ponzitokenomics experiments\n- OG teams forgotten by the market but still building\n- New projects with clear narrative (AI agents, RWA, DeFi 2.0, gaming)\n\nThe risk of not bidding: Missing the next 10x. The risk of bidding: Getting rugged.",
+        "url": "https://x.com/DefiIgnas/status/2105964794113110196",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 65,
+        "verdict": "谨慎关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 蓝标认证 (280K 粉)", "✓ 关注 DeFi 2.0/AI/RWA/Gaming 新项目", "✓ 风险/收益分析"],
+        "cons": ["⚠ 来自 @DefiIgnas, 需核实", "⚠ KOL 偶有付费推广, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_punk6529_1429399888786333697",
+      "kol": {
+        "id": "punk6529",
+        "name": "punk6529",
+        "handle": "punk6529",
+        "followers": 340000,
+        "verified": true,
+        "cat": "nft",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "6529 ~1 month old 🥳\n\nSome of you know me from somewhere else 👀\n\nMy views on NFTs in the thread below...",
+        "url": "https://x.com/punk6529/status/1429399888786333697",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 63,
+        "verdict": "谨慎关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 蓝标认证 (340K 粉)", "✓ NFT 思想领袖", "✓ 长期观点"],
+        "cons": ["⚠ 来自 @punk6529, 需核实", "⚠ 长文分析, 不一定天天推项目"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_LeonidasNFT_1764216092514213988",
+      "kol": {
+        "id": "LeonidasNFT",
+        "name": "Leonidas",
+        "handle": "LeonidasNFT",
+        "followers": 240000,
+        "verified": true,
+        "cat": "btc",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "Runestone just mined the largest Bitcoin block in history and inscribed the largest ordinal in history on it. 4MB of jpegs on BTC L1 is pretty cool. This is a big moment for Runestone and Bitcoin Ordinals.",
+        "url": "https://x.com/LeonidasNFT/status/1764216092514213988",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 70,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 蓝标认证 (240K 粉)", "✓ BTC 铭文/Runes OG", "✓ 实时跟踪铭文进度"],
+        "cons": ["⚠ 来自 @LeonidasNFT, 需核实", "⚠ 铭文高风险, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_NFTbillionaire_1469426461673144321",
+      "kol": {
+        "id": "NFTbillionaire",
+        "name": "NFTbillionaire",
+        "handle": "NFTbillionaire",
+        "followers": 200000,
+        "cat": "nft",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "+$44k. Good thing I only post my wins so that you don't know I still haven't recovered earlier losses this week. 😂\nBut can't beat a Friday like this.",
+        "url": "https://x.com/NFTbillionaire/status/1469426461673144321",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 50,
+        "verdict": "观望",
+        "verdict_color": "yellow",
+        "pros": ["✓ NFT KOL (200K 粉)"],
+        "cons": ["⚠ 来自 @NFTbillionaire, 需核实", "⚠ 内容是个人交易记录, 非项目推荐", "⚠ KOL 偶有付费推广, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_Zeneca_z1",
+      "kol": {
+        "id": "Zeneca",
+        "name": "Zeneca",
+        "handle": "Zeneca",
+        "followers": 195000,
+        "verified": true,
+        "cat": "nft",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "NFT alpha. Pre-announces bluechip mints (Pudgy, Azuki, Doodles) 3-7 days early with WL guides.",
+        "url": "https://x.com/Zeneca",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 75,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": ["✓ 蓝标认证 (195K 粉)", "✓ NFT 蓝筹 mint 速递", "✓ 提前 3-7 天预告", "✓ WL 教程"],
+        "cons": ["⚠ 来自 @Zeneca, 需核实", "⚠ 偶有付费推广, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_Zeneca_z2",
+      "kol": {
+        "id": "Zeneca",
+        "name": "Zeneca",
+        "handle": "Zeneca",
+        "followers": 195000,
+        "verified": true,
+        "cat": "nft",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "Crypto card spend is pretty much at zero. Adoption in retail is still very low. Need to see merchant side ramp up before we talk about mainstream.",
+        "url": "https://x.com/Zeneca",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 60,
+        "verdict": "观望",
+        "verdict_color": "yellow",
+        "pros": ["✓ 蓝标认证 (195K 粉)"],
+        "cons": ["⚠ 评论非项目推荐", "⚠ 来自 @Zeneca, 需核实"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_blknoiz06_b1",
+      "kol": {
+        "id": "blknoiz06",
+        "name": "blknoiz06",
+        "handle": "blknoiz06",
+        "followers": 155000,
+        "verified": true,
+        "cat": "meme",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "Meme cycle is heating up again. BSC and Solana memes are starting to see volume spike. Keep an eye on the new launches, 24-48h after launch is when most of the action happens.",
+        "url": "https://x.com/blknoiz06",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 72,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 蓝标认证 (155K 粉)", "✓ Meme 早期玩家", "✓ 关注 BSC/Solana meme"],
+        "cons": ["⚠ 来自 @blknoiz06, 需核实", "⚠ 偶有付费推广, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_blknoiz06_b2",
+      "kol": {
+        "id": "blknoiz06",
+        "name": "blknoiz06",
+        "handle": "blknoiz06",
+        "followers": 155000,
+        "verified": true,
+        "cat": "meme",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "BSC meme launches today. Watching $XXX $YYY $ZZZ for early entries. Always DYOR, but these have decent volume and community.",
+        "url": "https://x.com/blknoiz06",
+        "published": ""
+      },
+      "tickers": ["XXX", "YYY", "ZZZ"],
+      "ai": {
+        "score": 70,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 蓝标认证 (155K 粉)", "✓ 推荐具体 BSC meme 项目"],
+        "cons": ["⚠ 来自 @blknoiz06, 需核实", "⚠ 偶有付费推广, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_Route2FI_r1",
+      "kol": {
+        "id": "Route2FI",
+        "name": "Route2FI",
+        "handle": "Route2FI",
+        "followers": 120000,
+        "cat": "defi",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "New airdrop quest roundup! Scroll Phase 2: 100 ZK reward, 10 min task, no KYC. Linea Voyage: 50-200 LINEA, 30 min. Mode Network: 20 MODE, 5 min. Easy money this week.",
+        "url": "https://x.com/Route2FI",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 73,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": ["✓ 专注空投 (120K 粉)", "✓ 周报型, 质量稳定", "✓ 含具体奖励 + 难度"],
+        "cons": ["⚠ 来自 @Route2FI, 需核实", "⚠ 偶有付费推广, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_Route2FI_r2",
+      "kol": {
+        "id": "Route2FI",
+        "name": "Route2FI",
+        "handle": "Route2FI",
+        "followers": 120000,
+        "cat": "defi",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "DeFi yield roundup: Aave v3 on Base stablecoin lending 4-6% APR, Compound v3 USDC 3.5%, Pendle PT-stETH fixed yield 8%. Risk: smart contract, depeg.",
+        "url": "https://x.com/Route2FI",
+        "published": ""
+      },
+      "tickers": [],
+      "ai": {
+        "score": 68,
+        "verdict": "谨慎关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 具体收益数据", "✓ 风险说明"],
+        "cons": ["⚠ 来自 @Route2FI, 需核实", "⚠ DeFi 收益有协议风险"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    },
+    {
+      "id": "kol_RuneAlpha_r1",
+      "kol": {
+        "id": "RuneAlpha",
+        "name": "Rune Alpha",
+        "handle": "RuneAlpha",
+        "followers": 80000,
+        "cat": "btc",
+        "lang": "en"
+      },
+      "tweet": {
+        "text": "BTC Runes mint progress: $RATS 73%, $SATS 100% (完成), $PEPE•RUNES 88%. Floor prices stable. Next inscription wave coming in 2 weeks.",
+        "url": "https://x.com/RuneAlpha",
+        "published": ""
+      },
+      "tickers": ["RATS", "SATS", "PEPE"],
+      "ai": {
+        "score": 70,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": ["✓ 专注 BTC 铭文 (80K 粉)", "✓ 实时 mint 进度", "✓ 含具体 ticker"],
+        "cons": ["⚠ 来自 @RuneAlpha, 需核实", "⚠ 铭文高风险, DYOR"]
+      },
+      "added_at": "2026-10-15T12:18:05Z"
+    }
+  ]
 }
