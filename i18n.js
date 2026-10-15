@@ -1,25 +1,25 @@
 /* OpenMeme — i18n 中英双语字典 */
 const I18N = {
   zh: {
-    site_title: 'OpenMeme — 1-2 周内 TGE 速递 · 新 Meme / NFT / 铭文 / 空投',
+    site_title: 'OpenMeme — 早期项目推荐 · 新 Meme / NFT / 铭文 / 空投',
     hero_line1: '1-2 周内',
     hero_line2: 'TGE 速递',
     hero_line3: '·',
     hero_line4: '新 Meme / NFT / 铭文 / 空投',
     hero_sub: '服务推特 + 币安广场的大众币圈人, 大白话分享, 一键发推引流转评',
     live: '实时更新',
-    data_sources: '数据源: DexScreener · MagicEden · 20 大V 推特 · 币安/OKX/Bybit',
+    data_sources: '数据源: DexScreener · MagicEden · 推特大V · 币安/OKX/Bybit',
     not_advice: '非投资建议 · DYOR',
 
+    stat_early: '早期项目',
     stat_meme: 'Meme 速递',
     stat_nft: 'NFT Mint',
     stat_insc: '铭文',
     stat_lp: 'Launchpad',
     stat_air: '空投',
-    stat_kol: 'KOL 推文',
 
-    sec_kol: '🐦 KOL Radar',
-    sec_kol_sub: '21 个推特大V · 公开资料 · 无编造推文',
+    sec_early: '🆕 早期项目推荐',
+    sec_early_sub: '精选 1-2 周内有动作的超早期项目 · 含项目背景/团队/融资/AI 分析/撸毛路径',
     sec_meme: '🔥 Meme 速递',
     sec_meme_sub: '新 Meme 币首发 · Solana Pump.fun · BSC 4.meme · Base 等',
     sec_nft: '🎨 NFT Mint 名单',
@@ -55,25 +55,25 @@ const I18N = {
     disc_5: '数据来自第三方公开 API + 推特大V, 不保证 100% 准确',
   },
   en: {
-    site_title: 'OpenMeme — 1-2 Week TGE Express · New Meme / NFT / Inscription / Airdrop',
+    site_title: 'OpenMeme — Early Projects · Meme / NFT / Inscription / Airdrop',
     hero_line1: '1-2 Week',
     hero_line2: 'TGE Express',
     hero_line3: '·',
     hero_line4: 'New Meme / NFT / Inscription / Airdrop',
     hero_sub: 'For Twitter & Binance Square retail crypto crowd, plain language, 1-click tweet & share',
     live: 'Live',
-    data_sources: 'Sources: DexScreener · MagicEden · 20 KOL tweets · Binance/OKX/Bybit',
+    data_sources: 'Sources: DexScreener · MagicEden · KOL tweets · Binance/OKX/Bybit',
     not_advice: 'Not financial advice · DYOR',
 
+    stat_early: 'Early Projects',
     stat_meme: 'Meme Express',
     stat_nft: 'NFT Mint',
     stat_insc: 'Inscription',
     stat_lp: 'Launchpad',
     stat_air: 'Airdrop',
-    stat_kol: 'KOL Tweets',
 
-    sec_kol: '🐦 KOL Radar',
-    sec_kol_sub: '21 个推特大V · 公开资料 · 无编造推文',
+    sec_early: '🆕 Early Projects',
+    sec_early_sub: 'Curated ultra-early projects · Background / team / funding / AI analysis / airdrop path',
     sec_meme: '🔥 Meme Express',
     sec_meme_sub: 'New meme launches · Solana Pump.fun · BSC 4.meme · Base',
     sec_nft: '🎨 NFT Mint List',
@@ -123,7 +123,6 @@ function applyLang() {
       el.textContent = dict[key];
     }
   });
-  // 切换按钮文字
   const lbl = document.getElementById('lang-label');
   if (lbl) lbl.textContent = currentLang === 'zh' ? 'EN' : '中';
 }

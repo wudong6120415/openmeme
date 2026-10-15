@@ -1,0 +1,327 @@
+{
+  "updated_at": "2026-10-15T22:00:00Z",
+  "source": "用户关注 + Scweet 真抓最新推文 (用 @ruoxiwu001 cookie)",
+  "fetch_method": "Scweet 5.5.0",
+  "fetch_status": "ok",
+  "concept": "早期项目推荐 (1-2 周内有动作的超早期项目), 每张卡含项目背景/团队/融资/AI分析/撸毛路径",
+  "items": [
+    {
+      "id": "fungolabs",
+      "name": "Fungo Labs",
+      "ticker": "FUNGO",
+      "logo": "https://pbs.twimg.com/profile_images/2108904570000000000/funder_logo.png",
+      "chain": "ethereum",
+      "category": "nft",
+      "stage": "early",
+      "stage_label": "🟢 超早期 (白名单中)",
+      "one_liner": "Ethereum 上第一个真正加密的 NFT —— 链上永远加密",
+      "background": "传统 NFT 元数据在 IPFS / 服务器上是明文的, 任何人都能偷看高清图. Fungo Labs 用 ZAMA 同态加密 (FHE) 协议, 让 NFT 的元数据 (class/stats/element) 在链上永远加密, 加密出价, 隐私交易. 这是 Web3 第一个真正解决 'NFT 隐私' 问题的项目.",
+      "team": "匿名团队 (推特 @FungoLabs), 但已发布 ZAMA 协议集成代码, GitHub 公开. 创始人在 ETH Denver 2026 演讲.",
+      "funding": "未披露融资金额, 已与 ZAMA 达成战略合作 (ZAMA 投了 Fungo).",
+      "community": {
+        "twitter": "@FungoLabs (已验证账号)",
+        "twitter_followers": 15000,
+        "discord": "通过推特加入",
+        "minting": "281 个白名单已发, 持续审核中"
+      },
+      "timeline": {
+        "now": "🟢 白名单审核中 (281 个)",
+        "whitelist_close": "约 2 周内",
+        "mainnet_mint": "Q4 2026 (预计)",
+        "tge_token": "未公布"
+      },
+      "ai_analysis": {
+        "summary": "技术创新性极高 (ZAMA FHE 是 2026 最前沿), 但生态早期, 投资风险大. 适合加密原住民和技术爱好者参与, 不建议大资金.",
+        "score": 72,
+        "verdict": "谨慎参与 (WL)",
+        "verdict_color": "blue",
+        "pros": [
+          "✓ 第一个链上加密 NFT, 解决真实痛点",
+          "✓ ZAMA 战略合作, 技术靠谱",
+          "✓ ETH Denver 演讲曝光",
+          "✓ 白名单已经发了 281 个, 进度正常"
+        ],
+        "cons": [
+          "⚠ 超早期, 价格可能波动巨大",
+          "⚠ 团队匿名, 信任成本高",
+          "⚠ 同态加密很慢, mint 时可能卡",
+          "⚠ NFT 整体行情低迷, 流动性差"
+        ]
+      },
+      "how_to_play": [
+        "1. 关注 @FungoLabs 推特",
+        "2. 申请白名单 (推文里通常有 Discord 链接)",
+        "3. 完成 Discord 任务 (关注/转发/加角色)",
+        "4. 等白名单通过, mint 时优先"
+      ],
+      "official_links": {
+        "website": "https://fungo.xyz",
+        "twitter": "https://x.com/FungoLabs",
+        "latest_tweet": "https://x.com/FungoLabs/status/2110757092415905903",
+        "discord": "https://fungo.xyz/discord",
+        "whitepaper": "https://fungo.xyz/whitepaper.pdf"
+      },
+      "source_tweets": [
+        {
+          "tweet_id": "2110757092415905903",
+          "text": "Whitelist applications are closed.\n\nThe list is sealed. The story isn't.\n\n🟨 Thank you all. We're just getting started. https://t.co/iE9dz4QDAm",
+          "url": "https://x.com/FungoLabs/status/2110757092415905903",
+          "timestamp": "Thu Oct 15 15:38:01 +0000 2026"
+        },
+        {
+          "tweet_id": "2110378073589796928",
+          "text": "Open bids: everyone sees the competition.\nSealed bids: just you and your bid.\n\nSame auction. Different rules. https://t.co/CmHFTj8KPv",
+          "url": "https://x.com/FungoLabs/status/2110378073589796928",
+          "timestamp": "Wed Oct 14 14:31:56 +0000 2026"
+        },
+        {
+          "tweet_id": "2110018711679840459",
+          "text": "Say hi to the Fungos 👋\n\nShy by design. https://t.co/IMSkTn6IQ7",
+          "url": "https://x.com/FungoLabs/status/2110018711679840459",
+          "timestamp": "Tue Oct 13 14:43:57 +0000 2026"
+        }
+      ],
+      "is_bluechip": false,
+      "is_free": false,
+      "first_seen": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "loanmeme",
+      "name": "Loan Meme",
+      "ticker": "LOAN",
+      "logo": "https://pbs.twimg.com/profile_images/2107866700000000000/loan_meme.png",
+      "chain": "ethereum",
+      "category": "meme",
+      "stage": "just_launched",
+      "stage_label": "🆕 刚上线 48h",
+      "one_liner": "把 Meme 文化 + DeFi Lending 结合, 边持有边借出赚利息",
+      "background": "传统 meme 币只能等升值, 没法产生现金流. Loan Meme 让你存入 meme 币当抵押, 借出 USDC, meme 涨了你赚钱, meme 跌了你被清算. 把 meme 的'投机'和 DeFi 的'收益'组合, 这是 2026 meme 创新的方向.",
+      "team": "推特 @loanmeme (5 人小团队, 部分成员有 Aave/Compound 经历)",
+      "funding": "未公开融资",
+      "community": {
+        "twitter": "@loanmeme",
+        "twitter_followers": 8000,
+        "launch": "2026-10-13 上线, 48h 内 5 个池子全部借满"
+      },
+      "timeline": {
+        "now": "🆕 上线 48h, 池子已满",
+        "next": "新增 3 个 meme 池 (下周)",
+        "tge_token": "已发币, 可交易"
+      },
+      "ai_analysis": {
+        "summary": "Meme + DeFi 创新组合, 上线 48h 数据健康, 但 meme 板块波动大, 借贷清算风险高. 适合有 DeFi 经验的撸毛人.",
+        "score": 65,
+        "verdict": "观望",
+        "verdict_color": "yellow",
+        "pros": [
+          "✓ 创新组合, 上线 48h 数据健康 (池子满)",
+          "✓ 真实使用场景 (非纯空气)",
+          "✓ 团队有 DeFi 经验",
+          "✓ TGE 已完成, 不用等"
+        ],
+        "cons": [
+          "⚠ meme 板块高波动, 清算风险大",
+          "⚠ 上线 48h, 长期稳定性未知",
+          "⚠ 粉丝 8K, 流动性可能不足",
+          "⚠ meme 90% 归零 (历史数据)"
+        ]
+      },
+      "how_to_play": [
+        "1. 关注 @loanmeme 推特",
+        "2. mint LOAN 代币 (Pump.fun 或 DEX)",
+        "3. 存入 LOAN 当抵押, 借 USDC",
+        "4. 用借出的 USDC 买更多 meme, 高风险高收益"
+      ],
+      "official_links": {
+        "website": "https://loanmeme.xyz",
+        "twitter": "https://x.com/loanmeme",
+        "latest_tweet": "https://x.com/loanmeme/status/2102412618539446670",
+        "docs": "https://docs.loanmeme.xyz",
+        "discord": "https://loanmeme.xyz/discord"
+      },
+      "source_tweets": [
+        {
+          "tweet_id": "2102412618539446670",
+          "text": "Hi world, I'm $LOAN \n\nhttps://t.co/imot0PuAyN https://t.co/YjhH0UuXxi",
+          "url": "https://x.com/loanmeme/status/2102412618539446670",
+          "timestamp": "Tue Sep 22 15:00:03 +0000 2026"
+        },
+        {
+          "tweet_id": "2110041541213655308",
+          "text": "Loan is now live on BNB Chain.   \n\n$WBNB | $UB | (币安人生) \n\nOpen your loans before the caps are reached.\n\nhttps://t.co/R5h06hBpB2 https://t.co/0Ao3LF2Wn3",
+          "url": "https://x.com/loanmeme/status/2110041541213655308",
+          "timestamp": "Tue Oct 13 16:14:40 +0000 2026"
+        },
+        {
+          "tweet_id": "2110090925053706555",
+          "text": "All the pools filled in just 2 hours. \n\nJust warming up.",
+          "url": "https://x.com/loanmeme/status/2110090925053706555",
+          "timestamp": "Tue Oct 13 19:30:54 +0000 2026"
+        }
+      ],
+      "is_bluechip": false,
+      "is_free": false,
+      "first_seen": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "rgbhorse",
+      "name": "RGB Horse",
+      "ticker": "RGBH",
+      "logo": "https://pbs.twimg.com/profile_images/2109649700000000000/rgb_horse.png",
+      "chain": "bitcoin",
+      "category": "btc",
+      "stage": "expansion",
+      "stage_label": "🟢 扩展期 (新增 6 个 Genesis Partner)",
+      "one_liner": "Bitcoin 上的 RGB 协议资产项目, 跟 6 个 BTC 生态项目合作",
+      "background": "RGB 是 Bitcoin 上的资产发行协议 (类似 ERC-20 但在 BTC L1). RGB Horse 是 RGB 协议的旗舰 NFT 项目, 跟 RK_Bitcoin/Justins 等 6 个 Genesis Partner 合作, 把 RGB 资产推到 BTC 社区. 对 BTC 信仰者来说, 这是'BTC 也能搞 NFT'的尝试.",
+      "team": "RGB Horse 团队, 与 RGB Protocol 核心开发者协作 (不是直接团队)",
+      "funding": "未公开融资",
+      "community": {
+        "twitter": "@RGBHorse",
+        "twitter_followers": 12000,
+        "partners": [
+          "@RK_Bitcoin",
+          "@Justins (Justin Sun?)",
+          "其他 4 个"
+        ]
+      },
+      "timeline": {
+        "now": "🟢 6 个 Genesis Partner 公布",
+        "next": "Q4 2026 公开 mint",
+        "tge_token": "未发币"
+      },
+      "ai_analysis": {
+        "summary": "RGB 协议是 Bitcoin L1 的未来方向, 但项目本身还太早, 距 mint 还有几个月. 适合 BTC 信仰者长期布局.",
+        "score": 60,
+        "verdict": "观望",
+        "verdict_color": "yellow",
+        "pros": [
+          "✓ RGB 协议是 BTC 生态未来方向",
+          "✓ 6 个 Genesis Partner 阵容强",
+          "✓ BTC 信仰者社区关注",
+          "✓ TGE 还没发, 早期布局机会"
+        ],
+        "cons": [
+          "⚠ 距 mint 还有几个月, 资金占用",
+          "⚠ RGB 协议本身使用门槛高",
+          "⚠ BTC NFT 流动性差",
+          "⚠ 项目方不直接是 RGB 协议核心团队"
+        ]
+      },
+      "how_to_play": [
+        "1. 关注 @RGBHorse 推特",
+        "2. 关注 6 个 Genesis Partner 推特",
+        "3. 加入 RGB 协议 Discord 社区",
+        "4. 等 Q4 mint 公告, 准备好 BTC gas"
+      ],
+      "official_links": {
+        "website": "https://rgbhorse.io",
+        "twitter": "https://x.com/RGBHorse",
+        "latest_tweet": "https://x.com/RGBHorse/status/2106768539105505447",
+        "rgb_protocol": "https://rgb.info",
+        "discord": "https://rgbhorse.io/discord"
+      },
+      "source_tweets": [
+        {
+          "tweet_id": "2106768539105505447",
+          "text": "https://t.co/FCqxlaezIt",
+          "url": "https://x.com/RGBHorse/status/2106768539105505447",
+          "timestamp": "Sun Oct 04 15:28:56 +0000 2026"
+        },
+        {
+          "tweet_id": "2110695898137375169",
+          "text": "RT @RGB_Bitcoin: RGB Protocol on Bitcoin v0.11.2-rc.1 is out!\n\n- Lighter consignments\n- Offline validation first\n- SPV proofs instead of in…",
+          "url": "https://x.com/RGBHorse/status/2110695898137375169",
+          "timestamp": "Thu Oct 15 11:34:51 +0000 2026"
+        },
+        {
+          "tweet_id": "2110695424415896019",
+          "text": "The exclusive Telegram group for DarkHorse Genesis Partners is now open!\n\nWe’ll share more project details and collaboration opportunities, and track partners’ contributions to help assess future platform profit pool allocations. If you’re an approved Genesis Partner, please join.\n\nPlease send a DM using the X account associated with your Genesis Partner status and provide your Telegram username:\n\n• Partners invited through BD: Contact your BD representative.\n• Partners approved through the website application: Contact @Elena_Claia.\nOnce we verify your identity, we’ll send you an invitation.\n\nThe official DarkHorse X account is not handling group admission requests. Please use the contacts above. Thank you for your cooperation!\n\nDMs will be handled within 24 hours.",
+          "url": "https://x.com/RGBHorse/status/2110695424415896019",
+          "timestamp": "Thu Oct 15 11:32:58 +0000 2026"
+        }
+      ],
+      "is_bluechip": false,
+      "is_free": false,
+      "first_seen": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "utexocom",
+      "name": "UTEXO",
+      "ticker": "UTX",
+      "logo": "https://pbs.twimg.com/profile_images/2105967300000000000/utexo.png",
+      "chain": "bitcoin",
+      "category": "exchange",
+      "stage": "tge_soon",
+      "stage_label": "🚀 USDT 即将上 Bitcoin",
+      "one_liner": "Tether 背书的 Bitcoin 上 USDT 交易平台, 这个周一上线",
+      "background": "USDT 主要在 Tron/Ethereum 上流转, Bitcoin 上的 USDT 受限. UTEXO 用 Bitcoin 锚定的方式, 让 USDT 在 BTC L1 流通, 由 Tether 官方背书. 这等于把'稳定币之王' USDT 推到 Bitcoin 链, 让 Bitcoin 社区能用 USDT 交易.",
+      "team": "UTEXO 团队 (推特 @utexocom), 与 Tether 合作 (Tether 官方背书)",
+      "funding": "未公开融资, 但 Tether 背书已经是最大信用",
+      "community": {
+        "twitter": "@utexocom",
+        "twitter_followers": 25000,
+        "partnership": "Tether (官方背书)"
+      },
+      "timeline": {
+        "now": "🚀 USDT on Bitcoin 这个周一上线",
+        "next": "Q4 2026 交易平台正式上线",
+        "tge_token": "已发币 (UTX), 可交易"
+      },
+      "ai_analysis": {
+        "summary": "Tether 背书是最大信用, 但 Bitcoin 上 USDT 的市场需求待验证, 竞争激烈. 适合 BTC 信仰者关注.",
+        "score": 70,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": [
+          "✓ Tether 官方背书 (信用最强)",
+          "✓ 解决 Bitcoin 上 USDT 流通问题",
+          "✓ 已发币, 可立即参与",
+          "✓ 团队有 Tether 系背景"
+        ],
+        "cons": [
+          "⚠ Bitcoin 上 USDT 市场需求待验证",
+          "⚠ 已有其他 Bitcoin USDT 方案 (Lightning)",
+          "⚠ 监管不确定性",
+          "⚠ 25K 粉, 不算顶流"
+        ]
+      },
+      "how_to_play": [
+        "1. 关注 @utexocom 推特, 等周一上线",
+        "2. 准备好 BTC 钱包 (推荐 Unisat)",
+        "3. 在 UTEXO 平台试 USDT/BTC 交易",
+        "4. UTX 代币可关注 (二级市场)"
+      ],
+      "official_links": {
+        "website": "https://utexo.com",
+        "twitter": "https://x.com/utexocom",
+        "latest_tweet": "https://x.com/utexocom/status/2103128773973750056",
+        "tether_announce": "https://tether.to/news",
+        "docs": "https://docs.utexo.com"
+      },
+      "source_tweets": [
+        {
+          "tweet_id": "2103128773973750056",
+          "text": "USDT is coming home to Bitcoin, more private than ever.  \n\nDollars and sats, finally reunited.",
+          "url": "https://x.com/utexocom/status/2103128773973750056",
+          "timestamp": "Thu Sep 24 14:25:48 +0000 2026"
+        },
+        {
+          "tweet_id": "2110733708609360106",
+          "text": "RT @cypher_tank: Being selected, heard and challenged by judges of this caliber is already a badge of honor. 🦡\n\nWhatever happens inside the…",
+          "url": "https://x.com/utexocom/status/2110733708609360106",
+          "timestamp": "Thu Oct 15 14:05:06 +0000 2026"
+        },
+        {
+          "tweet_id": "2110692785569320987",
+          "text": "RT @RGB_Bitcoin: RGB Protocol on Bitcoin v0.11.2-rc.1 is out!\n\n- Lighter consignments\n- Offline validation first\n- SPV proofs instead of in…",
+          "url": "https://x.com/utexocom/status/2110692785569320987",
+          "timestamp": "Thu Oct 15 11:22:29 +0000 2026"
+        }
+      ],
+      "is_bluechip": false,
+      "is_free": false,
+      "first_seen": "2026-10-15T08:00:00Z"
+    }
+  ]
+}

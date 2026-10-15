@@ -36,77 +36,125 @@ function skeletonHTML(n) { let h = ''; for (let i = 0; i < n; i++) h += '<div cl
 function emptyHTML(msg, icon) { return `<div class="empty"><div class="empty-icon">${icon || '📭'}</div><div>${msg}</div></div>`; }
 function errorHTML(msg) { return `<div class="error">⚠ ${msg}</div>`; }
 
-// ========== 🐦 KOL Radar (新: 项目卡, 不是推文卡) ==========
-function kolCardHTML(item) {
-  const k = item.kol || {};
-  const t = item.tweet || {};
-  const a = item.ai || {};
+// ========== 🆕 早期项目卡片 (完善版) ==========
+function earlyCardHTML(item) {
   const links = item.official_links || {};
-  const part = item.participation || {};
-  const initial = (item.name || k.name || '?')[0].toUpperCase();
+  const ai = item.ai_analysis || {};
+  const initial = (item.name || '?')[0].toUpperCase();
 
-  // 真实有效的链接:
-  const kolProfileUrl = `https://x.com/${k.handle || ''}`;
-
-  // 推文 (大白话, 亲切, 不 AI) - 关键修复: 不用 AI 话术
-  const tweetBrief = (item.story || '').split('\n\n')[1]?.replace('最新推文 (', '').replace('):', ':').slice(0, 150) || '看官方推文';
+  // 大白话发推 (亲切)
   const tw = tweetUrl(
     `🆕 撸毛情报 · ${item.name} ($${item.ticker})\n\n` +
-    `看到 @${k.handle} 推这个, 撸毛人可以关注 👀\n\n` +
-    `${tweetBrief}\n\n` +
-    `📌 详情看这里 👉 https://openmeme.art/#kol\n\n` +
-    `#撸毛 #新项目 @${X_HANDLE}`
+    `${item.one_liner}\n\n` +
+    `📍 ${item.stage_label}\n` +
+    `🎯 AI: ${ai.score || 60}/100 (${ai.verdict || '需核实'})\n\n` +
+    `撸毛路径见这里 👉 https://openmeme.art/#early\n\n` +
+    `#撸毛 #早期项目 @${X_HANDLE}`
   );
 
-  // 阶段徽章
-  const stageColor = {
-    'whitelist_open': 'green',
-    'tge_soon': 'blue',
-    'ido_soon': 'blue',
-    'task_active': 'green',
-    'just_launched': 'yellow',
-    'mainnet_live': 'red',
-    'kol_mentioned': 'blue',
-  }[item.stage] || 'yellow';
-
-  // 链标签
-  const chainLabel = (item.chain || 'multi').toUpperCase();
-
-  // 撸毛方式
-  const methodText = part.method || '关注官方推特, 等进一步消息';
-  const timeText = part.time_required || (item.mint_time ? new Date(item.mint_time).toLocaleString('zh-CN', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) : '近期');
-
   return `
-    <article class="kol-card" data-cat="${item.category || k.cat || 'meme'}">
-      <div class="kol-header">
-        <div class="kol-avatar">${item.logo ? `<img src="${item.logo}" alt="${item.name}" onerror="this.outerHTML='<span>${initial}</span>'">` : initial}</div>
-        <div class="kol-meta">
-          <div class="kol-name">${item.name} <span class="kol-chain">${chainLabel}</span>${item.is_bluechip ? ' <span class="kol-bluechip">🏆 蓝筹</span>' : ''}${item.is_free ? ' <span class="kol-free">💰 免费</span>' : ''}</div>
-          <div class="kol-ticker">$${item.ticker} · ${item.category || k.cat || 'meme'}</div>
-          <div class="kol-stage kol-stage-${stageColor}">${item.stage_label || '近期'}</div>
+    <article class="early-card" data-cat="${item.category || 'nft'}">
+      <!-- 1. Header: Logo + 名字 + Ticker + 链 -->
+      <div class="early-header">
+        <div class="early-logo">${item.logo ? `<img src="${item.logo}" alt="${item.name}" onerror="this.outerHTML='<span>${initial}</span>'">` : initial}</div>
+        <div class="early-titles">
+          <div class="early-name">${item.name} <span class="early-ticker">$${item.ticker}</span> <span class="early-chain">${(item.chain || 'multi').toUpperCase()}</span></div>
+          <div class="early-one-liner">${item.one_liner || ''}</div>
+          <div class="early-stage early-stage-${item.stage}">${item.stage_label || '🆕 早期'}</div>
         </div>
-        <div class="kol-verdict ${a.verdict_color || 'yellow'}">${a.score || '—'} · ${a.verdict || '—'}</div>
+        <div class="early-verdict ${ai.verdict_color || 'yellow'}">${ai.score || 60}<br><span style="font-size:10px; font-weight:400;">${ai.verdict || '需核实'}</span></div>
       </div>
-      <div class="kol-story" style="font-size:13px; color:var(--text); margin-bottom:10px; line-height:1.6; padding:10px 12px; background:rgba(240,185,11,0.05); border-left:3px solid var(--gold); border-radius:6px;">${item.story || ''}</div>
-      <div class="kol-participation" style="display:grid; grid-template-columns:1fr 1fr; gap:6px 10px; font-size:12px; margin-bottom:10px; padding:8px 10px; background:var(--bg); border-radius:6px;">
-        <div class="kol-detail-row"><span style="color:var(--text-dim);">🎯 撸毛</span> <span style="color:var(--text); font-weight:600;">${methodText}</span></div>
-        <div class="kol-detail-row"><span style="color:var(--text-dim);">⏰ 时间</span> <span style="color:var(--gold); font-weight:600;">${timeText}</span></div>
-        ${item.is_free ? `<div class="kol-detail-row"><span style="color:var(--text-dim);">💰 费用</span> <span style="color:var(--green); font-weight:600;">FREE</span></div>` : (part.price ? `<div class="kol-detail-row"><span style="color:var(--text-dim);">💰 价格</span> <span style="color:var(--text);">${part.price}</span></div>` : '')}
-        ${part.difficulty ? `<div class="kol-detail-row"><span style="color:var(--text-dim);">⭐ 难度</span> <span style="color:var(--text);">${part.difficulty}</span></div>` : ''}
+
+      <!-- 2. 4 关键指标 -->
+      <div class="early-stats">
+        <div class="early-stat">
+          <div class="early-stat-label">🏷️ 类别</div>
+          <div class="early-stat-value">${(item.category || 'nft').toUpperCase()}</div>
+        </div>
+        <div class="early-stat">
+          <div class="early-stat-label">🔗 链</div>
+          <div class="early-stat-value">${(item.chain || 'multi').toUpperCase()}</div>
+        </div>
+        <div class="early-stat">
+          <div class="early-stat-label">📅 当前</div>
+          <div class="early-stat-value">${(item.stage_label || '').replace(/^🟢 |^🆕 |^🚀 |^⏰ /, '')}</div>
+        </div>
+        <div class="early-stat">
+          <div class="early-stat-label">💎 蓝筹</div>
+          <div class="early-stat-value">${item.is_bluechip ? '✅ 是' : '❌ 否'}</div>
+        </div>
       </div>
-      ${(a.pros && a.pros.length) || (a.cons && a.cons.length) ? `
-      <div class="kol-ai">
-        <div class="kol-pros">${(a.pros || []).map(p => `<div>${p}</div>`).join('')}</div>
-        <div class="kol-cons">${(a.cons || []).map(c => `<div>${c}</div>`).join('')}</div>
-      </div>` : ''}
-      <div class="kol-source" style="font-size:11px; color:var(--text-dim); margin-top:8px; padding-top:8px; border-top:1px solid var(--border);">
-        📡 来源: <a href="${links.kol_tweet || kolProfileUrl}" target="_blank" rel="noopener" style="color:var(--blue);">@${k.handle || 'unknown'} 推文</a> · AI 评分: <strong style="color:var(--gold);">${a.score || '—'}/100</strong>
+
+      <!-- 3. 项目背景 (大白话) -->
+      <div class="early-section">
+        <div class="early-section-title">📖 项目背景</div>
+        <div class="early-bg">${item.background || '—'}</div>
       </div>
-      <div class="kol-actions">
-        <a class="kol-btn primary" href="${links.kol_tweet || kolProfileUrl}" target="_blank" rel="noopener" title="看官方最新推文">📡 看官方推文</a>
-        <a class="kol-btn" href="${tw}" target="_blank" rel="noopener" title="分享给撸毛人">𝕏 一键发推</a>
-        <a class="kol-btn" href="${links.twitter || kolProfileUrl}" target="_blank" rel="noopener" title="关注项目方">🔔 关注</a>
-        <a class="kol-btn" href="${kolProfileUrl}" target="_blank" rel="noopener" title="看更多推文">📰 看主页</a>
+
+      <!-- 4. 团队 -->
+      <div class="early-section">
+        <div class="early-section-title">👥 团队</div>
+        <div class="early-bg">${item.team || '—'}</div>
+      </div>
+
+      <!-- 5. 融资 / 背书 -->
+      <div class="early-section">
+        <div class="early-section-title">💰 融资 / 背书</div>
+        <div class="early-bg">${item.funding || '—'}</div>
+      </div>
+
+      <!-- 6. 时间表 -->
+      <div class="early-section">
+        <div class="early-section-title">📅 时间表</div>
+        <div class="early-timeline">
+          ${Object.entries(item.timeline || {}).map(([k, v]) => `<div class="early-timeline-row"><span>${k}</span><strong>${v}</strong></div>`).join('')}
+        </div>
+      </div>
+
+      <!-- 7. AI 分析 (大白话) -->
+      <div class="early-section">
+        <div class="early-section-title">🤖 AI 深度分析</div>
+        <div class="early-bg" style="border-left:3px solid var(--gold); padding-left:12px;">${ai.summary || '—'}</div>
+        <div class="early-pros-cons">
+          <div class="early-pros">
+            <div class="early-pc-title">✓ 优点</div>
+            ${(ai.pros || []).map(p => `<div>${p}</div>`).join('')}
+          </div>
+          <div class="early-cons">
+            <div class="early-pc-title">✗ 风险</div>
+            ${(ai.cons || []).map(c => `<div>${c}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. 怎么撸 (大白话步骤) -->
+      <div class="early-section">
+        <div class="early-section-title">🎯 怎么撸 (大白话步骤)</div>
+        <div class="early-steps">
+          ${(item.how_to_play || []).map(s => `<div class="early-step">${s}</div>`).join('')}
+        </div>
+      </div>
+
+      <!-- 9. 来源 (真推文) -->
+      ${item.source_tweets && item.source_tweets.length > 0 ? `
+      <div class="early-section">
+        <div class="early-section-title">📡 官方最新推文 (Scweet 真抓)</div>
+        ${item.source_tweets.slice(0, 2).map(t => `
+          <div class="early-tweet">
+            <div class="early-tweet-time">${t.timestamp}</div>
+            <div class="early-tweet-text">${t.text}</div>
+            <a href="${t.url}" target="_blank" rel="noopener" class="early-tweet-link">看原推 →</a>
+          </div>
+        `).join('')}
+      </div>
+      ` : ''}
+
+      <!-- 10. 4 按钮 (大白话) -->
+      <div class="early-actions">
+        <a class="early-btn primary" href="${links.latest_tweet || links.twitter || '#'}" target="_blank" rel="noopener" title="看官方最新推文">📡 看官方推文</a>
+        <a class="early-btn" href="${tw}" target="_blank" rel="noopener" title="分享给撸毛人">𝕏 一键发推</a>
+        <a class="early-btn" href="${links.twitter || '#'}" target="_blank" rel="noopener" title="关注项目方">🔔 关注</a>
+        <a class="early-btn" href="${links.website || links.discord || links.rgb_protocol || links.tether_announce || '#'}" target="_blank" rel="noopener" title="看官网">🌐 官网</a>
       </div>
     </article>
   `;
@@ -387,7 +435,7 @@ async function loadStats() {
     ['inscription', 'data/inscription.json', 'stat-inscription'],
     ['launchpad', 'data/launchpad.json', 'stat-launchpad'],
     ['airdrop', 'data/airdrop.json', 'stat-airdrop'],
-    ['kol', 'data/kol.json', 'stat-kol'],
+    ['early', 'data/early.json', 'stat-early'],
   ];
   for (const [key, file, el] of sections) {
     try {
@@ -434,22 +482,22 @@ const FilterState = {
 
 function setupSearchAndFilters() {
   // KOL 搜索 + 过滤
-  const kolSearch = document.getElementById('kol-search');
-  const kolFilters = document.getElementById('kol-filters');
-  if (kolSearch) {
+  const earlySearch = document.getElementById('early-search');
+  const earlyFilters = document.getElementById('early-filters');
+  if (earlySearch) {
     kolSearch.addEventListener('input', (e) => {
-      FilterState.kol.search = e.target.value.toLowerCase();
-      applyFilters('kol');
+      FilterState.early.search = e.target.value.toLowerCase();
+      applyFilters('early');
     });
   }
-  if (kolFilters) {
+  if (earlyFilters) {
     kolFilters.addEventListener('click', (e) => {
       const btn = e.target.closest('.filter-chip');
       if (!btn) return;
-      kolFilters.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      earlyFilters.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
-      FilterState.kol.cat = btn.dataset.filter;
-      applyFilters('kol');
+      FilterState.early.cat = btn.dataset.filter;
+      applyFilters('early');
     });
   }
 
@@ -460,7 +508,7 @@ function setupSearchAndFilters() {
   });
 
   // NFT 过滤
-  setupFilterChips('nft-filters', (cat) => {
+  setupFilterChips('nft-filters', (cat) => {\n    FilterState.nft.cat = cat;\n    applyFilters('nft');\n  });\n  // Early 早期项目过滤\n  setupFilterChips('early-filters', (cat) => {\n    FilterState.early.cat = cat;\n    applyFilters('early');\n  });
     FilterState.nft.cat = cat;
     applyFilters('nft');
   });
@@ -480,10 +528,10 @@ function setupFilterChips(containerId, onChange) {
 
 function applyFilters(section) {
   const state = FilterState[section];
-  const cards = document.querySelectorAll(`#${section}-list > .${section === 'kol' ? 'kol' : section.replace(/s$/, '')}-card, #${section}-list > article`);
+  const cards = document.querySelectorAll(`#${section}-list > .${section === 'early' ? 'kol' : section.replace(/s$/, '')}-card, #${section}-list > article`);
   cards.forEach(card => {
     let show = true;
-    if (section === 'kol') {
+    if (section === 'early') {
       // 搜索: 名字 + 推文内容
       if (state.search) {
         const text = card.textContent.toLowerCase();
@@ -533,7 +581,7 @@ const _origLoadAndRender = loadAndRender;
 loadAndRender = async function(sectionId, file, updatedId, renderFn) {
   await _origLoadAndRender(sectionId, file, updatedId, renderFn);
   // 渲染后注入 data 属性
-  if (sectionId === 'kol-list') {
+  if (sectionId === 'early-list') {
     document.querySelectorAll('#kol-list > article').forEach((card, i) => {
       const item = window._lastKOLData && window._lastKOLData[i];
       if (item) {
@@ -573,7 +621,7 @@ loadAndRender = async function(sectionId, file, updatedId, renderFn, isList) {
       items = data.items || [];
     }
   } catch (e) {}
-  if (sectionId === 'kol-list') window._lastKOLData = items;
+  if (sectionId === 'early-list') window._lastKOLData = items;
   if (sectionId === 'meme-list') window._lastMemeData = items;
   if (sectionId === 'nft-list') window._lastNFTData = items;
   await _origLoadAndRender2(sectionId, file, updatedId, renderFn, isList);

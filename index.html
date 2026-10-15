@@ -34,7 +34,7 @@
         <span class="brand-tag">.art</span>
       </a>
       <nav class="nav">
-        <a href="#kol">🐦 KOL</a>
+        <a href="#early">🆕 早期项目</a>
         <a href="#meme">🔥 Meme</a>
         <a href="#nft">🎨 NFT</a>
         <a href="#inscription">📜 铭文</a>
@@ -67,47 +67,43 @@
 
   <!-- 实时统计 -->
   <section class="container">
-    <div class="stats-bar" id="stats-bar">
-      <div class="stat-card"><div class="num" id="stat-meme">—</div><div class="label" data-i18n="stat_meme">Meme 速递</div></div>
-      <div class="stat-card"><div class="num" id="stat-nft">—</div><div class="label" data-i18n="stat_nft">NFT Mint</div></div>
-      <div class="stat-card"><div class="num" id="stat-inscription">—</div><div class="label" data-i18n="stat_insc">铭文</div></div>
-      <div class="stat-card"><div class="num" id="stat-launchpad">—</div><div class="label" data-i18n="stat_lp">Launchpad</div></div>
-      <div class="stat-card"><div class="num" id="stat-airdrop">—</div><div class="label" data-i18n="stat_air">空投</div></div>
-      <div class="stat-card"><div class="num" id="stat-kol">—</div><div class="label" data-i18n="stat_kol">KOL 推文</div></div>
-    </div>
+  <div class="stats-bar" id="stats-bar">
+    <div class="stat-card"><div class="num" id="stat-early">—</div><div class="label" data-i18n="stat_early">早期项目</div></div>
+    <div class="stat-card"><div class="num" id="stat-meme">—</div><div class="label" data-i18n="stat_meme">Meme 速递</div></div>
+    <div class="stat-card"><div class="num" id="stat-nft">—</div><div class="label" data-i18n="stat_nft">NFT Mint</div></div>
+    <div class="stat-card"><div class="num" id="stat-inscription">—</div><div class="label" data-i18n="stat_insc">铭文</div></div>
+    <div class="stat-card"><div class="num" id="stat-launchpad">—</div><div class="label" data-i18n="stat_lp">Launchpad</div></div>
+    <div class="stat-card"><div class="num" id="stat-airdrop">—</div><div class="label" data-i18n="stat_air">空投</div></div>
+  </div>
   </section>
 
   <main class="container">
 
-    <!-- 🐦 KOL Radar (主推) -->
-    <section id="kol" class="section">
-      <div class="kol-notice" style="background: rgba(29, 161, 242, 0.08); border: 1px solid rgba(29, 161, 242, 0.3); border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; font-size: 13px; color: var(--text-dim);">
-        <strong style="color:#1DA1F2;">ℹ️ 关于 KOL 板块:</strong> 21 个真实大V (粉丝数 2024 公开数据), 简介真实, 无编造推文. 真实最新推文请点每张卡片的 "𝕏 推文" 或 "𝕏 主页" 按钮. 实时抓取需付费 API 或自维护 cookie 池.
-      </div>
+    <!-- 🆕 早期项目推荐 (主推) -->
+    <section id="early" class="section">
       <div class="section-head">
         <div class="section-title-group">
-          <span class="section-icon-svg" data-icon="kol"></span>
-          <h2 data-i18n="sec_kol">🐦 KOL Radar</h2>
+          <span class="section-icon-svg" data-icon="early"></span>
+          <h2 data-i18n="sec_early">🆕 早期项目推荐</h2>
         </div>
-        <p class="section-sub" data-i18n="sec_kol_sub">21 个推特大V · 公开资料 · 无编造推文</p>
-        <span class="section-updated" id="kol-updated">—</span>
+        <p class="section-sub" data-i18n="sec_early_sub">精选 1-2 周内有动作的超早期项目 · 含项目背景/团队/融资/AI 分析/撸毛路径</p>
+        <span class="section-updated" id="early-updated">—</span>
       </div>
       <div class="section-toolbar">
-        <input type="text" id="kol-search" class="search-input" placeholder="🔍 搜索 KOL 名字 / 推文内容..." aria-label="搜索 KOL" />
-        <div class="filter-chips" id="kol-filters">
+        <input type="text" id="early-search" class="search-input" placeholder="🔍 搜索项目名 / 简介 / 标签..." aria-label="搜索项目" />
+        <div class="filter-chips" id="early-filters">
           <button class="filter-chip active" data-filter="all">全部</button>
-          <button class="filter-chip" data-filter="meme">Meme</button>
           <button class="filter-chip" data-filter="nft">NFT</button>
-          <button class="filter-chip" data-filter="btc">铭文</button>
+          <button class="filter-chip" data-filter="meme">Meme</button>
+          <button class="filter-chip" data-filter="btc">BTC 生态</button>
           <button class="filter-chip" data-filter="defi">DeFi</button>
-          <button class="filter-chip" data-filter="launchpad">Launchpad</button>
-          <button class="filter-chip" data-filter="news">新闻</button>
+          <button class="filter-chip" data-filter="exchange">交易所</button>
         </div>
       </div>
-      <div id="kol-list" class="kol-grid"></div>
+      <div id="early-list" class="early-grid"></div>
     </section>
 
-    <!-- 🔥 Meme 速递 -->
+    <!-- 🔥 Meme 速递 -->    <!-- 🔥 Meme 速递 -->
     <section id="meme" class="section">
       <div class="section-head">
         <div class="section-title-group">

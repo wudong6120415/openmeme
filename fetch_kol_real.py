@@ -276,7 +276,7 @@ async def main():
     }
 
     # 写入文件
-    out_path = os.path.join(os.path.dirname(__file__), "data", "kol.json")
+    out_path = os.path.join(os.path.dirname(__file__), "data", "early.json")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
