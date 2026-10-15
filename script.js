@@ -47,10 +47,16 @@ function kolCardHTML(item) {
 
   // 真实有效的链接:
   const kolProfileUrl = `https://x.com/${k.handle || ''}`;
-  const searchUrl = `https://x.com/search?q=${encodeURIComponent('from:' + (k.handle || '') + ' ' + (t.search_keyword || ''))}`;
 
-  // 推文 (含项目信息)
-  const tw = tweetUrl(`${a.verdict || '看看'} · @${k.handle}\n\n${item.name} (${item.ticker})\n\n${item.story}\n\n撸毛: ${part.method}\n\n@${k.handle} 推荐\n\nvia @${X_HANDLE} · ${SITE_URL}`);
+  // 推文 (大白话, 亲切, 不 AI) - 关键修复: 不用 AI 话术
+  const tweetBrief = (item.story || '').split('\n\n')[1]?.replace('最新推文 (', '').replace('):', ':').slice(0, 150) || '看官方推文';
+  const tw = tweetUrl(
+    `🆕 撸毛情报 · ${item.name} ($${item.ticker})\n\n` +
+    `看到 @${k.handle} 推这个, 撸毛人可以关注 👀\n\n` +
+    `${tweetBrief}\n\n` +
+    `📌 详情看这里 👉 https://openmeme.art/#kol\n\n` +
+    `#撸毛 #新项目 @${X_HANDLE}`
+  );
 
   // 阶段徽章
   const stageColor = {
@@ -60,17 +66,15 @@ function kolCardHTML(item) {
     'task_active': 'green',
     'just_launched': 'yellow',
     'mainnet_live': 'red',
+    'kol_mentioned': 'blue',
   }[item.stage] || 'yellow';
 
   // 链标签
   const chainLabel = (item.chain || 'multi').toUpperCase();
 
   // 撸毛方式
-  const methodText = part.method || '—';
+  const methodText = part.method || '关注官方推特, 等进一步消息';
   const timeText = part.time_required || (item.mint_time ? new Date(item.mint_time).toLocaleString('zh-CN', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) : '近期');
-
-  // 风险图标
-  const riskIcon = a.verdict_color === 'red' ? '🔴' : a.verdict_color === 'yellow' ? '🟡' : a.verdict_color === 'blue' ? '🔵' : '🟢';
 
   return `
     <article class="kol-card" data-cat="${item.category || k.cat || 'meme'}">
@@ -96,13 +100,13 @@ function kolCardHTML(item) {
         <div class="kol-cons">${(a.cons || []).map(c => `<div>${c}</div>`).join('')}</div>
       </div>` : ''}
       <div class="kol-source" style="font-size:11px; color:var(--text-dim); margin-top:8px; padding-top:8px; border-top:1px solid var(--border);">
-        🤖 AI 评分: <strong style="color:var(--gold);">${a.score || '—'}/100</strong> · 来源: <a href="${links.mint_url || links.quest_url || links.ido_url || kolProfileUrl}" target="_blank" rel="noopener" style="color:var(--blue);">@${k.handle || 'unknown'}</a>
+        📡 来源: <a href="${links.kol_tweet || kolProfileUrl}" target="_blank" rel="noopener" style="color:var(--blue);">@${k.handle || 'unknown'} 推文</a> · AI 评分: <strong style="color:var(--gold);">${a.score || '—'}/100</strong>
       </div>
       <div class="kol-actions">
-        <a class="kol-btn primary" href="${links.mint_url || links.quest_url || links.ido_url || '#'}" target="_blank" rel="noopener">🎯 立即参与</a>
-        <a class="kol-btn" href="${tw}" target="_blank" rel="noopener">𝕏 发推</a>
-        <a class="kol-btn" href="${links.twitter || kolProfileUrl}" target="_blank" rel="noopener">𝕏 关注</a>
-        <a class="kol-btn" href="${links.website || '#'}" target="_blank" rel="noopener">🌐 官网</a>
+        <a class="kol-btn primary" href="${links.kol_tweet || kolProfileUrl}" target="_blank" rel="noopener" title="看官方最新推文">📡 看官方推文</a>
+        <a class="kol-btn" href="${tw}" target="_blank" rel="noopener" title="分享给撸毛人">𝕏 一键发推</a>
+        <a class="kol-btn" href="${links.twitter || kolProfileUrl}" target="_blank" rel="noopener" title="关注项目方">🔔 关注</a>
+        <a class="kol-btn" href="${kolProfileUrl}" target="_blank" rel="noopener" title="看更多推文">📰 看主页</a>
       </div>
     </article>
   `;
