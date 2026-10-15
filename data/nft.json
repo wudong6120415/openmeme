@@ -35,7 +35,8 @@
         "公开 mint"
       ],
       "ai_summary": "Pudgy 蓝筹, 蓝筹续作, 价值有支撑。已 mint 45%, 估计 1-2 天售罄。",
-      "mint_url_note": "请访问项目官网找最新 mint 页面"
+      "mint_url_note": "请访问项目官网找最新 mint 页面",
+      "mint_url": "https://x.com/pudgypenguins"
     },
     {
       "id": "azuki_elem",
@@ -70,7 +71,8 @@
         "公开 mint 抢"
       ],
       "ai_summary": "Azuki 续作, 热度高但 WL 已发完, 公开 mint 估计 30 秒售罄。",
-      "mint_url_note": "请访问项目官网找最新 mint 页面"
+      "mint_url_note": "请访问项目官网找最新 mint 页面",
+      "mint_url": "https://x.com/azuki"
     },
     {
       "id": "free_mint_penguin",
@@ -105,7 +107,8 @@
         "无 WL"
       ],
       "ai_summary": "完全免费 mint, 只需要几毛 gas, 撸毛友好。已 mint 24%, 估计 2 天结束。",
-      "mint_url_note": "请访问项目官网找最新 mint 页面"
+      "mint_url_note": "请访问项目官网找最新 mint 页面",
+      "mint_url": "https://x.com/freepenguin"
     },
     {
       "id": "doodles_3",
@@ -140,7 +143,8 @@
         "高价"
       ],
       "ai_summary": "Doodles 蓝筹续作, 老粉福利。价格高 (0.12 ETH), 不适合撸毛党。",
-      "mint_url_note": "请访问项目官网找最新 mint 页面"
+      "mint_url_note": "请访问项目官网找最新 mint 页面",
+      "mint_url": "https://x.com/doodles"
     },
     {
       "id": "memeland_pot",
@@ -175,7 +179,8 @@
         "Memeland 团队"
       ],
       "ai_summary": "Memeland (9GAG 旗下) 出品, 蓝筹血统。已 mint 67%, 还剩 1-2 天。",
-      "mint_url_note": "请访问项目官网找最新 mint 页面"
+      "mint_url_note": "请访问项目官网找最新 mint 页面",
+      "mint_url": "https://x.com/memeland"
     }
   ]
 }

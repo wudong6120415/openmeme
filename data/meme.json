@@ -17,13 +17,18 @@
       "holders": 1240,
       "story": "AI + 狗梗, Solana Pump.fun 3h 前首发",
       "source_kol": "CryptoKOL",
-      "source_tweet": "https://x.com/CryptoKOL/status/123",
-      "dexUrl": "https://dexscreener.com/solana/dogeai",
+      "source_tweet": "https://x.com/search?q=from%3ACryptoKOL+meme+launch",
+      "dexUrl": "https://pump.fun/",
       "risk_level": "extreme",
-      "risk_tags": ["新币 3h", "高风险", "可能归零"],
+      "risk_tags": [
+        "新币 3h",
+        "高风险",
+        "可能归零"
+      ],
       "ai_score": 68,
       "ai_verdict": "可参与",
-      "ai_verdict_color": "green"
+      "ai_verdict_color": "green",
+      "dexUrl_note": "Solana 新币基本都从 pump.fun 首发"
     },
     {
       "id": "pepev2",
@@ -41,12 +46,17 @@
       "story": "原版 PEPE 仿盘, 推特大V 多次推荐",
       "source_kol": "blknoiz06",
       "source_tweet": "https://x.com/blknoiz06/status/456",
-      "dexUrl": "https://dexscreener.com/ethereum/pepe2",
+      "dexUrl": "https://app.uniswap.org/explore/tokens/ethereum",
       "risk_level": "high",
-      "risk_tags": ["仿盘", "24h +84%", "新币"],
+      "risk_tags": [
+        "仿盘",
+        "24h +84%",
+        "新币"
+      ],
       "ai_score": 62,
       "ai_verdict": "谨慎关注",
-      "ai_verdict_color": "blue"
+      "ai_verdict_color": "blue",
+      "dexUrl_note": "替换自 DexScreener/GMGN (反爬), ethereum 用户用 https://app.uniswap.org/explore/tokens/ethereum"
     },
     {
       "id": "trumpai",
@@ -64,12 +74,17 @@
       "story": "Trump + AI 梗, Base 链新上线, KOL @CryptoGems 推荐",
       "source_kol": "CryptoGems",
       "source_tweet": "https://x.com/CryptoGems/status/789",
-      "dexUrl": "https://dexscreener.com/base/trumpai",
+      "dexUrl": "https://app.uniswap.org/explore/tokens/base",
       "risk_level": "high",
-      "risk_tags": ["新币 7h", "KOL 推荐", "高波动"],
+      "risk_tags": [
+        "新币 7h",
+        "KOL 推荐",
+        "高波动"
+      ],
       "ai_score": 65,
       "ai_verdict": "谨慎关注",
-      "ai_verdict_color": "blue"
+      "ai_verdict_color": "blue",
+      "dexUrl_note": "替换自 DexScreener/GMGN (反爬), base 用户用 https://app.uniswap.org/explore/tokens/base"
     },
     {
       "id": "wojakinu",
@@ -86,13 +101,18 @@
       "holders": 5600,
       "story": "Wojak 梗 + 柴犬, BSC 4.meme 48h 首发, 持续上涨",
       "source_kol": "blknoiz06",
-      "source_tweet": "https://x.com/blknoiz06/status/111",
-      "dexUrl": "https://dexscreener.com/bsc/wojakinu",
+      "source_tweet": "https://x.com/search?q=from%3Ablknoiz06+meme+launch",
+      "dexUrl": "https://app.uniswap.org/explore/tokens/bsc",
       "risk_level": "high",
-      "risk_tags": ["48h 币", "BSC meme", "高量"],
+      "risk_tags": [
+        "48h 币",
+        "BSC meme",
+        "高量"
+      ],
       "ai_score": 60,
       "ai_verdict": "观望",
-      "ai_verdict_color": "yellow"
+      "ai_verdict_color": "yellow",
+      "dexUrl_note": "替换自 DexScreener/GMGN (反爬), bsc 用户用 https://app.uniswap.org/explore/tokens/bsc"
     },
     {
       "id": "shib2",
@@ -110,12 +130,17 @@
       "story": "Shib + 猫, ETH 新币 5h, 高波动",
       "source_kol": "CryptoGems",
       "source_tweet": "https://x.com/CryptoGems/status/222",
-      "dexUrl": "https://dexscreener.com/ethereum/shibat",
+      "dexUrl": "https://app.uniswap.org/explore/tokens/ethereum",
       "risk_level": "extreme",
-      "risk_tags": ["5h 新币", "极高波动", "小盘"],
+      "risk_tags": [
+        "5h 新币",
+        "极高波动",
+        "小盘"
+      ],
       "ai_score": 45,
       "ai_verdict": "观望",
-      "ai_verdict_color": "yellow"
+      "ai_verdict_color": "yellow",
+      "dexUrl_note": "替换自 DexScreener/GMGN (反爬), ethereum 用户用 https://app.uniswap.org/explore/tokens/ethereum"
     },
     {
       "id": "elonai",
@@ -133,12 +158,17 @@
       "story": "Elon + AI 梗, Solana 10h 前, KOL 推荐",
       "source_kol": "CryptoKOL",
       "source_tweet": "https://x.com/CryptoKOL/status/333",
-      "dexUrl": "https://dexscreener.com/solana/elonai",
+      "dexUrl": "https://pump.fun/",
       "risk_level": "high",
-      "risk_tags": ["10h 币", "梗币", "KOL"],
+      "risk_tags": [
+        "10h 币",
+        "梗币",
+        "KOL"
+      ],
       "ai_score": 58,
       "ai_verdict": "观望",
-      "ai_verdict_color": "yellow"
+      "ai_verdict_color": "yellow",
+      "dexUrl_note": "Solana 新币基本都从 pump.fun 首发"
     },
     {
       "id": "catoshi",
@@ -156,12 +186,17 @@
       "story": "Cat + Satoshi, 蓝筹 meme 候选, 3 天观察期",
       "source_kol": "blknoiz06",
       "source_tweet": "https://x.com/blknoiz06/status/444",
-      "dexUrl": "https://dexscreener.com/solana/catoshi",
+      "dexUrl": "https://pump.fun/",
       "risk_level": "medium",
-      "risk_tags": ["3 天币", "蓝筹 meme", "高流动性"],
+      "risk_tags": [
+        "3 天币",
+        "蓝筹 meme",
+        "高流动性"
+      ],
       "ai_score": 72,
       "ai_verdict": "可参与",
-      "ai_verdict_color": "green"
+      "ai_verdict_color": "green",
+      "dexUrl_note": "Solana 新币基本都从 pump.fun 首发"
     }
   ]
 }

@@ -16,7 +16,6 @@
       "total_raise": "5,000,000 USDT",
       "per_user": "100-1000 USDT",
       "unlock": "25% TGE, 6 月线性",
-      "whitepaper": "https://sapien.ai/whitepaper.pdf",
       "project_twitter": "https://x.com/sapien_ai",
       "project_website": "https://sapien.ai",
       "category": "AI",
@@ -46,7 +45,6 @@
       "total_raise": "2,000,000 USDT",
       "per_user": "50-500 USDT",
       "unlock": "20% TGE, 9 月线性",
-      "whitepaper": "https://strip.fi/whitepaper.pdf",
       "project_twitter": "https://x.com/strip_fi",
       "project_website": "https://strip.fi",
       "category": "DeFi",
@@ -60,7 +58,7 @@
         "中等额度"
       ],
       "ai_summary": "OKX Jumpstart, Solana 链 DeFi 协议, 申购门槛低 (50 USDT), 适合小额撸毛。",
-      "ido_url": "https://www.okx.com/jumpstart"
+      "ido_url": "https://www.okx.com/"
     },
     {
       "id": "monad_bybit",
@@ -76,7 +74,6 @@
       "total_raise": "8,000,000 USDT",
       "per_user": "200-2000 USDT",
       "unlock": "15% TGE, 12 月线性",
-      "whitepaper": "https://monad.xyz/whitepaper.pdf",
       "project_twitter": "https://x.com/monad_xyz",
       "project_website": "https://monad.xyz",
       "category": "L1",

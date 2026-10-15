@@ -25,7 +25,11 @@
       "ai_score": 65,
       "ai_verdict": "谨慎关注",
       "ai_verdict_color": "blue",
-      "risk_tags": ["仿盘", "高风险", "BTC 生态"],
+      "risk_tags": [
+        "仿盘",
+        "高风险",
+        "BTC 生态"
+      ],
       "ai_summary": "Runestone 仿盘, 节奏快 (73% 已 mint), 仿盘以娱乐为主, 投资价值低。"
     },
     {
@@ -41,7 +45,7 @@
       "minted": 100000000,
       "mint_progress": 100,
       "current_gas": 12,
-      "floor_price": 0.00003,
+      "floor_price": 3e-05,
       "floor_usd": 2,
       "discord": 8500,
       "twitter": "https://x.com/SATS_brc",
@@ -51,7 +55,11 @@
       "ai_score": 78,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["已 mint 完", "BRC-20 龙头", "高认知"],
+      "risk_tags": [
+        "已 mint 完",
+        "BRC-20 龙头",
+        "高认知"
+      ],
       "ai_summary": "BRC-20 龙头, 已 mint 完 100%, 地板价 2 美元, 适合小额配置。"
     },
     {
@@ -70,14 +78,18 @@
       "floor_price": null,
       "floor_usd": null,
       "discord": 3500,
-      "twitter": "https://x.com/ordstr_xyz",
+      "twitter": "https://x.com/search?q=BRC-20+ORDSTR",
       "is_bluechip": false,
       "is_verified": false,
       "source_kol": "OrdinalHub",
       "ai_score": 45,
       "ai_verdict": "观望",
       "ai_verdict_color": "yellow",
-      "risk_tags": ["新铭文", "未验证", "小盘"],
+      "risk_tags": [
+        "新铭文",
+        "未验证",
+        "小盘"
+      ],
       "ai_summary": "新铭文, mint 进度慢 (16%), 社区小, 风险大, 不建议撸。"
     },
     {
@@ -93,7 +105,7 @@
       "minted": 88000000,
       "mint_progress": 88,
       "current_gas": 18,
-      "floor_price": 0.00008,
+      "floor_price": 8e-05,
       "floor_usd": 5,
       "discord": 24000,
       "twitter": "https://x.com/pepe_runes",
@@ -103,7 +115,11 @@
       "ai_score": 72,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["Pepe 概念", "88% minted", "高社区"],
+      "risk_tags": [
+        "Pepe 概念",
+        "88% minted",
+        "高社区"
+      ],
       "ai_summary": "Pepe 符文, 88% 已 mint, 社区大 24K, 是符文板块最热的。"
     }
   ]
