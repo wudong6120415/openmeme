@@ -9,7 +9,7 @@
       "id": "fungolabs",
       "name": "Fungo Labs",
       "ticker": "FUNGO",
-      "logo": "https://pbs.twimg.com/profile_images/2108904570000000000/funder_logo.png",
+      "logo": "https://pbs.twimg.com/profile_images/2106809840211226624/hRAyV38A_400x400.jpg",
       "chain": "ethereum",
       "category": "nft",
       "stage": "early",
@@ -89,7 +89,7 @@
       "id": "loanmeme",
       "name": "Loan Meme",
       "ticker": "LOAN",
-      "logo": "https://pbs.twimg.com/profile_images/2107866700000000000/loan_meme.png",
+      "logo": "https://pbs.twimg.com/profile_images/2098404226124890112/mGPF8KTg_400x400.jpg",
       "chain": "ethereum",
       "category": "meme",
       "stage": "just_launched",
@@ -163,32 +163,32 @@
     },
     {
       "id": "rgbhorse",
-      "name": "RGB Horse",
+      "name": "DarkHorse (RGBHorse)",
       "ticker": "RGBH",
-      "logo": "https://pbs.twimg.com/profile_images/2109649700000000000/rgb_horse.png",
+      "logo": "https://pbs.twimg.com/profile_images/2085947255379685376/4nm6My6p_400x400.jpg",
       "chain": "bitcoin",
       "category": "btc",
       "stage": "expansion",
       "stage_label": "🟢 扩展期 (新增 6 个 Genesis Partner)",
-      "one_liner": "Bitcoin 上的 RGB 资产 launchpad + 交易平台, 帮 RGB 资产真正流通起来",
-      "background": "RGB 协议让 Bitcoin 也能发资产, 但一直缺个用户用的平台. DarkHorse (@RGBHorse) 做了 3 件事: 1) 帮项目方发 RGB 资产 (launchpad) 2) 用户交易/兑换 RGB 资产 3) 自托管钱包. 简单说就是 RGB 生态的 \"Uniswap + Pump.fun + MetaMask\" 组合. 现在还早, 距 Q4 公开 mint 还有几个月.",
-      "team": "DarkHorse 团队 (推特 @RGBHorse), 与 RGB Protocol 核心开发者协作",
+      "one_liner": "Bitcoin 上的 RGB 资产 launchpad + 交易平台, 让 RGB 资产真正流通起来",
+      "background": "RGB 协议让 Bitcoin 能发资产, 但一直缺用户能用的平台. DarkHorse (@RGBHorse) 做了 3 件事: 1) 项目方 launchpad (帮发资产) 2) 用户交易/兑换 RGB 资产 3) 自托管钱包. 简单说就是 RGB 生态的 Uniswap + Pump.fun + MetaMask. 29K 粉, 已 6 个 Genesis Partner.",
+      "team": "DarkHorse 团队 (推特 @RGBHorse, 2014 年老号), 与 RGB Protocol 核心开发者协作",
       "funding": "未公开融资, RGB Protocol 战略合作",
       "community": {
-        "twitter": "@RGBHorse",
-        "twitter_followers": "约 12K",
+        "twitter": "@RGBHorse (29K 粉, 2014 老号)",
+        "telegram": "t.me/RGB_Horse",
         "partners": [
           "@RK_Bitcoin",
-          "其他 5 个 Genesis Partner (具体见推文)"
+          "其他 5 个 Genesis Partner (具体看推文)"
         ]
       },
       "timeline": {
         "now": "🟢 6 个 Genesis Partner 公布 (扩展期)",
         "next": "Q4 2026 公开 mint (预计)",
-        "TGE": "未公布"
+        "TGE_token": "未公布"
       },
       "ai_analysis": {
-        "summary": "RGB 协议是 Bitcoin 资产未来方向, DarkHorse 是 RGB 生态第一个用户级平台, 想象空间大但目前还早. 适合 BTC 信仰者早期布局, 不建议大资金.",
+        "summary": "RGB 协议是 Bitcoin 资产未来方向, DarkHorse 是 RGB 生态第一个用户级 launchpad+swap+wallet, 想象空间大但目前还早 (29K 粉, 215 推文). 适合 BTC 信仰者早期布局, 不建议大资金.",
         "score": 60,
         "verdict": "观望",
         "verdict_color": "yellow",
@@ -212,9 +212,10 @@
         "4. 等 Q4 mint 公告, 准备好 BTC gas"
       ],
       "official_links": {
-        "website": "https://x.com/RGBHorse",
+        "website": "https://dhorse.fun",
         "twitter": "https://x.com/RGBHorse",
-        "latest_tweet": "https://x.com/RGBHorse/status/2106768539105505447"
+        "latest_tweet": "https://x.com/RGBHorse/status/2106768539105505447",
+        "telegram": "https://t.me/RGB_Horse"
       },
       "source_tweets": [
         {
@@ -244,7 +245,7 @@
       "id": "utexocom",
       "name": "UTEXO",
       "ticker": "UTX",
-      "logo": "https://pbs.twimg.com/profile_images/2105967300000000000/utexo.png",
+      "logo": "https://pbs.twimg.com/profile_images/2029863649054162944/w7ft-NAg_400x400.jpg",
       "chain": "bitcoin",
       "category": "exchange",
       "stage": "tge_soon",
