@@ -42,18 +42,27 @@ function kolCardHTML(item) {
   const t = item.tweet || {};
   const a = item.ai || {};
   const initial = (k.name || k.handle || '?')[0].toUpperCase();
-  const tw = tweetUrl(`${a.verdict || '看看'} · ${k.handle} 推的\n\n${t.text}\n\n${(a.pros || []).join(' · ')}\n\n${(a.cons || []).join(' · ')}`);
+
+  // 真实有效的链接:
+  // - KOL 主页: https://x.com/{handle} (用户点这个, 看到 KOL 所有推文)
+  // - KOL 搜索: https://x.com/search?q=from%3A{handle}+{keyword}
+  const kolProfileUrl = `https://x.com/${k.handle || ''}`;
+  const searchUrl = `https://x.com/search?q=${encodeURIComponent('from:' + (k.handle || '') + ' ' + (t.search_keyword || ''))}`;
+
+  const tw = tweetUrl(`${a.verdict || '看看'} · @${k.handle}\n\n${k.bio || ''}\n\n关注理由: ${(a.pros || []).join(' · ')}`);
+
   return `
     <article class="kol-card">
       <div class="kol-header">
         <div class="kol-avatar">${initial}</div>
         <div class="kol-meta">
-          <div class="kol-name">${k.name || k.handle}</div>
-          <div class="kol-handle">@${k.handle} ${k.official ? '<span style="color:#1DA1F2;">✓</span>' : ''}</div>
+          <div class="kol-name">${k.name || k.handle}${k.verified ? ' <span style="color:#1DA1F2;">✓</span>' : ''}${k.official ? ' <span style="color:#f0b90b; font-size:10px; padding:1px 5px; border:1px solid #f0b90b; border-radius:3px; margin-left:4px;">官方</span>' : ''}</div>
+          <div class="kol-handle">@${k.handle}</div>
           <div class="kol-followers">${fmtNum(k.followers)} 粉丝 · ${k.cat || 'meme'}</div>
         </div>
         <div class="kol-verdict ${a.verdict_color || 'yellow'}">${a.score || '—'} · ${a.verdict || '—'}</div>
       </div>
+      <div class="kol-bio" style="font-size:13px; color:var(--text-dim); margin-bottom:10px; line-height:1.5;">${k.bio || ''}</div>
       <div class="kol-tweet">${t.text || ''}</div>
       ${(a.pros && a.pros.length) || (a.cons && a.cons.length) ? `
       <div class="kol-ai">
@@ -62,7 +71,8 @@ function kolCardHTML(item) {
       </div>` : ''}
       <div class="kol-actions">
         <a class="kol-btn primary" href="${tw}" target="_blank" rel="noopener">𝕏 一键发推</a>
-        <a class="kol-btn" href="${t.url || '#'}" target="_blank" rel="noopener">𝕏 原文</a>
+        <a class="kol-btn" href="${kolProfileUrl}" target="_blank" rel="noopener">𝕏 主页</a>
+        <a class="kol-btn" href="${searchUrl}" target="_blank" rel="noopener">𝕏 推文</a>
       </div>
     </article>
   `;

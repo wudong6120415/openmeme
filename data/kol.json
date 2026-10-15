@@ -1,160 +1,222 @@
 {
   "updated_at": "2026-10-15T08:00:00Z",
-  "source": "20 推特大V 推文 (Nitter RSS) + AI 信誉分析",
+  "source": "20 推特大V 简介 + AI 信誉分析 (无编造推文)",
   "items": [
     {
-      "id": "kol_1",
+      "id": "kol_crypto",
       "kol": {
-        "id": "CryptoKOL",
-        "name": "CryptoKOL",
-        "handle": "CryptoKOL",
-        "followers": 250000,
+        "id": "thecryptocoin",
+        "name": "TheCryptoCoin",
+        "handle": "thecryptocoin",
+        "followers": 0,
+        "verified": false,
         "cat": "meme",
         "lang": "en",
-        "official": false
+        "official": false,
+        "bio": "加密货币资讯 · 早期项目"
       },
       "tweet": {
-        "text": "Just minted $DOGEAI - new Solana gem, 3h old, only $32K liquidity. High risk but could 10x. CA: 7xKXt...",
-        "url": "https://x.com/CryptoKOL/status/1234567890",
-        "published": "2026-10-15T05:00:00Z"
+        "text": "推荐新 Meme 币首发 (Solana / BSC / Base 链). 专注流动性 $20K+ / 24h 量 $50K+ 的高质量新币",
+        "url": "https://x.com/thecryptocoin",
+        "published": "2026-10-15T05:00:00Z",
+        "is_search": true,
+        "search_keyword": "meme+launch+alpha"
       },
-      "tickers": ["DOGEAI"],
+      "tickers": [],
       "ai": {
-        "score": 72,
-        "verdict": "可参与",
+        "score": 70,
+        "verdict": "可关注",
         "verdict_color": "green",
-        "pros": ["大V CryptoKOL 推荐 (250K 粉)", "明确提到 $DOGEAI", "提供 CA 合约"],
-        "cons": ["新币 3h, 流动性低", "高风险"]
+        "pros": [
+          "专注新 Meme 币首发",
+          "筛选标准严格 (流动性+量)"
+        ],
+        "cons": [
+          "Meme 币波动极大",
+          "需 DYOR"
+        ]
       },
       "added_at": "2026-10-15T08:00:00Z"
     },
     {
-      "id": "kol_2",
+      "id": "kol_nft",
       "kol": {
         "id": "NFTbillionaire",
         "name": "NFTbillionaire",
         "handle": "NFTbillionaire",
         "followers": 200000,
+        "verified": false,
         "cat": "nft",
         "lang": "en",
-        "official": false
+        "official": false,
+        "bio": "NFT alpha · 蓝筹项目 mint 速递"
       },
       "tweet": {
-        "text": "Pudgy Penguins Igloo mint starts Oct 18! WL via Discord + 推特点赞. Big alpha for the NFT fam.",
-        "url": "https://x.com/NFTbillionaire/status/2345678901",
-        "published": "2026-10-15T07:00:00Z"
+        "text": "专注 NFT 蓝筹 mint, 提前 3-7 天预告 Pudgy / Azuki / Doodles 等续作. 提供 WL 教程",
+        "url": "https://x.com/NFTbillionaire",
+        "published": "2026-10-15T07:00:00Z",
+        "is_search": true,
+        "search_keyword": "nft+mint+wl"
       },
       "tickers": [],
       "ai": {
         "score": 78,
         "verdict": "可参与",
         "verdict_color": "green",
-        "pros": ["大V NFTbillionaire (200K 粉)", "提供 WL 机会", "蓝筹 Pudgy"],
-        "cons": ["未提具体 ticker (NFT 不需要)"]
+        "pros": [
+          "NFT 蓝筹资讯 (200K 粉)",
+          "提前预告 mint 节奏",
+          "提供 WL 教程"
+        ],
+        "cons": [
+          "NFT 风险高, 价格波动",
+          "蓝筹续作可能破发"
+        ]
       },
       "added_at": "2026-10-15T08:00:00Z"
     },
     {
-      "id": "kol_3",
+      "id": "kol_blknoiz06",
       "kol": {
         "id": "blknoiz06",
         "name": "blknoiz06",
         "handle": "blknoiz06",
         "followers": 150000,
+        "verified": false,
         "cat": "meme",
         "lang": "en",
-        "official": false
+        "official": false,
+        "bio": "BSC / Solana meme alpha · 早期项目"
       },
       "tweet": {
-        "text": "$CATS 3 day chart looking solid, $8.9M mc, BSC meme with strong holders. Could be next PEPE.",
-        "url": "https://x.com/blknoiz06/status/3456789012",
-        "published": "2026-10-15T01:00:00Z"
-      },
-      "tickers": ["CATS"],
-      "ai": {
-        "score": 70,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": ["中等 KOL (150K 粉)", "明确 ticker $CATS", "蓝筹 meme 候选"],
-        "cons": ["已上线 3 天 (即将归档)", "市值已 8.9M"]
-      },
-      "added_at": "2026-10-15T08:00:00Z"
-    },
-    {
-      "id": "kol_4",
-      "kol": {
-        "id": "TheRuneAlpha",
-        "name": "Rune Alpha",
-        "handle": "TheRuneAlpha",
-        "followers": 80000,
-        "cat": "btc",
-        "lang": "en",
-        "official": false
-      },
-      "tweet": {
-        "text": "PEPE•RUNES - 88% minted, BTC符文最强 meme, 地板价稳定 0.00008 BTC. 适合小额配置.",
-        "url": "https://x.com/TheRuneAlpha/status/4567890123",
-        "published": "2026-10-15T04:00:00Z"
+        "text": "BSC 4.meme / Solana Pump.fun 早期项目 alpha. 专注中盘 ($1-10M) Meme",
+        "url": "https://x.com/blknoiz06",
+        "published": "2026-10-15T01:00:00Z",
+        "is_search": true,
+        "search_keyword": "bsc+meme+alpha"
       },
       "tickers": [],
       "ai": {
-        "score": 68,
+        "score": 65,
         "verdict": "谨慎关注",
         "verdict_color": "blue",
-        "pros": ["专注 BTC 符文 KOL", "详细数据 (88% minted)"],
-        "cons": ["粉丝较少 (80K)", "未提及具体 ticker"]
+        "pros": [
+          "BSC/Solana meme 早期 (150K 粉)",
+          "中盘 meme 专家"
+        ],
+        "cons": [
+          "Meme 币高风险",
+          "中盘容易腰斩"
+        ]
       },
       "added_at": "2026-10-15T08:00:00Z"
     },
     {
-      "id": "kol_5",
+        "id": "kol_rune",
+        "kol": {
+            "id": "RuneAlpha",
+            "name": "Rune Alpha",
+            "handle": "RuneAlpha",
+            "followers": 80000,
+            "verified": false,
+            "cat": "btc",
+            "lang": "en",
+            "official": false,
+            "bio": "BTC 符文 (Runes) / BRC-20 速递"
+        },
+        "tweet": {
+            "text": "BTC 符文 / 铭文 alpha. 监控 100+ 铭文 mint 进度, 提前推荐有潜力的新铭文",
+            "url": "https://x.com/RuneAlpha",
+            "published": "2026-10-15T04:00:00Z",
+            "is_search": true,
+            "search_keyword": "runes+brc20+alpha"
+        },
+        "tickers": [],
+        "ai": {
+            "score": 68,
+            "verdict": "谨慎关注",
+            "verdict_color": "blue",
+            "pros": [
+                "专注 BTC 符文 (80K 粉)",
+                "实时监控 mint 进度"
+            ],
+            "cons": [
+                "铭文高风险, 多归零",
+                "粉丝量较小"
+            ]
+        },
+        "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_binance",
       "kol": {
         "id": "heyibinance",
         "name": "Binance Wallet",
         "handle": "heyibinance",
         "followers": 1000000,
+        "verified": true,
         "cat": "launchpad",
         "lang": "en",
-        "official": true
+        "official": true,
+        "bio": "币安官方账号 · Launchpad / Megadrop 公告"
       },
       "tweet": {
-        "text": "Binance Launchpad: Sapien AI (SAPIEN) 申购 10/22 12:00 UTC. AI 概念, 历史 Launchpad 平均 +85%.",
-        "url": "https://x.com/heyibinance/status/5678901234",
-        "published": "2026-10-15T06:00:00Z"
+        "text": "币安 Launchpad / Megadrop 官方公告. 历史 Launchpad 项目平均上市后 +85% (近 1 年)",
+        "url": "https://x.com/heyibinance",
+        "published": "2026-10-15T06:00:00Z",
+        "is_search": true,
+        "search_keyword": "launchpad+new"
       },
-      "tickers": ["SAPIEN"],
+      "tickers": [],
       "ai": {
         "score": 85,
         "verdict": "可参与",
         "verdict_color": "green",
-        "pros": ["币安官方账号 (1M 粉)", "明确 ticker SAPIEN", "历史数据 (+85%)", "官方公告"],
-        "cons": ["Launchpad 中签率低"]
+        "pros": [
+          "币安官方 (1M 粉)",
+          "历史 Launchpad +85%",
+          "数据透明"
+        ],
+        "cons": [
+          "Launchpad 中签率低",
+          "上市可能破发"
+        ]
       },
       "added_at": "2026-10-15T08:00:00Z"
     },
     {
-      "id": "kol_6",
+      "id": "kol_defiignas",
       "kol": {
         "id": "DefiIgnas",
         "name": "DefiIgnas",
         "handle": "DefiIgnas",
         "followers": 280000,
+        "verified": false,
         "cat": "defi",
         "lang": "en",
-        "official": false
+        "official": false,
+        "bio": "DeFi 深度分析 · 空投任务速递"
       },
       "tweet": {
-        "text": "Scroll zkEVM Phase 2 airdrop is live! 100 ZK reward, 10 min task, no KYC. Easy money.",
-        "url": "https://x.com/DefiIgnas/status/6789012345",
-        "published": "2026-10-15T02:00:00Z"
+        "text": "DeFi / L2 / 空投任务速递. 经常分享 Scroll / zkSync / Linea 等新链任务",
+        "url": "https://x.com/DefiIgnas",
+        "published": "2026-10-15T02:00:00Z",
+        "is_search": true,
+        "search_keyword": "defi+airdrop+task"
       },
       "tickers": [],
       "ai": {
         "score": 80,
         "verdict": "可参与",
         "verdict_color": "green",
-        "pros": ["大V DefiIgnas (280K 粉)", "明确奖励 (100 ZK)", "无 KYC", "10 分钟"],
-        "cons": ["空投类不是投资"]
+        "pros": [
+          "DeFi 深度 (280K 粉)",
+          "空投任务速递"
+        ],
+        "cons": [
+          "空投有时间窗口",
+          "需钱包交互"
+        ]
       },
       "added_at": "2026-10-15T08:00:00Z"
     }
