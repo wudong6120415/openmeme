@@ -1,465 +1,252 @@
 {
-  "updated_at": "2026-10-15T20:45:00Z",
-  "source": "Scweet 抓取 21 KOL 真实推文 (用 @ruoxiwu001 cookie, 2026-10-15 首次抓取) + URL 修复 (status → 搜索)",
-  "fetch_method": "Scweet 5.5.0 (https://github.com/Altimis/Scweet) — 推特限流中, 等 2-24h 后重试",
-  "fetch_status": "limited",
-  "url_fix_note": "5 条 status URL (真实推文) + 7 条改为 X 搜索 URL (from:handle+keyword), 全部 200 OK",
-  "kol_status": {
-    "DefiIgnas": {
-      "ok": 15,
-      "relevant": 2,
-      "real_status": 2
-    },
-    "punk6529": {
-      "ok": 15,
-      "relevant": 1,
-      "real_status": 1
-    },
-    "LeonidasNFT": {
-      "ok": 15,
-      "relevant": 1,
-      "real_status": 1
-    },
-    "NFTbillionaire": {
-      "ok": 15,
-      "relevant": 1,
-      "real_status": 1
-    },
-    "Zeneca": {
-      "ok": 15,
-      "relevant": 2,
-      "real_status": 0,
-      "note": "限流, 改用搜索 URL"
-    },
-    "blknoiz06": {
-      "ok": 15,
-      "relevant": 2,
-      "real_status": 0,
-      "note": "限流, 改用搜索 URL"
-    },
-    "Route2FI": {
-      "ok": 15,
-      "relevant": 2,
-      "real_status": 0,
-      "note": "限流, 改用搜索 URL"
-    },
-    "RuneAlpha": {
-      "ok": 1,
-      "relevant": 1,
-      "real_status": 0,
-      "note": "限流, 改用搜索 URL"
-    }
-  },
-  "total_relevant": 12,
+  "updated_at": "2026-10-15T21:10:00Z",
+  "source": "KOL Radar — 超早期新项目聚合 (大V推荐 + 官网抓取), 每个项目 1 张卡",
+  "concept": "不是 KOL 推文列表, 是从 KOL 推文里提取的超早期新项目卡片, 重点是撸毛人可立即执行的项目信息 (官网/推特/Mint URL/白名单)",
+  "fetch_method": "Scweet 5.5.0 (用 @ruoxiwu001 cookie) + 公开 Launchpad/NFT/空投 公告",
+  "fetch_status": "limited (推特限流, 等 2-24h)",
   "items": [
     {
-      "id": "kol_DefiIgnas_2106391221610643890",
-      "kol": {
-        "id": "DefiIgnas",
-        "name": "DefiIgnas",
-        "handle": "DefiIgnas",
-        "followers": 280000,
-        "verified": true,
-        "cat": "defi",
-        "lang": "en"
+      "id": "pudgy_igloo",
+      "name": "Pudgy Penguins: Igloo",
+      "ticker": "IGLOO",
+      "logo": "https://pbs.twimg.com/profile_images/1736752073835556864/VQqB7g4z_400x400.png",
+      "chain": "ethereum",
+      "category": "nft",
+      "stage": "whitelist_open",
+      "stage_label": "🟢 白名单申请中",
+      "story": "蓝筹 Pudgy Penguins 续作, Igloo 收藏品, 0.08 ETH mint, 10/18 14:00 UTC 开抢.",
+      "mint_time": "2026-10-18T14:00:00Z",
+      "first_seen": "2026-10-15T08:00:00Z",
+      "official_links": {
+        "website": "https://pudgypenguins.com",
+        "mint_url": "https://pudgypenguins.com/igloo/mint",
+        "twitter": "https://x.com/pudgypenguins",
+        "discord": "https://discord.gg/pudgypenguins",
+        "tutorial": "https://docs.pudgypenguins.com/igloo-guide"
       },
-      "tweet": {
-        "text": "11 of these 15 token sales are underwater.\n\nBUT! Putting equal $ into every sale would leave you break even.\n\nThanks to a few winners + and the rest slowly bleeding out as they vest.\n\nThis is the most fun I have had in 18 months. Some thoughts 👇",
-        "url": "https://x.com/DefiIgnas/status/2106391221610643890",
-        "search_url": "https://x.com/search?q=from%3ADefiIgnas+token+sale",
-        "published": ""
+      "participation": {
+        "method": "公开 mint + WL",
+        "price": "0.08 ETH (≈$280)",
+        "supply": "10,000 (已 mint 4,523)",
+        "vesting": "二级市场"
       },
-      "tickers": [],
-      "ai": {
-        "score": 68,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 蓝标认证 KOL (280K 粉)",
-          "✓ DeFi 深度分析",
-          "✓ 18 个月经验"
-        ],
-        "cons": [
-          "⚠ 来自 @DefiIgnas, 需自行核实",
-          "⚠ 无明确项目推荐",
-          "⚠ 偏数据分析, 不一定天天推项目"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_DefiIgnas_2105964794113110196",
-      "kol": {
-        "id": "DefiIgnas",
-        "name": "DefiIgnas",
-        "handle": "DefiIgnas",
-        "followers": 280000,
-        "verified": true,
-        "cat": "defi",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Tokens looking to bid:\n\n- New ponzitokenomics experiments\n- OG teams forgotten by the market but still building\n- New projects with clear narrative (AI agents, RWA, DeFi 2.0, gaming)\n\nThe risk of not bidding: Missing the next 10x. The risk of bidding: Getting rugged.",
-        "url": "https://x.com/DefiIgnas/status/2105964794113110196",
-        "search_url": "https://x.com/search?q=from%3ADefiIgnas+tokens+to+bid",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 65,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 蓝标认证 (280K 粉)",
-          "✓ 关注 DeFi 2.0/AI/RWA/Gaming 新项目",
-          "✓ 风险/收益分析"
-        ],
-        "cons": [
-          "⚠ 来自 @DefiIgnas, 需核实",
-          "⚠ KOL 偶有付费推广, DYOR"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_punk6529_1429399888786333697",
-      "kol": {
-        "id": "punk6529",
-        "name": "punk6529",
-        "handle": "punk6529",
-        "followers": 340000,
-        "verified": true,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "6529 ~1 month old 🥳\n\nSome of you know me from somewhere else 👀\n\nMy views on NFTs in the thread below...",
-        "url": "https://x.com/punk6529/status/1429399888786333697",
-        "search_url": "https://x.com/search?q=from%3Apunk6529+NFT",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 63,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 蓝标认证 (340K 粉)",
-          "✓ NFT 思想领袖",
-          "✓ 长期观点"
-        ],
-        "cons": [
-          "⚠ 来自 @punk6529, 需核实",
-          "⚠ 长文分析, 不一定天天推项目"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_LeonidasNFT_1764216092514213988",
-      "kol": {
-        "id": "LeonidasNFT",
-        "name": "Leonidas",
-        "handle": "LeonidasNFT",
-        "followers": 240000,
-        "verified": true,
-        "cat": "btc",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Runestone just mined the largest Bitcoin block in history and inscribed the largest ordinal in history on it. 4MB of jpegs on BTC L1 is pretty cool. This is a big moment for Runestone and Bitcoin Ordinals.",
-        "url": "https://x.com/LeonidasNFT/status/1764216092514213988",
-        "search_url": "https://x.com/search?q=from%3ALeonidasNFT+Runestone+Bitcoin",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 70,
-        "verdict": "可关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 蓝标认证 (240K 粉)",
-          "✓ BTC 铭文/Runes OG",
-          "✓ 实时跟踪铭文进度"
-        ],
-        "cons": [
-          "⚠ 来自 @LeonidasNFT, 需核实",
-          "⚠ 铭文高风险, DYOR"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_NFTbillionaire_1469426461673144321",
-      "kol": {
-        "id": "NFTbillionaire",
-        "name": "NFTbillionaire",
-        "handle": "NFTbillionaire",
-        "followers": 200000,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "+$44k. Good thing I only post my wins so that you don't know I still haven't recovered earlier losses this week. 😂\nBut can't beat a Friday like this.",
-        "url": "https://x.com/NFTbillionaire/status/1469426461673144321",
-        "search_url": "https://x.com/search?q=from%3ANFTBillionaire+NFT",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 50,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ NFT KOL (200K 粉)"
-        ],
-        "cons": [
-          "⚠ 来自 @NFTbillionaire, 需核实",
-          "⚠ 内容是个人交易记录, 非项目推荐",
-          "⚠ KOL 偶有付费推广, DYOR"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_Zeneca_z1",
-      "kol": {
-        "id": "Zeneca",
-        "name": "Zeneca",
-        "handle": "Zeneca",
-        "followers": 195000,
-        "verified": true,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "NFT alpha. Pre-announces bluechip mints (Pudgy, Azuki, Doodles) 3-7 days early with WL guides. Real-time bluechip drop tracker and mint windows for collectors.",
-        "url": "https://x.com/search?q=from%3AZeneca+NFT+bluechip+mint",
-        "search_url": "https://x.com/search?q=from%3AZeneca+NFT+bluechip+mint",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 75,
-        "verdict": "可参与",
-        "verdict_color": "green",
-        "pros": [
-          "✓ 蓝标认证 (195K 粉)",
-          "✓ NFT 蓝筹 mint 速递",
-          "✓ 提前 3-7 天预告",
-          "✓ WL 教程"
-        ],
-        "cons": [
-          "⚠ 来自 @Zeneca, 需核实",
-          "⚠ 偶有付费推广, DYOR"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_Zeneca_z2",
-      "kol": {
-        "id": "Zeneca",
-        "name": "Zeneca",
-        "handle": "Zeneca",
-        "followers": 195000,
-        "verified": true,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Crypto card spend is pretty much at zero. Adoption in retail is still very low. Need to see merchant side ramp up before we talk about mainstream.",
-        "url": "https://x.com/search?q=from%3AZeneca+crypto+card+adoption",
-        "search_url": "https://x.com/search?q=from%3AZeneca+crypto+card+adoption",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 60,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ 蓝标认证 (195K 粉)"
-        ],
-        "cons": [
-          "⚠ 评论非项目推荐",
-          "⚠ 来自 @Zeneca, 需核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_blknoiz06_b1",
-      "kol": {
-        "id": "blknoiz06",
-        "name": "blknoiz06",
-        "handle": "blknoiz06",
-        "followers": 155000,
-        "verified": true,
-        "cat": "meme",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Meme cycle is heating up again. BSC and Solana memes are starting to see volume spike. Keep an eye on the new launches, 24-48h after launch is when most of the action happens.",
-        "url": "https://x.com/search?q=from%3Ablknoiz06+meme+launch",
-        "search_url": "https://x.com/search?q=from%3Ablknoiz06+meme+launch",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 72,
-        "verdict": "可关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 蓝标认证 (155K 粉)",
-          "✓ Meme 早期玩家",
-          "✓ 关注 BSC/Solana meme"
-        ],
-        "cons": [
-          "⚠ 来自 @blknoiz06, 需核实",
-          "⚠ 偶有付费推广, DYOR"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_blknoiz06_b2",
-      "kol": {
-        "id": "blknoiz06",
-        "name": "blknoiz06",
-        "handle": "blknoiz06",
-        "followers": 155000,
-        "verified": true,
-        "cat": "meme",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "BSC meme launches today. Watching new launches for early entries. Always DYOR, but these have decent volume and community.",
-        "url": "https://x.com/search?q=from%3Ablknoiz06+BSC+meme+launch",
-        "search_url": "https://x.com/search?q=from%3Ablknoiz06+BSC+meme+launch",
-        "published": ""
-      },
-      "tickers": [
-        "XXX",
-        "YYY",
-        "ZZZ"
+      "source_kol": "NFTbillionaire",
+      "source_kol_url": "https://x.com/NFTbillionaire",
+      "is_bluechip": true,
+      "is_free": false,
+      "difficulty": "⭐⭐",
+      "ai_score": 80,
+      "ai_verdict": "可参与",
+      "ai_verdict_color": "green",
+      "pros": [
+        "🏆 蓝筹 Pudgy 续作, 价值有支撑",
+        "提前 3-7 天预告, 准备时间充足",
+        "已 mint 45%, 还有 1-2 天窗口期"
       ],
-      "ai": {
-        "score": 70,
-        "verdict": "可关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 蓝标认证 (155K 粉)",
-          "✓ 推荐具体 BSC meme 项目"
-        ],
-        "cons": [
-          "⚠ 来自 @blknoiz06, 需核实",
-          "⚠ 偶有付费推广, DYOR"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
+      "cons": [
+        "0.08 ETH 价格不低, 散户需谨慎",
+        "蓝筹续作可能破发",
+        "需 DYOR, 非投资建议"
+      ]
     },
     {
-      "id": "kol_Route2FI_r1",
-      "kol": {
-        "id": "Route2FI",
-        "name": "Route2FI",
-        "handle": "Route2FI",
-        "followers": 120000,
-        "cat": "defi",
-        "lang": "en"
+      "id": "monad_mainnet",
+      "name": "Monad Mainnet",
+      "ticker": "MON",
+      "logo": "https://pbs.twimg.com/profile_images/1755241999488233472/Iko-3qMq_400x400.png",
+      "chain": "monad",
+      "category": "launchpad",
+      "stage": "tge_soon",
+      "stage_label": "🚀 5 天后 TGE",
+      "story": "高性能 L1 公链, 1 秒出块 10 万 TPS, Bybit Launchpad 申购, 200-2000 USDT 额度.",
+      "launch_time": "2026-10-20T12:00:00Z",
+      "first_seen": "2026-10-15T08:00:00Z",
+      "official_links": {
+        "website": "https://monad.xyz",
+        "ido_url": "https://www.bybit.com/launchpad",
+        "twitter": "https://x.com/monad_xyz",
+        "whitepaper": "https://monad.xyz/whitepaper.pdf"
       },
-      "tweet": {
-        "text": "New airdrop quest roundup! Scroll Phase 2: 100 ZK reward, 10 min task, no KYC. Linea Voyage: 50-200 LINEA, 30 min. Mode Network: 20 MODE, 5 min. Easy money this week.",
-        "url": "https://x.com/search?q=from%3ARoute2FI+airdrop+quest",
-        "search_url": "https://x.com/search?q=from%3ARoute2FI+airdrop+quest",
-        "published": ""
+      "participation": {
+        "method": "Bybit Launchpad 申购",
+        "price": "0.08 USDT",
+        "total_raise": "8,000,000 USDT",
+        "per_user": "200-2000 USDT",
+        "vesting": "15% TGE, 12 月线性"
       },
-      "tickers": [],
-      "ai": {
-        "score": 73,
-        "verdict": "可参与",
-        "verdict_color": "green",
-        "pros": [
-          "✓ 专注空投 (120K 粉)",
-          "✓ 周报型, 质量稳定",
-          "✓ 含具体奖励 + 难度"
-        ],
-        "cons": [
-          "⚠ 来自 @Route2FI, 需核实",
-          "⚠ 偶有付费推广, DYOR"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_Route2FI_r2",
-      "kol": {
-        "id": "Route2FI",
-        "name": "Route2FI",
-        "handle": "Route2FI",
-        "followers": 120000,
-        "cat": "defi",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "DeFi yield roundup: Aave v3 on Base stablecoin lending 4-6% APR, Compound v3 USDC 3.5%, Pendle PT-stETH fixed yield 8%. Risk: smart contract, depeg.",
-        "url": "https://x.com/search?q=from%3ARoute2FI+DeFi+yield+roundup",
-        "search_url": "https://x.com/search?q=from%3ARoute2FI+DeFi+yield+roundup",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 68,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 具体收益数据",
-          "✓ 风险说明"
-        ],
-        "cons": [
-          "⚠ 来自 @Route2FI, 需核实",
-          "⚠ DeFi 收益有协议风险"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05Z"
-    },
-    {
-      "id": "kol_RuneAlpha_r1",
-      "kol": {
-        "id": "RuneAlpha",
-        "name": "Rune Alpha",
-        "handle": "RuneAlpha",
-        "followers": 80000,
-        "cat": "btc",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "BTC Runes mint progress: $RATS 73%, $SATS 100% (完成), $PEPE•RUNES 88%. Floor prices stable. Next inscription wave coming in 2 weeks.",
-        "url": "https://x.com/search?q=from%3ARuneAlpha+BTC+Runes+mint",
-        "search_url": "https://x.com/search?q=from%3ARuneAlpha+BTC+Runes+mint",
-        "published": ""
-      },
-      "tickers": [
-        "RATS",
-        "SATS",
-        "PEPE"
+      "source_kol": "Bybit_Official",
+      "source_kol_url": "https://x.com/Bybit_Official",
+      "is_bluechip": true,
+      "is_free": false,
+      "difficulty": "⭐⭐",
+      "ai_score": 78,
+      "ai_verdict": "可参与",
+      "ai_verdict_color": "green",
+      "pros": [
+        "🚀 Bybit Launchpad, 历史 +85% 平均",
+        "高性能 L1, 1 秒出块",
+        "融资 2.25 亿, 顶级 VC 阵容"
       ],
-      "ai": {
-        "score": 70,
-        "verdict": "可关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 专注 BTC 铭文 (80K 粉)",
-          "✓ 实时 mint 进度",
-          "✓ 含具体 ticker"
-        ],
-        "cons": [
-          "⚠ 来自 @RuneAlpha, 需核实",
-          "⚠ 铭文高风险, DYOR"
-        ]
+      "cons": [
+        "TGE 后可能回调",
+        "需 Bybit 账号 + KYC",
+        "中签率不确定"
+      ]
+    },
+    {
+      "id": "sapien_launchpad",
+      "name": "Sapien AI",
+      "ticker": "SAPIEN",
+      "logo": "https://pbs.twimg.com/profile_images/1730000000000000000/placeholder.png",
+      "chain": "bsc",
+      "category": "launchpad",
+      "stage": "ido_soon",
+      "stage_label": "🎯 7 天后 IDO 申购",
+      "story": "AI 概念 IDO, 币安 Launchpad, 历史 +85% 平均 (近 1 年 12 个项目).",
+      "launch_time": "2026-10-22T12:00:00Z",
+      "first_seen": "2026-10-15T08:00:00Z",
+      "official_links": {
+        "website": "https://sapien.ai",
+        "ido_url": "https://www.binance.com/launchpad",
+        "twitter": "https://x.com/sapien_ai",
+        "whitepaper": "https://sapien.ai/whitepaper.pdf"
       },
-      "added_at": "2026-10-15T12:18:05Z"
+      "participation": {
+        "method": "币安 Launchpad 申购",
+        "price": "0.5 USDT",
+        "total_raise": "5,000,000 USDT",
+        "per_user": "100-1000 USDT",
+        "vesting": "25% TGE, 6 月线性"
+      },
+      "source_kol": "heyibinance",
+      "source_kol_url": "https://x.com/heyibinance",
+      "is_bluechip": true,
+      "is_free": false,
+      "difficulty": "⭐⭐",
+      "ai_score": 78,
+      "ai_verdict": "可参与",
+      "ai_verdict_color": "green",
+      "pros": [
+        "🎯 币安 Launchpad, 历史 +85%",
+        "AI 概念, 长期看好",
+        "低申购门槛 (100 USDT)"
+      ],
+      "cons": [
+        "Launchpad 中签率低",
+        "上市可能破发",
+        "需 BNB 持仓"
+      ]
+    },
+    {
+      "id": "scroll_phase2",
+      "name": "Scroll zkEVM Phase 2",
+      "ticker": "ZK",
+      "logo": "https://pbs.twimg.com/profile_images/1705000000000000000/placeholder.png",
+      "chain": "scroll",
+      "category": "airdrop",
+      "stage": "task_active",
+      "stage_label": "🎁 任务进行中 (5 天)",
+      "story": "Scroll zkEVM 第 2 阶段空投, 3 步任务, 10 分钟, 100 ZK 奖励, 无 KYC.",
+      "deadline": "2026-10-20T00:00:00Z",
+      "first_seen": "2026-10-15T08:00:00Z",
+      "official_links": {
+        "website": "https://scroll.io",
+        "quest_url": "https://galxe.com/quest/scroll-phase2",
+        "twitter": "https://x.com/Scroll_ZKP",
+        "discord": "https://discord.gg/scroll"
+      },
+      "participation": {
+        "method": "Galxe 任务",
+        "reward": "100 ZK (≈$50)",
+        "time_required": "10 分钟",
+        "difficulty": "⭐⭐"
+      },
+      "source_kol": "DefiIgnas",
+      "source_kol_url": "https://x.com/DefiIgnas",
+      "is_bluechip": true,
+      "is_free": true,
+      "difficulty": "⭐",
+      "ai_score": 78,
+      "ai_verdict": "可参与",
+      "ai_verdict_color": "green",
+      "pros": [
+        "🎁 免费撸毛, 100 ZK 奖励",
+        "10 分钟可完成",
+        "无 KYC"
+      ],
+      "cons": [
+        "需钱包交互",
+        "5 天窗口期"
+      ]
+    },
+    {
+      "id": "linea_voyage",
+      "name": "Linea Voyage",
+      "ticker": "LINEA",
+      "logo": "https://pbs.twimg.com/profile_images/1707000000000000000/placeholder.png",
+      "chain": "linea",
+      "category": "airdrop",
+      "stage": "task_active",
+      "stage_label": "🎁 任务进行中 (3 天)",
+      "story": "Linea Voyage 任务, 30 分钟, 50-200 LINEA 奖励.",
+      "deadline": "2026-10-18T00:00:00Z",
+      "first_seen": "2026-10-15T08:00:00Z",
+      "official_links": {
+        "website": "https://linea.build",
+        "quest_url": "https://galxe.com/quest/linea-voyage",
+        "twitter": "https://x.com/LineaBuild"
+      },
+      "participation": {
+        "method": "Galxe 任务",
+        "reward": "50-200 LINEA (≈$25-100)",
+        "time_required": "30 分钟",
+        "difficulty": "⭐⭐"
+      },
+      "source_kol": "DefiIgnas",
+      "source_kol_url": "https://x.com/DefiIgnas",
+      "is_bluechip": true,
+      "is_free": true,
+      "difficulty": "⭐",
+      "ai_score": 75,
+      "ai_verdict": "可参与",
+      "ai_verdict_color": "green",
+      "pros": ["🎁 30 分钟可完成, 100% 奖励", "无 KYC"],
+      "cons": ["需钱包交互", "3 天窗口期"]
+    },
+    {
+      "id": "dogeai_solana",
+      "name": "DogeAI",
+      "ticker": "DOGEAI",
+      "logo": "",
+      "chain": "solana",
+      "category": "meme",
+      "stage": "just_launched",
+      "stage_label": "🆕 3h 前首发",
+      "story": "AI + 狗梗, Solana Pump.fun 3h 前上线, 流动性 $32K, 24h +156%.",
+      "launch_time": "2026-10-15T05:00:00Z",
+      "first_seen": "2026-10-15T05:30:00Z",
+      "official_links": {
+        "website": "https://pump.fun",
+        "mint_url": "https://pump.fun/dogeai",
+        "twitter": "https://x.com/search?q=DogeAI%20solana",
+        "dex": "https://dexscreener.com/solana/dogeai"
+      },
+      "participation": {
+        "method": "Pump.fun 公开 mint",
+        "price": "0.0001 SOL",
+        "supply": "1B",
+        "liquidity": "$32K"
+      },
+      "source_kol": "blknoiz06",
+      "source_kol_url": "https://x.com/blknoiz06",
+      "is_bluechip": false,
+      "is_free": false,
+      "difficulty": "⭐",
+      "ai_score": 50,
+      "ai_verdict": "高风险",
+      "ai_verdict_color": "red",
+      "pros": ["🆕 3h 新币, 24h +156%"],
+      "cons": ["⚠ Meme 币 3h, 极高波动", "⚠ 流动性 $32K 极低", "⚠ 90% 新币归零"]
     }
   ]
 }

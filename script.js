@@ -36,43 +36,73 @@ function skeletonHTML(n) { let h = ''; for (let i = 0; i < n; i++) h += '<div cl
 function emptyHTML(msg, icon) { return `<div class="empty"><div class="empty-icon">${icon || '📭'}</div><div>${msg}</div></div>`; }
 function errorHTML(msg) { return `<div class="error">⚠ ${msg}</div>`; }
 
-// ========== 🐦 KOL 卡片 ==========
+// ========== 🐦 KOL Radar (新: 项目卡, 不是推文卡) ==========
 function kolCardHTML(item) {
   const k = item.kol || {};
   const t = item.tweet || {};
   const a = item.ai || {};
-  const initial = (k.name || k.handle || '?')[0].toUpperCase();
+  const links = item.official_links || {};
+  const part = item.participation || {};
+  const initial = (item.name || k.name || '?')[0].toUpperCase();
 
   // 真实有效的链接:
-  // - KOL 主页: https://x.com/{handle} (用户点这个, 看到 KOL 所有推文)
-  // - KOL 搜索: https://x.com/search?q=from%3A{handle}+{keyword}
   const kolProfileUrl = `https://x.com/${k.handle || ''}`;
   const searchUrl = `https://x.com/search?q=${encodeURIComponent('from:' + (k.handle || '') + ' ' + (t.search_keyword || ''))}`;
 
-  const tw = tweetUrl(`${a.verdict || '看看'} · @${k.handle}\n\n${k.bio || ''}\n\n关注理由: ${(a.pros || []).join(' · ')}`);
+  // 推文 (含项目信息)
+  const tw = tweetUrl(`${a.verdict || '看看'} · @${k.handle}\n\n${item.name} (${item.ticker})\n\n${item.story}\n\n撸毛: ${part.method}\n\n@${k.handle} 推荐\n\nvia @${X_HANDLE} · ${SITE_URL}`);
+
+  // 阶段徽章
+  const stageColor = {
+    'whitelist_open': 'green',
+    'tge_soon': 'blue',
+    'ido_soon': 'blue',
+    'task_active': 'green',
+    'just_launched': 'yellow',
+    'mainnet_live': 'red',
+  }[item.stage] || 'yellow';
+
+  // 链标签
+  const chainLabel = (item.chain || 'multi').toUpperCase();
+
+  // 撸毛方式
+  const methodText = part.method || '—';
+  const timeText = part.time_required || (item.mint_time ? new Date(item.mint_time).toLocaleString('zh-CN', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) : '近期');
+
+  // 风险图标
+  const riskIcon = a.verdict_color === 'red' ? '🔴' : a.verdict_color === 'yellow' ? '🟡' : a.verdict_color === 'blue' ? '🔵' : '🟢';
 
   return `
-    <article class="kol-card">
+    <article class="kol-card" data-cat="${item.category || k.cat || 'meme'}">
       <div class="kol-header">
-        <div class="kol-avatar">${initial}</div>
+        <div class="kol-avatar">${item.logo ? `<img src="${item.logo}" alt="${item.name}" onerror="this.outerHTML='<span>${initial}</span>'">` : initial}</div>
         <div class="kol-meta">
-          <div class="kol-name">${k.name || k.handle}${k.verified ? ' <span style="color:#1DA1F2;">✓</span>' : ''}${k.official ? ' <span style="color:#f0b90b; font-size:10px; padding:1px 5px; border:1px solid #f0b90b; border-radius:3px; margin-left:4px;">官方</span>' : ''}</div>
-          <div class="kol-handle">@${k.handle}</div>
-          <div class="kol-followers">${fmtNum(k.followers)} 粉丝 · ${k.cat || 'meme'}</div>
+          <div class="kol-name">${item.name} <span class="kol-chain">${chainLabel}</span>${item.is_bluechip ? ' <span class="kol-bluechip">🏆 蓝筹</span>' : ''}${item.is_free ? ' <span class="kol-free">💰 免费</span>' : ''}</div>
+          <div class="kol-ticker">$${item.ticker} · ${item.category || k.cat || 'meme'}</div>
+          <div class="kol-stage kol-stage-${stageColor}">${item.stage_label || '近期'}</div>
         </div>
         <div class="kol-verdict ${a.verdict_color || 'yellow'}">${a.score || '—'} · ${a.verdict || '—'}</div>
       </div>
-      <div class="kol-bio" style="font-size:13px; color:var(--text-dim); margin-bottom:10px; line-height:1.5;">${k.bio || ''}</div>
-      <div class="kol-tweet">${t.text || ''}</div>
+      <div class="kol-story" style="font-size:13px; color:var(--text); margin-bottom:10px; line-height:1.6; padding:10px 12px; background:rgba(240,185,11,0.05); border-left:3px solid var(--gold); border-radius:6px;">${item.story || ''}</div>
+      <div class="kol-participation" style="display:grid; grid-template-columns:1fr 1fr; gap:6px 10px; font-size:12px; margin-bottom:10px; padding:8px 10px; background:var(--bg); border-radius:6px;">
+        <div class="kol-detail-row"><span style="color:var(--text-dim);">🎯 撸毛</span> <span style="color:var(--text); font-weight:600;">${methodText}</span></div>
+        <div class="kol-detail-row"><span style="color:var(--text-dim);">⏰ 时间</span> <span style="color:var(--gold); font-weight:600;">${timeText}</span></div>
+        ${item.is_free ? `<div class="kol-detail-row"><span style="color:var(--text-dim);">💰 费用</span> <span style="color:var(--green); font-weight:600;">FREE</span></div>` : (part.price ? `<div class="kol-detail-row"><span style="color:var(--text-dim);">💰 价格</span> <span style="color:var(--text);">${part.price}</span></div>` : '')}
+        ${part.difficulty ? `<div class="kol-detail-row"><span style="color:var(--text-dim);">⭐ 难度</span> <span style="color:var(--text);">${part.difficulty}</span></div>` : ''}
+      </div>
       ${(a.pros && a.pros.length) || (a.cons && a.cons.length) ? `
       <div class="kol-ai">
         <div class="kol-pros">${(a.pros || []).map(p => `<div>${p}</div>`).join('')}</div>
         <div class="kol-cons">${(a.cons || []).map(c => `<div>${c}</div>`).join('')}</div>
       </div>` : ''}
+      <div class="kol-source" style="font-size:11px; color:var(--text-dim); margin-top:8px; padding-top:8px; border-top:1px solid var(--border);">
+        🤖 AI 评分: <strong style="color:var(--gold);">${a.score || '—'}/100</strong> · 来源: <a href="${links.mint_url || links.quest_url || links.ido_url || kolProfileUrl}" target="_blank" rel="noopener" style="color:var(--blue);">@${k.handle || 'unknown'}</a>
+      </div>
       <div class="kol-actions">
-        <a class="kol-btn primary" href="${tw}" target="_blank" rel="noopener">𝕏 一键发推</a>
-        <a class="kol-btn" href="${t.url || kolProfileUrl}" target="_blank" rel="noopener">𝕏 推文</a>
-        <a class="kol-btn" href="${kolProfileUrl}" target="_blank" rel="noopener">𝕏 主页</a>
+        <a class="kol-btn primary" href="${links.mint_url || links.quest_url || links.ido_url || '#'}" target="_blank" rel="noopener">🎯 立即参与</a>
+        <a class="kol-btn" href="${tw}" target="_blank" rel="noopener">𝕏 发推</a>
+        <a class="kol-btn" href="${links.twitter || kolProfileUrl}" target="_blank" rel="noopener">𝕏 关注</a>
+        <a class="kol-btn" href="${links.website || '#'}" target="_blank" rel="noopener">🌐 官网</a>
       </div>
     </article>
   `;
