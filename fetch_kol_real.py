@@ -151,9 +151,29 @@ def ai_score_tweet(kol_info, tweet_text, tickers):
 
 
 async def main():
-    # === 临时变量 (用完即删) ===
-    TWITTER_AUTH = "1c5dd998fbcb4bf87be67fb3a76ba2fe075102a1"
-    # ================================
+    # === 从安全 env 文件读 cookie (用户长期授权) ===
+    env_path = os.path.expanduser("~/.hermes/secrets/twitter.env")
+    if not os.path.exists(env_path):
+        raise FileNotFoundError(
+            f"❌ Cookie 文件不存在: {env_path}\n"
+            f"   请先创建: mkdir -p ~/.hermes/secrets && touch ~/.hermes/secrets/twitter.env\n"
+            f"   然后写入: TWITTER_AUTH_TOKEN=你的auth_token"
+        )
+    # 加载 env (不污染全局环境)
+    env_vars = {}
+    with open(env_path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "=" in line:
+                k, v = line.split("=", 1)
+                env_vars[k.strip()] = v.strip()
+
+    TWITTER_AUTH = env_vars.get("TWITTER_AUTH_TOKEN")
+    if not TWITTER_AUTH:
+        raise ValueError("TWITTER_AUTH_TOKEN 未设置")
+    # ========================================
 
     now = datetime.utcnow().isoformat() + "Z"
     print(f"[{now}] 抓取 21 KOL 真实推文 (Scweet)")
@@ -251,9 +271,9 @@ async def main():
     print(f"\n✅ 写入 {out_path}: {len(all_items)} 条相关推文")
     print(f"   KOL 覆盖: {len([h for h, r in kol_status.items() if r.get('relevant', 0) > 0])}/{len(KOLS)}")
 
-    # === 立刻销毁 cookie ===
-    del TWITTER_AUTH
-    # =====================
+    # === 不销毁 cookie (用户授权长期使用) ===
+    # 但函数作用域结束, 内存中变量会被回收
+    # ============================================
 
 
 if __name__ == "__main__":

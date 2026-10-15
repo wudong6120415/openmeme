@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-10-15T12:18:05.884228Z",
+  "updated_at": "2026-10-15T12:19:59.886610Z",
   "source": "Scweet 抓取 21 KOL 真实推文 (实时, 用你的 auth_token 一次性抓取)",
   "fetch_method": "Scweet 5.5.0 (https://github.com/Altimis/Scweet)",
   "kol_status": {
     "blknoiz06": {
-      "ok": 15,
-      "relevant": 2
+      "ok": 0,
+      "relevant": 0
     },
     "thecryptocoin": {
-      "ok": 3,
+      "ok": 0,
       "relevant": 0
     },
     "CryptoGems": {
@@ -16,36 +16,36 @@
       "relevant": 0
     },
     "Cobie": {
-      "ok": 15,
+      "ok": 0,
       "relevant": 0
     },
     "DefiIgnas": {
-      "ok": 15,
-      "relevant": 2
+      "ok": 0,
+      "relevant": 0
     },
     "Route2FI": {
-      "ok": 15,
-      "relevant": 2
+      "ok": 0,
+      "relevant": 0
     },
     "NFTbillionaire": {
-      "ok": 15,
-      "relevant": 1
+      "ok": 0,
+      "relevant": 0
     },
     "Zeneca": {
-      "ok": 15,
-      "relevant": 2
+      "ok": 0,
+      "relevant": 0
     },
     "punk6529": {
-      "ok": 15,
-      "relevant": 1
+      "ok": 0,
+      "relevant": 0
     },
     "LeonidasNFT": {
-      "ok": 15,
-      "relevant": 1
+      "ok": 0,
+      "relevant": 0
     },
     "RuneAlpha": {
-      "ok": 1,
-      "relevant": 1
+      "ok": 0,
+      "relevant": 0
     },
     "OrdinalHub": {
       "ok": 0,
@@ -88,407 +88,6 @@
       "relevant": 0
     }
   },
-  "total_relevant": 12,
-  "items": [
-    {
-      "id": "kol_DefiIgnas_2106391221610643890",
-      "kol": {
-        "id": "DefiIgnas",
-        "name": "DefiIgnas",
-        "handle": "DefiIgnas",
-        "followers": 280000,
-        "verified": true,
-        "official": false,
-        "cat": "defi",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "11 of these 15 token sales are underwater.\n\nBUT! Putting equal $ into every sale would leave you break even.\n\nThanks to $CAP's +610%\n\nWithout CAP: down ~44%.\n\nStill not the ICO season?",
-        "url": "https://x.com/DefiIgnas/status/2106391221610643890",
-        "published": ""
-      },
-      "tickers": [
-        "CAP"
-      ],
-      "ai": {
-        "score": 68,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 推特蓝标",
-          "✓ 知名 KOL (280K 粉)",
-          "✓ 明确提到 $CAP"
-        ],
-        "cons": [
-          "⚠ 来自 @DefiIgnas, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_DefiIgnas_2105964794113110196",
-      "kol": {
-        "id": "DefiIgnas",
-        "name": "DefiIgnas",
-        "handle": "DefiIgnas",
-        "followers": 280000,
-        "verified": true,
-        "official": false,
-        "cat": "defi",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Tokens looking to bid:\n\n- New ponzitokenomics experiments\n- OG teams forgotten by the market but still building\n- New projects with disproportional revenue &amp; buybacks\n- Tokens that have value accrual from Institutional adoption\n- Organic memes\n\nWhat else? Pls share",
-        "url": "https://x.com/DefiIgnas/status/2105964794113110196",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 63,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 推特蓝标",
-          "✓ 知名 KOL (280K 粉)"
-        ],
-        "cons": [
-          "⚠ 来自 @DefiIgnas, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_punk6529_1429399888786333697",
-      "kol": {
-        "id": "punk6529",
-        "name": "punk6529",
-        "handle": "punk6529",
-        "followers": 340000,
-        "verified": true,
-        "official": false,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "6529 ~1 month old 🥳\n\nSome of you know me from somewhere else 👀\n\nMy views on NFTs in the thread below",
-        "url": "https://x.com/punk6529/status/1429399888786333697",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 63,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 推特蓝标",
-          "✓ 知名 KOL (340K 粉)"
-        ],
-        "cons": [
-          "⚠ 来自 @punk6529, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_LeonidasNFT_1764216092514213988",
-      "kol": {
-        "id": "LeonidasNFT",
-        "name": "Leonidas",
-        "handle": "LeonidasNFT",
-        "followers": 240000,
-        "verified": true,
-        "official": false,
-        "cat": "btc",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Runestone just mined the largest Bitcoin block in history and inscribed the largest inscription ever, AGAIN!\n\nIntroducing the 3.97 MB Runestone:\n\n→ https://t.co/GxX7zQrreL\n\nARE YOU READY TO GET STONED? https://t.co/VL3HP9UoI4",
-        "url": "https://x.com/LeonidasNFT/status/1764216092514213988",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 63,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 推特蓝标",
-          "✓ 知名 KOL (240K 粉)"
-        ],
-        "cons": [
-          "⚠ 来自 @LeonidasNFT, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_NFTbillionaire_1469426461673144321",
-      "kol": {
-        "id": "NFTbillionaire",
-        "name": "NFTbillionaire",
-        "handle": "NFTbillionaire",
-        "followers": 200000,
-        "verified": false,
-        "official": false,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "+$44k. Good thing I only post my wins so that you don't know I still haven't recovered earlier losses this week. 😂\nBut can't beat a Friday like this.\n\n$AVCT $BKKT $CNTX $IINN $ISIG $KSS $LCID $ORCL $PPSI $SGMA https://t.co/8VmseNy4Yw",
-        "url": "https://x.com/NFTbillionaire/status/1469426461673144321",
-        "published": ""
-      },
-      "tickers": [
-        "ORCL",
-        "LCID",
-        "CNTX",
-        "IINN",
-        "KSS",
-        "PPSI",
-        "AVCT",
-        "ISIG",
-        "SGMA",
-        "BKKT"
-      ],
-      "ai": {
-        "score": 60,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "✓ 知名 KOL (200K 粉)",
-          "✓ 明确提到 $ORCL, $LCID, $CNTX"
-        ],
-        "cons": [
-          "⚠ 来自 @NFTbillionaire, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_blknoiz06_2110304660192117229",
-      "kol": {
-        "id": "blknoiz06",
-        "name": "blknoiz06",
-        "handle": "blknoiz06",
-        "followers": 155000,
-        "verified": true,
-        "official": false,
-        "cat": "meme",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "top public pnl from now till 2028 will be a \"crypto\" trader who trades both memecoins &amp; perps on stocks &amp; crypto assets",
-        "url": "https://x.com/blknoiz06/status/2110304660192117229",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 58,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ 推特蓝标"
-        ],
-        "cons": [
-          "⚠ 来自 @blknoiz06, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_blknoiz06_2110252627799966022",
-      "kol": {
-        "id": "blknoiz06",
-        "name": "blknoiz06",
-        "handle": "blknoiz06",
-        "followers": 155000,
-        "verified": true,
-        "official": false,
-        "cat": "meme",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Market Bubble ep.23: my full conversation\n\non the first major pullback, portfolio strategy, the Coinbase perps showdown and my outlook on BTC, Zcash, Pump and HYPE\n\n0:00 - The first pullback and 70/30 strategy\n5:45 - Coinbase perps showdown and trading lessons\n10:48 - Bitcoin, Zcash and the MemeFi thesis\n18:12 - StarkWare, Pump and SOL targets\n26:48 - HYPE, momentum and taking profits",
-        "url": "https://x.com/blknoiz06/status/2110252627799966022",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 58,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ 推特蓝标"
-        ],
-        "cons": [
-          "⚠ 来自 @blknoiz06, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_Zeneca_2110247795345310178",
-      "kol": {
-        "id": "Zeneca",
-        "name": "Zeneca",
-        "handle": "Zeneca",
-        "followers": 195000,
-        "verified": true,
-        "official": false,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "crypto card spend is pretty much up and to the right\n\nstablecoins, neobanks, and cards have found pretty strong PMF in crypto https://t.co/LM1tgEgOOh",
-        "url": "https://x.com/Zeneca/status/2110247795345310178",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 58,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ 推特蓝标"
-        ],
-        "cons": [
-          "⚠ 来自 @Zeneca, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_Zeneca_2110101196409393561",
-      "kol": {
-        "id": "Zeneca",
-        "name": "Zeneca",
-        "handle": "Zeneca",
-        "followers": 195000,
-        "verified": true,
-        "official": false,
-        "cat": "nft",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "It’s a brave new world\n\nReasons to be bullish:\n\n- 120 MILLION monthly active users\n- roadmap 4.0 introduces new revenue\n- buybacks to support the token incoming\n\nReasons to be bearish:\n\n- only new revenue goes to buybacks\n- so depends on new product adoption\n- ??? https://t.co/dVIWmIK4gh",
-        "url": "https://x.com/Zeneca/status/2110101196409393561",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 58,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ 推特蓝标"
-        ],
-        "cons": [
-          "⚠ 来自 @Zeneca, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_Route2FI_2041439080064422363",
-      "kol": {
-        "id": "Route2FI",
-        "name": "Route2FI",
-        "handle": "Route2FI",
-        "followers": 120000,
-        "verified": false,
-        "official": false,
-        "cat": "defi",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "I guess the coins I like the most going into the new cycle are these:\n\n1. $HYPE (perps, L1)\n2. $TAO (AI, L1)\n3. $NEAR (AI, L1, privacy)\n4. $LIT (perps, the best bet on perps after HYPE)\n5. $PUMP (memecoins, speculation)\n6. $ZEC (L1, privacy)\n7. $MON (new L1)\n8. $MEGA (new L2)\n\nNew coins good, old coins bad. HYPE, LIT, PUMP, MON, MEGA has never been in a bull. Well, you could argue HYPE launched at the tail of the bull, but not a full cycle. TAO and NEAR are clear tokens in the AI narrative. ZEC is the \"VC-privacy coin\".\n\nBut tokens are not stocks, they have no value. Yes, and no. I think this is one of the hardest \"dilemmas\" of the new cycle. Betting on tokens in 2023 felt like a no-brainer. We all had hopes that our coins would make a comeback at some point. Now, in 2026, with an infinite number of tokens, it's harder than ever to pick something. There is a huge difference between a good product and a good token, and since most tokens are governance tokens, do we really need them? Maybe not, but it remains the main vehicle for speculation.\n\nWhat about BTC, SOL, ETH? BTC should always be a part of a core portfolio, maybe SOL and ETH also, but I think the ones above will outperform compared to them.\n\nAnyway, my gut feeling says that there will be something else that takes the spotlight, and that \"the new thing\" will outperform all of the 8 I listed. These are my thoughts today. Next week or next month I could already have changed my mind, so NFA and do your own research.",
-        "url": "https://x.com/Route2FI/status/2041439080064422363",
-        "published": ""
-      },
-      "tickers": [
-        "MON",
-        "MEGA",
-        "LIT",
-        "ZEC",
-        "NEAR",
-        "HYPE",
-        "TAO",
-        "PUMP"
-      ],
-      "ai": {
-        "score": 55,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ 明确提到 $MON, $MEGA, $LIT"
-        ],
-        "cons": [
-          "⚠ 来自 @Route2FI, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_Route2FI_2110692685212262470",
-      "kol": {
-        "id": "Route2FI",
-        "name": "Route2FI",
-        "handle": "Route2FI",
-        "followers": 120000,
-        "verified": false,
-        "official": false,
-        "cat": "defi",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "$STRK was up 20% on the news about the governance vote on whether they should become an independent post-quantum L1.\n\nThe vote ends in 7 days, but's it's already a 99,8% on \"Yes, this should be researched\".\n\nA “Yes” vote indicates support for further research. It does not constitute approval of a transition to an L1. I mean, who wouldn't want more research into this in these FUD days...\n\nAnyway, the news is about to get retraced completely as it is already a done deal IMO.",
-        "url": "https://x.com/Route2FI/status/2110692685212262470",
-        "published": ""
-      },
-      "tickers": [
-        "STRK"
-      ],
-      "ai": {
-        "score": 55,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [
-          "✓ 明确提到 $STRK"
-        ],
-        "cons": [
-          "⚠ 来自 @Route2FI, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    },
-    {
-      "id": "kol_RuneAlpha_257335227062550530",
-      "kol": {
-        "id": "RuneAlpha",
-        "name": "Rune Alpha",
-        "handle": "RuneAlpha",
-        "followers": 80000,
-        "verified": false,
-        "official": false,
-        "cat": "btc",
-        "lang": "en"
-      },
-      "tweet": {
-        "text": "Welcome to the official RuneAlpha twitter!",
-        "url": "https://x.com/RuneAlpha/status/257335227062550530",
-        "published": ""
-      },
-      "tickers": [],
-      "ai": {
-        "score": 53,
-        "verdict": "观望",
-        "verdict_color": "yellow",
-        "pros": [],
-        "cons": [
-          "⚠ 来自 @RuneAlpha, 需自行核实"
-        ]
-      },
-      "added_at": "2026-10-15T12:18:05.884228Z"
-    }
-  ]
+  "total_relevant": 0,
+  "items": []
 }
