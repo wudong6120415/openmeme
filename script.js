@@ -71,8 +71,8 @@ function kolCardHTML(item) {
       </div>` : ''}
       <div class="kol-actions">
         <a class="kol-btn primary" href="${tw}" target="_blank" rel="noopener">𝕏 一键发推</a>
+        <a class="kol-btn" href="${t.url || kolProfileUrl}" target="_blank" rel="noopener">𝕏 推文</a>
         <a class="kol-btn" href="${kolProfileUrl}" target="_blank" rel="noopener">𝕏 主页</a>
-        <a class="kol-btn" href="${searchUrl}" target="_blank" rel="noopener">𝕏 推文</a>
       </div>
     </article>
   `;
