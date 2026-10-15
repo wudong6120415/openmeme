@@ -529,3 +529,93 @@
   margin-top: 8px;
   text-align: center;
 }
+
+/* ========== refine-web-design: 搜索/过滤工具栏 ========== */
+.section-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(240, 185, 11, 0.15);
+}
+.search-input::placeholder { color: var(--text-dim); }
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-chip {
+  padding: 6px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.filter-chip:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+.filter-chip.active {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
+.filter-chip:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* 隐藏过滤的卡片 (无 JS 动画) */
+.card.filtered-out,
+.nft-card.filtered-out,
+.meme-card.filtered-out,
+.kol-card.filtered-out,
+.insc-card.filtered-out,
+.lp-card.filtered-out,
+.air-card.filtered-out,
+.scam-card.filtered-out {
+  display: none;
+}
+
+/* refine-web-design: 视觉层次 */
+.section-toolbar + .card-grid,
+.section-toolbar + .kol-grid,
+.section-toolbar + .nft-grid,
+.section-toolbar + .meme-grid,
+.section-toolbar + .insc-grid,
+.section-toolbar + .lp-grid,
+.section-toolbar + .air-grid,
+.section-toolbar + .scam-grid {
+  margin-top: 0;
+}
+
+/* 增强 hover (refine-web-design 维度 7) */
+.kol-card:hover, .meme-card:hover, .nft-card:hover,
+.insc-card:hover, .lp-card:hover, .air-card:hover {
+  transform: translateY(-3px) scale(1.005);
+}

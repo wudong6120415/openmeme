@@ -82,7 +82,7 @@
     <!-- 🐦 KOL Radar (主推) -->
     <section id="kol" class="section">
       <div class="kol-notice" style="background: rgba(29, 161, 242, 0.08); border: 1px solid rgba(29, 161, 242, 0.3); border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; font-size: 13px; color: var(--text-dim);">
-        <strong style="color:#1DA1F2;">ℹ️ 关于 KOL 板块:</strong> 21 个真实大V (粉丝数 2024 公开数据), 简介真实, 无编造推文. 真实最新推文请点每张卡片的 "𝕏 主页" 或 "𝕏 推文" 按钮 (跳到 KOL 主页 / 推特搜索). 实时抓取需付费 API (推特 $100/月, Apify $0.94/100推文) 或自维护 cookie 池.
+        <strong style="color:#1DA1F2;">ℹ️ 关于 KOL 板块:</strong> 21 个真实大V (粉丝数 2024 公开数据), 简介真实, 无编造推文. 真实最新推文请点每张卡片的 "𝕏 推文" 或 "𝕏 主页" 按钮. 实时抓取需付费 API 或自维护 cookie 池.
       </div>
       <div class="section-head">
         <div class="section-title-group">
@@ -91,6 +91,18 @@
         </div>
         <p class="section-sub" data-i18n="sec_kol_sub">21 个推特大V · 公开资料 · 无编造推文</p>
         <span class="section-updated" id="kol-updated">—</span>
+      </div>
+      <div class="section-toolbar">
+        <input type="text" id="kol-search" class="search-input" placeholder="🔍 搜索 KOL 名字 / 推文内容..." aria-label="搜索 KOL" />
+        <div class="filter-chips" id="kol-filters">
+          <button class="filter-chip active" data-filter="all">全部</button>
+          <button class="filter-chip" data-filter="meme">Meme</button>
+          <button class="filter-chip" data-filter="nft">NFT</button>
+          <button class="filter-chip" data-filter="btc">铭文</button>
+          <button class="filter-chip" data-filter="defi">DeFi</button>
+          <button class="filter-chip" data-filter="launchpad">Launchpad</button>
+          <button class="filter-chip" data-filter="news">新闻</button>
+        </div>
       </div>
       <div id="kol-list" class="kol-grid"></div>
     </section>
@@ -105,6 +117,17 @@
         <p class="section-sub" data-i18n="sec_meme_sub">新 Meme 币首发 · Solana Pump.fun · BSC 4.meme · Base 等</p>
         <span class="section-updated" id="meme-updated">—</span>
       </div>
+      <div class="section-toolbar">
+        <div class="filter-chips" id="meme-filters">
+          <button class="filter-chip active" data-filter="all">全部</button>
+          <button class="filter-chip" data-filter="solana">Solana</button>
+          <button class="filter-chip" data-filter="bsc">BSC</button>
+          <button class="filter-chip" data-filter="base">Base</button>
+          <button class="filter-chip" data-filter="ethereum">Ethereum</button>
+          <button class="filter-chip" data-filter="new">🆕 24h 新币</button>
+          <button class="filter-chip" data-filter="hot">🔥 24h 涨幅</button>
+        </div>
+      </div>
       <div id="meme-list" class="meme-grid"></div>
     </section>
 
@@ -117,6 +140,15 @@
         </div>
         <p class="section-sub" data-i18n="sec_nft_sub">蓝筹续作 + 免费 mint · 倒计时提醒</p>
         <span class="section-updated" id="nft-updated">—</span>
+      </div>
+      <div class="section-toolbar">
+        <div class="filter-chips" id="nft-filters">
+          <button class="filter-chip active" data-filter="all">全部</button>
+          <button class="filter-chip" data-filter="bluechip">🏆 蓝筹</button>
+          <button class="filter-chip" data-filter="free">💰 免费</button>
+          <button class="filter-chip" data-filter="urgent">⏰ 24h 内</button>
+          <button class="filter-chip" data-filter="upcoming">📅 1 周内</button>
+        </div>
       </div>
       <div id="nft-list" class="nft-grid"></div>
     </section>

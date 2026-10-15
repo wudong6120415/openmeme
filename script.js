@@ -323,7 +323,8 @@ async function loadAndRender(sectionId, file, updatedId, renderFn, isList = true
 
 // === 启动 ===
 document.addEventListener('DOMContentLoaded', () => {
-  loadAndRender('kol-list', 'data/kol.json', 'kol-updated', kolCardHTML);
+  loadAndRender("kol-list", "data/kol.json", "kol-updated", kolCardHTML);
+  setupSearchAndFilters();
   loadAndRender('meme-list', 'data/meme.json', 'meme-updated', memeCardHTML);
   loadAndRender('nft-list', 'data/nft.json', 'nft-updated', nftCardHTML);
   loadAndRender('inscription-list', 'data/inscription.json', 'inscription-updated', inscCardHTML);
@@ -389,3 +390,157 @@ function setupBackToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// ========== refine-web-design: 搜索 + 过滤 ==========
+const FilterState = {
+  kol: { search: '', cat: 'all' },
+  meme: { cat: 'all', sort: 'new' },
+  nft: { cat: 'all' },
+};
+
+function setupSearchAndFilters() {
+  // KOL 搜索 + 过滤
+  const kolSearch = document.getElementById('kol-search');
+  const kolFilters = document.getElementById('kol-filters');
+  if (kolSearch) {
+    kolSearch.addEventListener('input', (e) => {
+      FilterState.kol.search = e.target.value.toLowerCase();
+      applyFilters('kol');
+    });
+  }
+  if (kolFilters) {
+    kolFilters.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-chip');
+      if (!btn) return;
+      kolFilters.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      FilterState.kol.cat = btn.dataset.filter;
+      applyFilters('kol');
+    });
+  }
+
+  // Meme 链过滤
+  setupFilterChips('meme-filters', (cat) => {
+    FilterState.meme.cat = cat;
+    applyFilters('meme');
+  });
+
+  // NFT 过滤
+  setupFilterChips('nft-filters', (cat) => {
+    FilterState.nft.cat = cat;
+    applyFilters('nft');
+  });
+}
+
+function setupFilterChips(containerId, onChange) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-chip');
+    if (!btn) return;
+    container.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    onChange(btn.dataset.filter);
+  });
+}
+
+function applyFilters(section) {
+  const state = FilterState[section];
+  const cards = document.querySelectorAll(`#${section}-list > .${section === 'kol' ? 'kol' : section.replace(/s$/, '')}-card, #${section}-list > article`);
+  cards.forEach(card => {
+    let show = true;
+    if (section === 'kol') {
+      // 搜索: 名字 + 推文内容
+      if (state.search) {
+        const text = card.textContent.toLowerCase();
+        if (!text.includes(state.search)) show = false;
+      }
+      // 类别过滤
+      if (state.cat !== 'all' && show) {
+        const cat = card.dataset.cat || '';
+        if (cat !== state.cat) show = false;
+      }
+    } else if (section === 'meme' && state.cat !== 'all') {
+      if (state.cat === 'new') {
+        // 24h 新币
+        const ts = card.dataset.launchTime || '';
+        const age = (Date.now() - new Date(ts).getTime()) / 3600000;
+        if (age > 24) show = false;
+      } else if (state.cat === 'hot') {
+        // 24h 涨幅
+        const change = parseFloat(card.dataset.change24h || '0');
+        if (change < 50) show = false;
+      } else {
+        // 链
+        const chain = (card.dataset.chain || '').toLowerCase();
+        if (chain !== state.cat) show = false;
+      }
+    } else if (section === 'nft' && state.cat !== 'all') {
+      if (state.cat === 'bluechip') {
+        if (card.dataset.bluechip !== 'true') show = false;
+      } else if (state.cat === 'free') {
+        if (card.dataset.free !== 'true') show = false;
+      } else if (state.cat === 'urgent') {
+        const ts = card.dataset.mintTime || '';
+        const diff = (new Date(ts).getTime() - Date.now()) / 3600000;
+        if (diff > 24 || diff < 0) show = false;
+      } else if (state.cat === 'upcoming') {
+        const ts = card.dataset.mintTime || '';
+        const diff = (new Date(ts).getTime() - Date.now()) / 3600000;
+        if (diff > 168 || diff < 0) show = false;
+      }
+    }
+    card.classList.toggle('filtered-out', !show);
+  });
+}
+
+// 修改 loadAndRender, 渲染时加 data-attr
+const _origLoadAndRender = loadAndRender;
+loadAndRender = async function(sectionId, file, updatedId, renderFn) {
+  await _origLoadAndRender(sectionId, file, updatedId, renderFn);
+  // 渲染后注入 data 属性
+  if (sectionId === 'kol-list') {
+    document.querySelectorAll('#kol-list > article').forEach((card, i) => {
+      const item = window._lastKOLData && window._lastKOLData[i];
+      if (item) {
+        card.dataset.cat = item.kol.cat;
+        card.dataset.handle = item.kol.handle;
+      }
+    });
+  } else if (sectionId === 'meme-list') {
+    document.querySelectorAll('#meme-list > article').forEach((card, i) => {
+      const item = window._lastMemeData && window._lastMemeData[i];
+      if (item) {
+        card.dataset.chain = item.chain;
+        card.dataset.launchTime = item.launch_time || item.first_seen;
+        card.dataset.change24h = item.change24h;
+      }
+    });
+  } else if (sectionId === 'nft-list') {
+    document.querySelectorAll('#nft-list > article').forEach((card, i) => {
+      const item = window._lastNFTData && window._lastNFTData[i];
+      if (item) {
+        card.dataset.bluechip = item.is_bluechip;
+        card.dataset.free = item.is_free;
+        card.dataset.mintTime = item.mint_time;
+      }
+    });
+  }
+};
+
+// 修改 KOL/Meme/NFT 加载, 存到 window 供过滤用
+const _origLoadAndRender2 = loadAndRender;
+loadAndRender = async function(sectionId, file, updatedId, renderFn, isList) {
+  let items = [];
+  try {
+    const res = await fetch(file + '?t=' + Date.now(), { cache: 'no-store' });
+    if (res.ok) {
+      const data = await res.json();
+      items = data.items || [];
+    }
+  } catch (e) {}
+  if (sectionId === 'kol-list') window._lastKOLData = items;
+  if (sectionId === 'meme-list') window._lastMemeData = items;
+  if (sectionId === 'nft-list') window._lastNFTData = items;
+  await _origLoadAndRender2(sectionId, file, updatedId, renderFn, isList);
+};
