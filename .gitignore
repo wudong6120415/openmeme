@@ -12,3 +12,8 @@ Thumbs.db
 *.swp
 scweet_state.db
 *.db
+
+# Secret files
+secrets/
+*.env
+twitter.env
