@@ -405,7 +405,7 @@ async function loadAndRender(sectionId, file, updatedId, renderFn, isList = true
 
 // === 启动 ===
 document.addEventListener('DOMContentLoaded', () => {
-  loadAndRender("kol-list", "data/kol.json", "kol-updated", kolCardHTML);
+  loadAndRender("early-list", "data/early.json", "early-updated", earlyCardHTML);
   setupSearchAndFilters();
   loadAndRender('meme-list', 'data/meme.json', 'meme-updated', memeCardHTML);
   loadAndRender('nft-list', 'data/nft.json', 'nft-updated', nftCardHTML);
@@ -508,9 +508,14 @@ function setupSearchAndFilters() {
   });
 
   // NFT 过滤
-  setupFilterChips('nft-filters', (cat) => {\n    FilterState.nft.cat = cat;\n    applyFilters('nft');\n  });\n  // Early 早期项目过滤\n  setupFilterChips('early-filters', (cat) => {\n    FilterState.early.cat = cat;\n    applyFilters('early');\n  });
+  setupFilterChips('nft-filters', (cat) => {
     FilterState.nft.cat = cat;
     applyFilters('nft');
+  });
+  // Early 早期项目过滤
+  setupFilterChips('early-filters', (cat) => {
+    FilterState.early.cat = cat;
+    applyFilters('early');
   });
 }
 
