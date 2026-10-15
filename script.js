@@ -150,9 +150,10 @@ function nftCardHTML(item) {
         <div class="meme-verdict ${item.ai_verdict_color || 'yellow'}">${item.ai_score || '—'} · ${item.ai_verdict || '观望'}</div>
       </div>
       <div class="nft-actions">
-        <a class="nft-btn primary" href="${tw}" target="_blank" rel="noopener">𝕏 发推</a>
-        <a class="nft-btn" href="${item.project_website || '#'}" target="_blank" rel="noopener">🌐 Mint</a>
+        <a class="nft-btn primary" href="${item.mint_url || item.project_website || '#'}" target="_blank" rel="noopener" title="${item.mint_url ? '直达 mint 页面' : '跳到官网'}">🎯 Mint ${item.is_free ? '免费' : ''}</a>
+        <a class="nft-btn" href="${tw}" target="_blank" rel="noopener">𝕏 发推</a>
         <a class="nft-btn" href="${item.project_twitter || item.source_tweet || '#'}" target="_blank" rel="noopener">𝕏 关注</a>
+        ${item.tutorial_url ? `<a class="nft-btn" href="${item.tutorial_url}" target="_blank" rel="noopener">📖 教程</a>` : ''}
       </div>
     </article>
   `;
