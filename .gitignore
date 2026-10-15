@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Data (每次抓取都变, 不入仓 — 留空目录占位)
+data/*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
