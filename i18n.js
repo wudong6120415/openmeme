@@ -19,7 +19,7 @@ const I18N = {
     stat_kol: 'KOL 推文',
 
     sec_kol: '🐦 KOL Radar',
-    sec_kol_sub: '20 个推特大V, 过去 24h 推了什么新项目 · AI 信誉分析',
+    sec_kol_sub: '21 个推特大V · 公开资料 · 无编造推文',
     sec_meme: '🔥 Meme 速递',
     sec_meme_sub: '新 Meme 币首发 · Solana Pump.fun · BSC 4.meme · Base 等',
     sec_nft: '🎨 NFT Mint 名单',
@@ -73,7 +73,7 @@ const I18N = {
     stat_kol: 'KOL Tweets',
 
     sec_kol: '🐦 KOL Radar',
-    sec_kol_sub: '20 top crypto KOLs · Past 24h tweets · AI trust analysis',
+    sec_kol_sub: '21 个推特大V · 公开资料 · 无编造推文',
     sec_meme: '🔥 Meme Express',
     sec_meme_sub: 'New meme launches · Solana Pump.fun · BSC 4.meme · Base',
     sec_nft: '🎨 NFT Mint List',

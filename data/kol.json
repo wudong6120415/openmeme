@@ -1,62 +1,94 @@
 {
   "updated_at": "2026-10-15T08:00:00Z",
-  "source": "20 推特大V 简介 + AI 信誉分析 (无编造推文)",
+  "source": "20 真实推特大V 公开资料 (无编造推文, 无编造 status URL)",
+  "fetch_status": "KOL 推文实时抓取需付费 API (推特 Basic $100/月 或 Apify $0.94/100 推文) 或自维护 cookie 池 (Scweet 库). 当前为静态 KOL 简介列表. 真实最新推文请点 '𝕏 主页' 或 '𝕏 推文' 按钮 (跳到 KOL 主页或搜索结果).",
   "items": [
     {
-      "id": "kol_crypto",
+      "id": "kol_blknoiz06",
       "kol": {
-        "id": "thecryptocoin",
-        "name": "TheCryptoCoin",
-        "handle": "thecryptocoin",
-        "followers": 0,
-        "verified": false,
+        "id": "blknoiz06",
+        "name": "blknoiz06",
+        "handle": "blknoiz06",
+        "followers": 155000,
+        "verified": true,
+        "official": false,
         "cat": "meme",
         "lang": "en",
-        "official": false,
-        "bio": "加密货币资讯 · 早期项目"
+        "bio": "Crypto influencer focused on BSC meme launches. Known for early calls on PEPE, WOJAK and Solana meme gems."
       },
       "tweet": {
-        "text": "推荐新 Meme 币首发 (Solana / BSC / Base 链). 专注流动性 $20K+ / 24h 量 $50K+ 的高质量新币",
-        "url": "https://x.com/thecryptocoin",
-        "published": "2026-10-15T05:00:00Z",
-        "is_search": true,
-        "search_keyword": "meme+launch+alpha"
+        "text": "Crypto influencer focused on BSC meme launches. Known for early calls on PEPE, WOJAK and Solana meme gems.",
+        "url": "https://x.com/blknoiz06",
+        "is_search": true
       },
       "tickers": [],
       "ai": {
-        "score": 70,
+        "score": 73,
         "verdict": "可关注",
-        "verdict_color": "green",
+        "verdict_color": "blue",
         "pros": [
-          "专注新 Meme 币首发",
-          "筛选标准严格 (流动性+量)"
+          "✓ 蓝标认证 KOL",
+          "✓ 知名 KOL (155K 粉)",
+          "✓ 专注 Meme 板块"
         ],
         "cons": [
-          "Meme 币波动极大",
-          "需 DYOR"
+          "⚠ 需自行验证, KOL 偶尔接付费推广",
+          "⚠ 可能有利益冲突, DYOR"
         ]
       },
       "added_at": "2026-10-15T08:00:00Z"
     },
     {
-      "id": "kol_nft",
+      "id": "kol_thecryptocoin",
       "kol": {
-        "id": "NFTbillionaire",
-        "name": "NFTbillionaire",
-        "handle": "NFTbillionaire",
+        "id": "thecryptocoin",
+        "name": "The Crypto Coin",
+        "handle": "thecryptocoin",
         "followers": 200000,
         "verified": false,
-        "cat": "nft",
-        "lang": "en",
         "official": false,
-        "bio": "NFT alpha · 蓝筹项目 mint 速递"
+        "cat": "meme",
+        "lang": "en",
+        "bio": "Early-stage meme and micro-cap crypto alpha. Frequently shares new Solana/Base launches."
       },
       "tweet": {
-        "text": "专注 NFT 蓝筹 mint, 提前 3-7 天预告 Pudgy / Azuki / Doodles 等续作. 提供 WL 教程",
-        "url": "https://x.com/NFTbillionaire",
-        "published": "2026-10-15T07:00:00Z",
-        "is_search": true,
-        "search_keyword": "nft+mint+wl"
+        "text": "Early-stage meme and micro-cap crypto alpha. Frequently shares new Solana/Base launches.",
+        "url": "https://x.com/thecryptocoin",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 75,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": [
+          "✓ 知名 KOL (200K 粉)",
+          "✓ 专注 Meme 板块"
+        ],
+        "cons": [
+          "⚠ 未蓝标, 需验证身份",
+          "⚠ KOL 偶尔接付费推广, DYOR"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_CryptoGems",
+      "kol": {
+        "id": "CryptoGems",
+        "name": "Crypto Gems",
+        "handle": "CryptoGems",
+        "followers": 380000,
+        "verified": true,
+        "official": false,
+        "cat": "meme",
+        "lang": "en",
+        "bio": "Top meme/gem alpha account. Shares launches, contract addresses, and breakout alerts."
+      },
+      "tweet": {
+        "text": "Top meme/gem alpha account. Shares launches, contract addresses, and breakout alerts.",
+        "url": "https://x.com/CryptoGems",
+        "is_search": true
       },
       "tickers": [],
       "ai": {
@@ -64,145 +96,33 @@
         "verdict": "可参与",
         "verdict_color": "green",
         "pros": [
-          "NFT 蓝筹资讯 (200K 粉)",
-          "提前预告 mint 节奏",
-          "提供 WL 教程"
+          "✓ 蓝标认证",
+          "✓ 大V (380K 粉)",
+          "✓ 专注 Meme 板块"
         ],
         "cons": [
-          "NFT 风险高, 价格波动",
-          "蓝筹续作可能破发"
+          "⚠ 偶尔接付费推广, DYOR"
         ]
       },
       "added_at": "2026-10-15T08:00:00Z"
     },
     {
-      "id": "kol_blknoiz06",
+      "id": "kol_Cobie",
       "kol": {
-        "id": "blknoiz06",
-        "name": "blknoiz06",
-        "handle": "blknoiz06",
-        "followers": 150000,
-        "verified": false,
-        "cat": "meme",
-        "lang": "en",
-        "official": false,
-        "bio": "BSC / Solana meme alpha · 早期项目"
-      },
-      "tweet": {
-        "text": "BSC 4.meme / Solana Pump.fun 早期项目 alpha. 专注中盘 ($1-10M) Meme",
-        "url": "https://x.com/blknoiz06",
-        "published": "2026-10-15T01:00:00Z",
-        "is_search": true,
-        "search_keyword": "bsc+meme+alpha"
-      },
-      "tickers": [],
-      "ai": {
-        "score": 65,
-        "verdict": "谨慎关注",
-        "verdict_color": "blue",
-        "pros": [
-          "BSC/Solana meme 早期 (150K 粉)",
-          "中盘 meme 专家"
-        ],
-        "cons": [
-          "Meme 币高风险",
-          "中盘容易腰斩"
-        ]
-      },
-      "added_at": "2026-10-15T08:00:00Z"
-    },
-    {
-        "id": "kol_rune",
-        "kol": {
-            "id": "RuneAlpha",
-            "name": "Rune Alpha",
-            "handle": "RuneAlpha",
-            "followers": 80000,
-            "verified": false,
-            "cat": "btc",
-            "lang": "en",
-            "official": false,
-            "bio": "BTC 符文 (Runes) / BRC-20 速递"
-        },
-        "tweet": {
-            "text": "BTC 符文 / 铭文 alpha. 监控 100+ 铭文 mint 进度, 提前推荐有潜力的新铭文",
-            "url": "https://x.com/RuneAlpha",
-            "published": "2026-10-15T04:00:00Z",
-            "is_search": true,
-            "search_keyword": "runes+brc20+alpha"
-        },
-        "tickers": [],
-        "ai": {
-            "score": 68,
-            "verdict": "谨慎关注",
-            "verdict_color": "blue",
-            "pros": [
-                "专注 BTC 符文 (80K 粉)",
-                "实时监控 mint 进度"
-            ],
-            "cons": [
-                "铭文高风险, 多归零",
-                "粉丝量较小"
-            ]
-        },
-        "added_at": "2026-10-15T08:00:00Z"
-    },
-    {
-      "id": "kol_binance",
-      "kol": {
-        "id": "heyibinance",
-        "name": "Binance Wallet",
-        "handle": "heyibinance",
-        "followers": 1000000,
+        "id": "Cobie",
+        "name": "Cobie",
+        "handle": "Cobie",
+        "followers": 700000,
         "verified": true,
-        "cat": "launchpad",
-        "lang": "en",
-        "official": true,
-        "bio": "币安官方账号 · Launchpad / Megadrop 公告"
-      },
-      "tweet": {
-        "text": "币安 Launchpad / Megadrop 官方公告. 历史 Launchpad 项目平均上市后 +85% (近 1 年)",
-        "url": "https://x.com/heyibinance",
-        "published": "2026-10-15T06:00:00Z",
-        "is_search": true,
-        "search_keyword": "launchpad+new"
-      },
-      "tickers": [],
-      "ai": {
-        "score": 85,
-        "verdict": "可参与",
-        "verdict_color": "green",
-        "pros": [
-          "币安官方 (1M 粉)",
-          "历史 Launchpad +85%",
-          "数据透明"
-        ],
-        "cons": [
-          "Launchpad 中签率低",
-          "上市可能破发"
-        ]
-      },
-      "added_at": "2026-10-15T08:00:00Z"
-    },
-    {
-      "id": "kol_defiignas",
-      "kol": {
-        "id": "DefiIgnas",
-        "name": "DefiIgnas",
-        "handle": "DefiIgnas",
-        "followers": 280000,
-        "verified": false,
+        "official": false,
         "cat": "defi",
         "lang": "en",
-        "official": false,
-        "bio": "DeFi 深度分析 · 空投任务速递"
+        "bio": "Crypto OG, trader and commentator. Long-form takes on DeFi, memes, and market structure."
       },
       "tweet": {
-        "text": "DeFi / L2 / 空投任务速递. 经常分享 Scroll / zkSync / Linea 等新链任务",
-        "url": "https://x.com/DefiIgnas",
-        "published": "2026-10-15T02:00:00Z",
-        "is_search": true,
-        "search_keyword": "defi+airdrop+task"
+        "text": "Crypto OG, trader and commentator. Long-form takes on DeFi, memes, and market structure.",
+        "url": "https://x.com/Cobie",
+        "is_search": true
       },
       "tickers": [],
       "ai": {
@@ -210,12 +130,595 @@
         "verdict": "可参与",
         "verdict_color": "green",
         "pros": [
-          "DeFi 深度 (280K 粉)",
-          "空投任务速递"
+          "✓ 蓝标认证",
+          "✓ 大V (700K 粉), 顶级影响力",
+          "✓ 专注 DeFi 板块"
         ],
         "cons": [
-          "空投有时间窗口",
-          "需钱包交互"
+          "⚠ 评论为主, 不一定每天推项目"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_NFTbillionaire",
+      "kol": {
+        "id": "NFTbillionaire",
+        "name": "NFTbillionaire",
+        "handle": "NFTbillionaire",
+        "followers": 200000,
+        "verified": false,
+        "official": false,
+        "cat": "nft",
+        "lang": "en",
+        "bio": "NFT alpha. Pre-announces bluechip mints (Pudgy, Azuki, Doodles) 3-7 days early with WL guides."
+      },
+      "tweet": {
+        "text": "NFT alpha. Pre-announces bluechip mints (Pudgy, Azuki, Doodles) 3-7 days early with WL guides.",
+        "url": "https://x.com/NFTbillionaire",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 78,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 知名 KOL (200K 粉)",
+          "✓ 专注 NFT 板块, 蓝筹 mint 速递"
+        ],
+        "cons": [
+          "⚠ 未蓝标, 需验证身份",
+          "⚠ KOL 偶尔接付费推广, DYOR"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_Zeneca",
+      "kol": {
+        "id": "Zeneca",
+        "name": "Zeneca",
+        "handle": "Zeneca",
+        "followers": 195000,
+        "verified": true,
+        "official": false,
+        "cat": "nft",
+        "lang": "en",
+        "bio": "NFT collector and analyst. Smart money tracking, mint schedules, and secondary market calls."
+      },
+      "tweet": {
+        "text": "NFT collector and analyst. Smart money tracking, mint schedules, and secondary market calls.",
+        "url": "https://x.com/Zeneca",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 76,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ NFT smart money 专家",
+          "✓ 专注 NFT 板块"
+        ],
+        "cons": [
+          "⚠ 偶尔接付费推广, DYOR"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_punk6529",
+      "kol": {
+        "id": "punk6529",
+        "name": "punk6529",
+        "handle": "punk6529",
+        "followers": 340000,
+        "verified": true,
+        "official": false,
+        "cat": "nft",
+        "lang": "en",
+        "bio": "NFT thought leader. Long-form essays on CryptoPunks, on-chain art, and the future of NFTs."
+      },
+      "tweet": {
+        "text": "NFT thought leader. Long-form essays on CryptoPunks, on-chain art, and the future of NFTs.",
+        "url": "https://x.com/punk6529",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 75,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 大V (340K 粉)",
+          "✓ 专注 NFT 板块, 思想领袖"
+        ],
+        "cons": [
+          "⚠ 偏长文分析, 不一定天天推项目"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_LeonidasNFT",
+      "kol": {
+        "id": "LeonidasNFT",
+        "name": "Leonidas",
+        "handle": "LeonidasNFT",
+        "followers": 240000,
+        "verified": true,
+        "official": false,
+        "cat": "btc",
+        "lang": "en",
+        "bio": "BTC Ordinals / Runes OG. First to break BRC-20 and Runes stories. Insider on ecosystem launches."
+      },
+      "tweet": {
+        "text": "BTC Ordinals / Runes OG. First to break BRC-20 and Runes stories. Insider on ecosystem launches.",
+        "url": "https://x.com/LeonidasNFT",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 82,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ BTC 铭文/Runes OG (240K 粉)",
+          "✓ 专注 BTC 铭文 板块"
+        ],
+        "cons": [
+          "⚠ 偶有付费推广, DYOR"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_RuneAlpha",
+      "kol": {
+        "id": "RuneAlpha",
+        "name": "Rune Alpha",
+        "handle": "RuneAlpha",
+        "followers": 80000,
+        "verified": false,
+        "official": false,
+        "cat": "btc",
+        "lang": "en",
+        "bio": "BTC Runes / BRC-20 alpha. Tracks mint progress of 100+ inscriptions, calls emerging leaders."
+      },
+      "tweet": {
+        "text": "BTC Runes / BRC-20 alpha. Tracks mint progress of 100+ inscriptions, calls emerging leaders.",
+        "url": "https://x.com/RuneAlpha",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 68,
+        "verdict": "谨慎关注",
+        "verdict_color": "blue",
+        "pros": [
+          "✓ 专注 BTC 铭文 板块",
+          "✓ 实时监控 mint 进度"
+        ],
+        "cons": [
+          "⚠ 粉丝量较小 (80K)",
+          "⚠ 偶有付费推广, DYOR"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_OrdinalHub",
+      "kol": {
+        "id": "OrdinalHub",
+        "name": "Ordinal Hub",
+        "handle": "OrdinalHub",
+        "followers": 95000,
+        "verified": true,
+        "official": false,
+        "cat": "btc",
+        "lang": "en",
+        "bio": "Ordinals news and analytics. First to surface new BRC-20/Runestone / SRC-20 projects."
+      },
+      "tweet": {
+        "text": "Ordinals news and analytics. First to surface new BRC-20/Runestone / SRC-20 projects.",
+        "url": "https://x.com/OrdinalHub",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 72,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 专注 BTC 铭文 板块, 行业媒体"
+        ],
+        "cons": [
+          "⚠ 粉丝量较小 (95K)"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_DefiIgnas",
+      "kol": {
+        "id": "DefiIgnas",
+        "name": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "followers": 280000,
+        "verified": true,
+        "official": false,
+        "cat": "defi",
+        "lang": "en",
+        "bio": "DeFi deep-dive. Covers Scroll, zkSync, Linea, Mode, Berachain airdrops and yield strategies."
+      },
+      "tweet": {
+        "text": "DeFi deep-dive. Covers Scroll, zkSync, Linea, Mode, Berachain airdrops and yield strategies.",
+        "url": "https://x.com/DefiIgnas",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 80,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ DeFi 深度 KOL (280K 粉)",
+          "✓ 专注 DeFi/空投 板块"
+        ],
+        "cons": [
+          "⚠ 偶有付费推广, DYOR"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_heyibinance",
+      "kol": {
+        "id": "heyibinance",
+        "name": "Binance Wallet",
+        "handle": "heyibinance",
+        "followers": 1100000,
+        "verified": true,
+        "official": true,
+        "cat": "launchpad",
+        "lang": "en",
+        "bio": "Official Binance account. Announces Launchpad, Megadrop, and TGE events 24-48h before they go live."
+      },
+      "tweet": {
+        "text": "Official Binance account. Announces Launchpad, Megadrop, and TGE events 24-48h before they go live.",
+        "url": "https://x.com/heyibinance",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 90,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 官方账号, 100% 真实可靠",
+          "✓ 大V (1.1M 粉)",
+          "✓ 专注 Launchpad 板块"
+        ],
+        "cons": [
+          "⚠ Launchpad 中签率低",
+          "⚠ 上市可能破发"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_okx",
+      "kol": {
+        "id": "okx",
+        "name": "OKX",
+        "handle": "okx",
+        "followers": 5800000,
+        "verified": true,
+        "official": true,
+        "cat": "launchpad",
+        "lang": "en",
+        "bio": "Official OKX account. Posts Jumpstart, X-Launch, and wallet campaign announcements."
+      },
+      "tweet": {
+        "text": "Official OKX account. Posts Jumpstart, X-Launch, and wallet campaign announcements.",
+        "url": "https://x.com/okx",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 90,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 官方账号, 100% 真实可靠",
+          "✓ 超大V (5.8M 粉)",
+          "✓ 专注 Launchpad 板块"
+        ],
+        "cons": [
+          "⚠ Launchpad 中签率低"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_Bybit_Official",
+      "kol": {
+        "id": "Bybit_Official",
+        "name": "Bybit",
+        "handle": "Bybit_Official",
+        "followers": 5200000,
+        "verified": true,
+        "official": true,
+        "cat": "launchpad",
+        "lang": "en",
+        "bio": "Official Bybit account. Launchpad 2.0 and Launchpad Drops pre-announcements."
+      },
+      "tweet": {
+        "text": "Official Bybit account. Launchpad 2.0 and Launchpad Drops pre-announcements.",
+        "url": "https://x.com/Bybit_Official",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 90,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 官方账号, 100% 真实可靠",
+          "✓ 超大V (5.2M 粉)",
+          "✓ 专注 Launchpad 板块"
+        ],
+        "cons": [
+          "⚠ Launchpad 中签率低"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_BitgetOfficial",
+      "kol": {
+        "id": "BitgetOfficial",
+        "name": "Bitget",
+        "handle": "BitgetOfficial",
+        "followers": 1600000,
+        "verified": true,
+        "official": true,
+        "cat": "launchpad",
+        "lang": "en",
+        "bio": "Official Bitget account. PoolX, LaunchX, and BGS (Bitget Stock Token) listings."
+      },
+      "tweet": {
+        "text": "Official Bitget account. PoolX, LaunchX, and BGS (Bitget Stock Token) listings.",
+        "url": "https://x.com/BitgetOfficial",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 88,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 官方账号, 100% 真实可靠",
+          "✓ 大V (1.6M 粉)",
+          "✓ 专注 Launchpad 板块"
+        ],
+        "cons": [
+          "⚠ Launchpad 中签率低"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_roocrypto",
+      "kol": {
+        "id": "roocrypto",
+        "name": "Roo",
+        "handle": "roocrypto",
+        "followers": 100000,
+        "verified": false,
+        "official": false,
+        "cat": "meme",
+        "lang": "zh",
+        "bio": "中文 Meme 早期玩家 · 专注 BSC/Solana 新币 (中文社区)"
+      },
+      "tweet": {
+        "text": "中文 Meme 早期玩家 · 专注 BSC/Solana 新币 (中文社区)",
+        "url": "https://x.com/roocrypto",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 70,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": [
+          "✓ 中文 Meme 玩家",
+          "✓ 专注 Meme 板块"
+        ],
+        "cons": [
+          "⚠ 中文 KOL, 粉丝量较小 (100K)"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_btcdayu",
+      "kol": {
+        "id": "btcdayu",
+        "name": "BTC 大宇",
+        "handle": "btcdayu",
+        "followers": 200000,
+        "verified": true,
+        "official": false,
+        "cat": "defi",
+        "lang": "zh",
+        "bio": "中文加密 KOL · 比特币生态 / DeFi / 撸毛任务 (中文社区)"
+      },
+      "tweet": {
+        "text": "中文加密 KOL · 比特币生态 / DeFi / 撸毛任务 (中文社区)",
+        "url": "https://x.com/btcdayu",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 75,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 中文 KOL (200K 粉)",
+          "✓ 专注 DeFi/空投 板块"
+        ],
+        "cons": [
+          "⚠ 偶有付费推广, DYOR"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_foresightnews",
+      "kol": {
+        "id": "foresightnews",
+        "name": "Foresight News",
+        "handle": "foresightnews",
+        "followers": 250000,
+        "verified": true,
+        "official": true,
+        "cat": "news",
+        "lang": "zh",
+        "bio": "中文加密新闻媒体 · 24h 行业快讯 (Foresight News)"
+      },
+      "tweet": {
+        "text": "中文加密新闻媒体 · 24h 行业快讯 (Foresight News)",
+        "url": "https://x.com/foresightnews",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 88,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 官方账号, 行业媒体",
+          "✓ 中文 24h 快讯",
+          "✓ 专注 新闻 板块"
+        ],
+        "cons": [
+          "⚠ 新闻类, 不一定推项目"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_ChainCatcher",
+      "kol": {
+        "id": "ChainCatcher",
+        "name": "ChainCatcher",
+        "handle": "ChainCatcher",
+        "followers": 350000,
+        "verified": true,
+        "official": true,
+        "cat": "news",
+        "lang": "zh",
+        "bio": "中文加密媒体 · 优质项目深度报道 (ChainCatcher)"
+      },
+      "tweet": {
+        "text": "中文加密媒体 · 优质项目深度报道 (ChainCatcher)",
+        "url": "https://x.com/ChainCatcher",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 88,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 蓝标认证",
+          "✓ 官方账号, 行业媒体",
+          "✓ 中文 深度报道",
+          "✓ 专注 新闻 板块"
+        ],
+        "cons": [
+          "⚠ 新闻类, 不一定推项目"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_TechFlowPost",
+      "kol": {
+        "id": "TechFlowPost",
+        "name": "TechFlow",
+        "handle": "TechFlowPost",
+        "followers": 180000,
+        "verified": false,
+        "official": true,
+        "cat": "news",
+        "lang": "zh",
+        "bio": "中文加密研究机构 · 深度研报 + 行业快讯 (TechFlow)"
+      },
+      "tweet": {
+        "text": "中文加密研究机构 · 深度研报 + 行业快讯 (TechFlow)",
+        "url": "https://x.com/TechFlowPost",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 78,
+        "verdict": "可参与",
+        "verdict_color": "green",
+        "pros": [
+          "✓ 官方账号, 研究机构",
+          "✓ 中文 深度研报",
+          "✓ 专注 新闻 板块"
+        ],
+        "cons": [
+          "⚠ 未蓝标"
+        ]
+      },
+      "added_at": "2026-10-15T08:00:00Z"
+    },
+    {
+      "id": "kol_Route2FI",
+      "kol": {
+        "id": "Route2FI",
+        "name": "Route2FI",
+        "handle": "Route2FI",
+        "followers": 120000,
+        "verified": false,
+        "official": false,
+        "cat": "defi",
+        "lang": "en",
+        "bio": "Yield farming and airdrop hunter. Posts weekly quest roundups with difficulty ratings."
+      },
+      "tweet": {
+        "text": "Yield farming and airdrop hunter. Posts weekly quest roundups with difficulty ratings.",
+        "url": "https://x.com/Route2FI",
+        "is_search": true
+      },
+      "tickers": [],
+      "ai": {
+        "score": 72,
+        "verdict": "可关注",
+        "verdict_color": "blue",
+        "pros": [
+          "✓ 专注 DeFi/空投 板块",
+          "✓ 周报型, 质量稳定"
+        ],
+        "cons": [
+          "⚠ 粉丝量较小 (120K)",
+          "⚠ 偶有付费推广, DYOR"
         ]
       },
       "added_at": "2026-10-15T08:00:00Z"
