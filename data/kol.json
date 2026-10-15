@@ -1,252 +1,173 @@
 {
-  "updated_at": "2026-10-15T21:10:00Z",
-  "source": "KOL Radar — 超早期新项目聚合 (大V推荐 + 官网抓取), 每个项目 1 张卡",
-  "concept": "不是 KOL 推文列表, 是从 KOL 推文里提取的超早期新项目卡片, 重点是撸毛人可立即执行的项目信息 (官网/推特/Mint URL/白名单)",
-  "fetch_method": "Scweet 5.5.0 (用 @ruoxiwu001 cookie) + 公开 Launchpad/NFT/空投 公告",
-  "fetch_status": "limited (推特限流, 等 2-24h)",
+  "updated_at": "2026-10-15T13:35:48.915821Z",
+  "source": "Scweet 真抓 4 个项目账号 (用 @ruoxiwu001 cookie)",
+  "fetch_method": "Scweet 5.5.0",
+  "fetch_status": "ok",
+  "concept": "KOL Radar — 用户关注项目卡片 (4 个 @FungoLabs @loanmeme @RGBHorse @utexocom)",
   "items": [
     {
-      "id": "pudgy_igloo",
-      "name": "Pudgy Penguins: Igloo",
-      "ticker": "IGLOO",
-      "logo": "https://pbs.twimg.com/profile_images/1736752073835556864/VQqB7g4z_400x400.png",
+      "id": "user_project_FungoLabs_2108904586371051790",
+      "name": "Fungo Labs",
+      "ticker": "FUNGO",
+      "logo": "",
       "chain": "ethereum",
       "category": "nft",
-      "stage": "whitelist_open",
-      "stage_label": "🟢 白名单申请中",
-      "story": "蓝筹 Pudgy Penguins 续作, Igloo 收藏品, 0.08 ETH mint, 10/18 14:00 UTC 开抢.",
-      "mint_time": "2026-10-18T14:00:00Z",
-      "first_seen": "2026-10-15T08:00:00Z",
+      "stage": "kol_mentioned",
+      "stage_label": "🆕 @FungoLabs 关注",
+      "story": "用户关注: Ethereum 上第一个加密 NFT, 用 ZAMA 协议\n\n最新推文 (Sat Oct 10 12:56:49 +0000 2026):\nWhitelist reviews are ongoing.\n\nSo far, 281 accounts have been approved, and 15 holders have each received one nomination.\n\n🟨 Check your status: https://t.co/4uKGPd203R\n\nMore news coming very soon. https://t.co/Bej7niWqSF",
+      "first_seen": "Sat Oct 10 12:56:49 +0000 2026",
       "official_links": {
-        "website": "https://pudgypenguins.com",
-        "mint_url": "https://pudgypenguins.com/igloo/mint",
-        "twitter": "https://x.com/pudgypenguins",
-        "discord": "https://discord.gg/pudgypenguins",
-        "tutorial": "https://docs.pudgypenguins.com/igloo-guide"
+        "twitter": "https://x.com/FungoLabs",
+        "kol_tweet": "https://x.com/FungoLabs/status/2108904586371051790",
+        "kol_tweet_text": "Whitelist reviews are ongoing.\n\nSo far, 281 accounts have been approved, and 15 holders have each received one nomination.\n\n🟨 Check your status: https://t.co/4uKGPd203R\n\nMore news coming very soon. ht"
       },
       "participation": {
-        "method": "公开 mint + WL",
-        "price": "0.08 ETH (≈$280)",
-        "supply": "10,000 (已 mint 4,523)",
-        "vesting": "二级市场"
+        "method": "关注官方推特, 等项目方公布 mint/IDO/空投",
+        "note": "⚠ 早期项目, 具体撸毛方式看推文"
       },
-      "source_kol": "NFTbillionaire",
-      "source_kol_url": "https://x.com/NFTbillionaire",
-      "is_bluechip": true,
-      "is_free": false,
-      "difficulty": "⭐⭐",
-      "ai_score": 80,
-      "ai_verdict": "可参与",
-      "ai_verdict_color": "green",
-      "pros": [
-        "🏆 蓝筹 Pudgy 续作, 价值有支撑",
-        "提前 3-7 天预告, 准备时间充足",
-        "已 mint 45%, 还有 1-2 天窗口期"
-      ],
-      "cons": [
-        "0.08 ETH 价格不低, 散户需谨慎",
-        "蓝筹续作可能破发",
-        "需 DYOR, 非投资建议"
-      ]
-    },
-    {
-      "id": "monad_mainnet",
-      "name": "Monad Mainnet",
-      "ticker": "MON",
-      "logo": "https://pbs.twimg.com/profile_images/1755241999488233472/Iko-3qMq_400x400.png",
-      "chain": "monad",
-      "category": "launchpad",
-      "stage": "tge_soon",
-      "stage_label": "🚀 5 天后 TGE",
-      "story": "高性能 L1 公链, 1 秒出块 10 万 TPS, Bybit Launchpad 申购, 200-2000 USDT 额度.",
-      "launch_time": "2026-10-20T12:00:00Z",
-      "first_seen": "2026-10-15T08:00:00Z",
-      "official_links": {
-        "website": "https://monad.xyz",
-        "ido_url": "https://www.bybit.com/launchpad",
-        "twitter": "https://x.com/monad_xyz",
-        "whitepaper": "https://monad.xyz/whitepaper.pdf"
-      },
-      "participation": {
-        "method": "Bybit Launchpad 申购",
-        "price": "0.08 USDT",
-        "total_raise": "8,000,000 USDT",
-        "per_user": "200-2000 USDT",
-        "vesting": "15% TGE, 12 月线性"
-      },
-      "source_kol": "Bybit_Official",
-      "source_kol_url": "https://x.com/Bybit_Official",
-      "is_bluechip": true,
-      "is_free": false,
-      "difficulty": "⭐⭐",
-      "ai_score": 78,
-      "ai_verdict": "可参与",
-      "ai_verdict_color": "green",
-      "pros": [
-        "🚀 Bybit Launchpad, 历史 +85% 平均",
-        "高性能 L1, 1 秒出块",
-        "融资 2.25 亿, 顶级 VC 阵容"
-      ],
-      "cons": [
-        "TGE 后可能回调",
-        "需 Bybit 账号 + KYC",
-        "中签率不确定"
-      ]
-    },
-    {
-      "id": "sapien_launchpad",
-      "name": "Sapien AI",
-      "ticker": "SAPIEN",
-      "logo": "https://pbs.twimg.com/profile_images/1730000000000000000/placeholder.png",
-      "chain": "bsc",
-      "category": "launchpad",
-      "stage": "ido_soon",
-      "stage_label": "🎯 7 天后 IDO 申购",
-      "story": "AI 概念 IDO, 币安 Launchpad, 历史 +85% 平均 (近 1 年 12 个项目).",
-      "launch_time": "2026-10-22T12:00:00Z",
-      "first_seen": "2026-10-15T08:00:00Z",
-      "official_links": {
-        "website": "https://sapien.ai",
-        "ido_url": "https://www.binance.com/launchpad",
-        "twitter": "https://x.com/sapien_ai",
-        "whitepaper": "https://sapien.ai/whitepaper.pdf"
-      },
-      "participation": {
-        "method": "币安 Launchpad 申购",
-        "price": "0.5 USDT",
-        "total_raise": "5,000,000 USDT",
-        "per_user": "100-1000 USDT",
-        "vesting": "25% TGE, 6 月线性"
-      },
-      "source_kol": "heyibinance",
-      "source_kol_url": "https://x.com/heyibinance",
-      "is_bluechip": true,
-      "is_free": false,
-      "difficulty": "⭐⭐",
-      "ai_score": 78,
-      "ai_verdict": "可参与",
-      "ai_verdict_color": "green",
-      "pros": [
-        "🎯 币安 Launchpad, 历史 +85%",
-        "AI 概念, 长期看好",
-        "低申购门槛 (100 USDT)"
-      ],
-      "cons": [
-        "Launchpad 中签率低",
-        "上市可能破发",
-        "需 BNB 持仓"
-      ]
-    },
-    {
-      "id": "scroll_phase2",
-      "name": "Scroll zkEVM Phase 2",
-      "ticker": "ZK",
-      "logo": "https://pbs.twimg.com/profile_images/1705000000000000000/placeholder.png",
-      "chain": "scroll",
-      "category": "airdrop",
-      "stage": "task_active",
-      "stage_label": "🎁 任务进行中 (5 天)",
-      "story": "Scroll zkEVM 第 2 阶段空投, 3 步任务, 10 分钟, 100 ZK 奖励, 无 KYC.",
-      "deadline": "2026-10-20T00:00:00Z",
-      "first_seen": "2026-10-15T08:00:00Z",
-      "official_links": {
-        "website": "https://scroll.io",
-        "quest_url": "https://galxe.com/quest/scroll-phase2",
-        "twitter": "https://x.com/Scroll_ZKP",
-        "discord": "https://discord.gg/scroll"
-      },
-      "participation": {
-        "method": "Galxe 任务",
-        "reward": "100 ZK (≈$50)",
-        "time_required": "10 分钟",
-        "difficulty": "⭐⭐"
-      },
-      "source_kol": "DefiIgnas",
-      "source_kol_url": "https://x.com/DefiIgnas",
-      "is_bluechip": true,
-      "is_free": true,
-      "difficulty": "⭐",
-      "ai_score": 78,
-      "ai_verdict": "可参与",
-      "ai_verdict_color": "green",
-      "pros": [
-        "🎁 免费撸毛, 100 ZK 奖励",
-        "10 分钟可完成",
-        "无 KYC"
-      ],
-      "cons": [
-        "需钱包交互",
-        "5 天窗口期"
-      ]
-    },
-    {
-      "id": "linea_voyage",
-      "name": "Linea Voyage",
-      "ticker": "LINEA",
-      "logo": "https://pbs.twimg.com/profile_images/1707000000000000000/placeholder.png",
-      "chain": "linea",
-      "category": "airdrop",
-      "stage": "task_active",
-      "stage_label": "🎁 任务进行中 (3 天)",
-      "story": "Linea Voyage 任务, 30 分钟, 50-200 LINEA 奖励.",
-      "deadline": "2026-10-18T00:00:00Z",
-      "first_seen": "2026-10-15T08:00:00Z",
-      "official_links": {
-        "website": "https://linea.build",
-        "quest_url": "https://galxe.com/quest/linea-voyage",
-        "twitter": "https://x.com/LineaBuild"
-      },
-      "participation": {
-        "method": "Galxe 任务",
-        "reward": "50-200 LINEA (≈$25-100)",
-        "time_required": "30 分钟",
-        "difficulty": "⭐⭐"
-      },
-      "source_kol": "DefiIgnas",
-      "source_kol_url": "https://x.com/DefiIgnas",
-      "is_bluechip": true,
-      "is_free": true,
-      "difficulty": "⭐",
-      "ai_score": 75,
-      "ai_verdict": "可参与",
-      "ai_verdict_color": "green",
-      "pros": ["🎁 30 分钟可完成, 100% 奖励", "无 KYC"],
-      "cons": ["需钱包交互", "3 天窗口期"]
-    },
-    {
-      "id": "dogeai_solana",
-      "name": "DogeAI",
-      "ticker": "DOGEAI",
-      "logo": "",
-      "chain": "solana",
-      "category": "meme",
-      "stage": "just_launched",
-      "stage_label": "🆕 3h 前首发",
-      "story": "AI + 狗梗, Solana Pump.fun 3h 前上线, 流动性 $32K, 24h +156%.",
-      "launch_time": "2026-10-15T05:00:00Z",
-      "first_seen": "2026-10-15T05:30:00Z",
-      "official_links": {
-        "website": "https://pump.fun",
-        "mint_url": "https://pump.fun/dogeai",
-        "twitter": "https://x.com/search?q=DogeAI%20solana",
-        "dex": "https://dexscreener.com/solana/dogeai"
-      },
-      "participation": {
-        "method": "Pump.fun 公开 mint",
-        "price": "0.0001 SOL",
-        "supply": "1B",
-        "liquidity": "$32K"
-      },
-      "source_kol": "blknoiz06",
-      "source_kol_url": "https://x.com/blknoiz06",
+      "source_kol": "FungoLabs",
+      "source_kol_url": "https://x.com/FungoLabs",
+      "source_tweet_id": "2108904586371051790",
+      "source_tweet_text": "Whitelist reviews are ongoing.\n\nSo far, 281 accounts have been approved, and 15 holders have each received one nomination.\n\n🟨 Check your status: https://t.co/4uKGPd203R\n\nMore news coming very soon. ht",
+      "source_tweet_url": "https://x.com/FungoLabs/status/2108904586371051790",
+      "source_tweet_time": "Sat Oct 10 12:56:49 +0000 2026",
       "is_bluechip": false,
       "is_free": false,
-      "difficulty": "⭐",
-      "ai_score": 50,
-      "ai_verdict": "高风险",
-      "ai_verdict_color": "red",
-      "pros": ["🆕 3h 新币, 24h +156%"],
-      "cons": ["⚠ Meme 币 3h, 极高波动", "⚠ 流动性 $32K 极低", "⚠ 90% 新币归零"]
+      "difficulty": "?",
+      "ai_score": 60,
+      "ai_verdict": "需核实",
+      "ai_verdict_color": "yellow",
+      "pros": [
+        "✓ 用户 @ruoxi01 关注",
+        "✓ @FungoLabs 真实账号 (推特验证 200)"
+      ],
+      "cons": [
+        "⚠ 早期项目, 信息有限",
+        "⚠ 需自行 DYOR"
+      ]
+    },
+    {
+      "id": "user_project_loanmeme_2107866738801168733",
+      "name": "Loan Meme",
+      "ticker": "LOAN",
+      "logo": "",
+      "chain": "ethereum",
+      "category": "meme",
+      "stage": "kol_mentioned",
+      "stage_label": "🆕 @loanmeme 关注",
+      "story": "用户关注: Lending meme 协议\n\n最新推文 (Wed Oct 07 16:12:47 +0000 2026):\nOur first 48 hours since launch. \n\nAll borrowing pools reached capacity in record time with over $2M in TVL and $3M in total volume.\n\nA huge milestone for Loan. Thank you to everyone who’s been part of it. We just started. https://t.co/8OSO6ffVLt",
+      "first_seen": "Wed Oct 07 16:12:47 +0000 2026",
+      "official_links": {
+        "twitter": "https://x.com/loanmeme",
+        "kol_tweet": "https://x.com/loanmeme/status/2107866738801168733",
+        "kol_tweet_text": "Our first 48 hours since launch. \n\nAll borrowing pools reached capacity in record time with over $2M in TVL and $3M in total volume.\n\nA huge milestone for Loan. Thank you to everyone who’s been part o"
+      },
+      "participation": {
+        "method": "关注官方推特, 等项目方公布 mint/IDO/空投",
+        "note": "⚠ 早期项目, 具体撸毛方式看推文"
+      },
+      "source_kol": "loanmeme",
+      "source_kol_url": "https://x.com/loanmeme",
+      "source_tweet_id": "2107866738801168733",
+      "source_tweet_text": "Our first 48 hours since launch. \n\nAll borrowing pools reached capacity in record time with over $2M in TVL and $3M in total volume.\n\nA huge milestone for Loan. Thank you to everyone who’s been part o",
+      "source_tweet_url": "https://x.com/loanmeme/status/2107866738801168733",
+      "source_tweet_time": "Wed Oct 07 16:12:47 +0000 2026",
+      "is_bluechip": false,
+      "is_free": false,
+      "difficulty": "?",
+      "ai_score": 60,
+      "ai_verdict": "需核实",
+      "ai_verdict_color": "yellow",
+      "pros": [
+        "✓ 用户 @ruoxi01 关注",
+        "✓ @loanmeme 真实账号 (推特验证 200)"
+      ],
+      "cons": [
+        "⚠ 早期项目, 信息有限",
+        "⚠ 需自行 DYOR"
+      ]
+    },
+    {
+      "id": "user_project_RGBHorse_2109649748814905632",
+      "name": "RGB Horse",
+      "ticker": "RGBH",
+      "logo": "",
+      "chain": "bitcoin",
+      "category": "btc",
+      "stage": "kol_mentioned",
+      "stage_label": "🆕 @RGBHorse 关注",
+      "story": "用户关注: RGB 协议相关项目\n\n最新推文 (Mon Oct 12 14:17:50 +0000 2026):\nWelcome to our 6 new Genesis Partners! 🐎\n\n@RK_Bitcoin @JustinRzx @FikrilO2 @ayopkacek @givegu88 @aaron_jiang\n\n92 of the 300 Genesis Partner spots are now filled.\n\nOur selection criteria will become more rigorous as spots fill up. If you’re planning to apply, focus on creating quality content and staying involved.\n\nWe’ll also launch a dedicated Genesis Partner group for project updates, ideas, and ",
+      "first_seen": "Mon Oct 12 14:17:50 +0000 2026",
+      "official_links": {
+        "twitter": "https://x.com/RGBHorse",
+        "kol_tweet": "https://x.com/RGBHorse/status/2109649748814905632",
+        "kol_tweet_text": "Welcome to our 6 new Genesis Partners! 🐎\n\n@RK_Bitcoin @JustinRzx @FikrilO2 @ayopkacek @givegu88 @aaron_jiang\n\n92 of the 300 Genesis Partner spots are now filled.\n\nOur selection criteria will become mo"
+      },
+      "participation": {
+        "method": "关注官方推特, 等项目方公布 mint/IDO/空投",
+        "note": "⚠ 早期项目, 具体撸毛方式看推文"
+      },
+      "source_kol": "RGBHorse",
+      "source_kol_url": "https://x.com/RGBHorse",
+      "source_tweet_id": "2109649748814905632",
+      "source_tweet_text": "Welcome to our 6 new Genesis Partners! 🐎\n\n@RK_Bitcoin @JustinRzx @FikrilO2 @ayopkacek @givegu88 @aaron_jiang\n\n92 of the 300 Genesis Partner spots are now filled.\n\nOur selection criteria will become mo",
+      "source_tweet_url": "https://x.com/RGBHorse/status/2109649748814905632",
+      "source_tweet_time": "Mon Oct 12 14:17:50 +0000 2026",
+      "is_bluechip": false,
+      "is_free": false,
+      "difficulty": "?",
+      "ai_score": 60,
+      "ai_verdict": "需核实",
+      "ai_verdict_color": "yellow",
+      "pros": [
+        "✓ 用户 @ruoxi01 关注",
+        "✓ @RGBHorse 真实账号 (推特验证 200)"
+      ],
+      "cons": [
+        "⚠ 早期项目, 信息有限",
+        "⚠ 需自行 DYOR"
+      ]
+    },
+    {
+      "id": "user_project_utexocom_2105967340575744344",
+      "name": "UTEXO",
+      "ticker": "UTX",
+      "logo": "",
+      "chain": "multi",
+      "category": "exchange",
+      "stage": "kol_mentioned",
+      "stage_label": "🆕 @utexocom 关注",
+      "story": "用户关注: UTE 交易所 (Telegram 生态)\n\n最新推文 (Fri Oct 02 10:25:15 +0000 2026):\nTether-Backed Utexo Plans to Launch USDT on Bitcoin This Month\n\nTether-backed Bitcoin payments infrastructure project Utexo plans to issue USDT on the Bitcoin network this month. Co-founder Viktor Ihnatiuk said the company has obtained a commercial license and will provide APIs, https://t.co/xiKTbxYMK6",
+      "first_seen": "Fri Oct 02 10:25:15 +0000 2026",
+      "official_links": {
+        "twitter": "https://x.com/utexocom",
+        "kol_tweet": "https://x.com/utexocom/status/2105967340575744344",
+        "kol_tweet_text": "Tether-Backed Utexo Plans to Launch USDT on Bitcoin This Month\n\nTether-backed Bitcoin payments infrastructure project Utexo plans to issue USDT on the Bitcoin network this month. Co-founder Viktor Ihn"
+      },
+      "participation": {
+        "method": "关注官方推特, 等项目方公布 mint/IDO/空投",
+        "note": "⚠ 早期项目, 具体撸毛方式看推文"
+      },
+      "source_kol": "utexocom",
+      "source_kol_url": "https://x.com/utexocom",
+      "source_tweet_id": "2105967340575744344",
+      "source_tweet_text": "Tether-Backed Utexo Plans to Launch USDT on Bitcoin This Month\n\nTether-backed Bitcoin payments infrastructure project Utexo plans to issue USDT on the Bitcoin network this month. Co-founder Viktor Ihn",
+      "source_tweet_url": "https://x.com/utexocom/status/2105967340575744344",
+      "source_tweet_time": "Fri Oct 02 10:25:15 +0000 2026",
+      "is_bluechip": false,
+      "is_free": false,
+      "difficulty": "?",
+      "ai_score": 60,
+      "ai_verdict": "需核实",
+      "ai_verdict_color": "yellow",
+      "pros": [
+        "✓ 用户 @ruoxi01 关注",
+        "✓ @utexocom 真实账号 (推特验证 200)"
+      ],
+      "cons": [
+        "⚠ 早期项目, 信息有限",
+        "⚠ 需自行 DYOR"
+      ]
     }
   ]
 }

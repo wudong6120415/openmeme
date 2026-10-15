@@ -21,7 +21,6 @@
       "source_tweet": "https://x.com/NFTbillionaire/status/555",
       "project_twitter": "https://x.com/pudgypenguins",
       "project_website": "https://pudgypenguins.com",
-      "mint_url": "https://pudgypenguins.com/igloo/mint",
       "discord": "https://discord.gg/pudgypenguins",
       "tutorial_url": "https://docs.pudgypenguins.com/igloo-guide",
       "is_bluechip": true,
@@ -30,8 +29,13 @@
       "ai_score": 78,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["蓝筹", "已 mint 45%", "公开 mint"],
-      "ai_summary": "Pudgy 蓝筹, 蓝筹续作, 价值有支撑。已 mint 45%, 估计 1-2 天售罄。"
+      "risk_tags": [
+        "蓝筹",
+        "已 mint 45%",
+        "公开 mint"
+      ],
+      "ai_summary": "Pudgy 蓝筹, 蓝筹续作, 价值有支撑。已 mint 45%, 估计 1-2 天售罄。",
+      "mint_url_note": "请访问项目官网找最新 mint 页面"
     },
     {
       "id": "azuki_elem",
@@ -52,7 +56,6 @@
       "source_tweet": "https://x.com/Zeneca_/status/666",
       "project_twitter": "https://x.com/azuki",
       "project_website": "https://azuki.com/elementals",
-      "mint_url": "https://mint.azuki.com/elementals",
       "discord": "https://discord.gg/azuki",
       "tutorial_url": "https://docs.azuki.com/elementals-mint",
       "is_bluechip": true,
@@ -61,8 +64,13 @@
       "ai_score": 72,
       "ai_verdict": "谨慎关注",
       "ai_verdict_color": "blue",
-      "risk_tags": ["蓝筹", "WL 已满", "公开 mint 抢"],
-      "ai_summary": "Azuki 续作, 热度高但 WL 已发完, 公开 mint 估计 30 秒售罄。"
+      "risk_tags": [
+        "蓝筹",
+        "WL 已满",
+        "公开 mint 抢"
+      ],
+      "ai_summary": "Azuki 续作, 热度高但 WL 已发完, 公开 mint 估计 30 秒售罄。",
+      "mint_url_note": "请访问项目官网找最新 mint 页面"
     },
     {
       "id": "free_mint_penguin",
@@ -83,7 +91,6 @@
       "source_tweet": "https://x.com/punk6529/status/777",
       "project_twitter": "https://x.com/freepenguin",
       "project_website": "https://freepenguin.xyz",
-      "mint_url": "https://mint.freepenguin.xyz",
       "discord": "https://discord.gg/freepenguin",
       "tutorial_url": "https://docs.freepenguin.xyz/how-to-mint",
       "is_bluechip": false,
@@ -92,8 +99,13 @@
       "ai_score": 65,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["免费", "仅 gas", "无 WL"],
-      "ai_summary": "完全免费 mint, 只需要几毛 gas, 撸毛友好。已 mint 24%, 估计 2 天结束。"
+      "risk_tags": [
+        "免费",
+        "仅 gas",
+        "无 WL"
+      ],
+      "ai_summary": "完全免费 mint, 只需要几毛 gas, 撸毛友好。已 mint 24%, 估计 2 天结束。",
+      "mint_url_note": "请访问项目官网找最新 mint 页面"
     },
     {
       "id": "doodles_3",
@@ -114,7 +126,6 @@
       "source_tweet": "https://x.com/NFTbillionaire/status/888",
       "project_twitter": "https://x.com/doodles",
       "project_website": "https://doodles.app",
-      "mint_url": "https://mint.doodles.app/genesis",
       "discord": "https://discord.gg/doodles",
       "tutorial_url": "https://docs.doodles.app/genesis-mint",
       "is_bluechip": true,
@@ -123,8 +134,13 @@
       "ai_score": 75,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["蓝筹", "WL 优先", "高价"],
-      "ai_summary": "Doodles 蓝筹续作, 老粉福利。价格高 (0.12 ETH), 不适合撸毛党。"
+      "risk_tags": [
+        "蓝筹",
+        "WL 优先",
+        "高价"
+      ],
+      "ai_summary": "Doodles 蓝筹续作, 老粉福利。价格高 (0.12 ETH), 不适合撸毛党。",
+      "mint_url_note": "请访问项目官网找最新 mint 页面"
     },
     {
       "id": "memeland_pot",
@@ -145,7 +161,6 @@
       "source_tweet": "https://x.com/Zeneca_/status/999",
       "project_twitter": "https://x.com/memeland",
       "project_website": "https://memeland.com",
-      "mint_url": "https://memeland.com/pot/mint",
       "discord": "https://discord.gg/memeland",
       "tutorial_url": "https://docs.memeland.com/pot-mint-guide",
       "is_bluechip": true,
@@ -154,8 +169,13 @@
       "ai_score": 70,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["蓝筹", "已 mint 67%", "Memeland 团队"],
-      "ai_summary": "Memeland (9GAG 旗下) 出品, 蓝筹血统。已 mint 67%, 还剩 1-2 天。"
+      "risk_tags": [
+        "蓝筹",
+        "已 mint 67%",
+        "Memeland 团队"
+      ],
+      "ai_summary": "Memeland (9GAG 旗下) 出品, 蓝筹血统。已 mint 67%, 还剩 1-2 天。",
+      "mint_url_note": "请访问项目官网找最新 mint 页面"
     }
   ]
 }

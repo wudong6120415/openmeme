@@ -24,8 +24,13 @@
       "ai_score": 78,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["币安 Launchpad", "AI 概念", "历史 +85%"],
-      "ai_summary": "币安 Launchpad, AI 概念, 历史 Launchpad 上市后平均涨 85% (1 年 12 个项目统计)。建议准备 500 USDT 申购。"
+      "risk_tags": [
+        "币安 Launchpad",
+        "AI 概念",
+        "历史 +85%"
+      ],
+      "ai_summary": "币安 Launchpad, AI 概念, 历史 Launchpad 上市后平均涨 85% (1 年 12 个项目统计)。建议准备 500 USDT 申购。",
+      "ido_url": "https://www.binance.com/en/launchpad"
     },
     {
       "id": "jupiter_strip",
@@ -49,8 +54,13 @@
       "ai_score": 70,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["OKX Jumpstart", "DeFi", "中等额度"],
-      "ai_summary": "OKX Jumpstart, Solana 链 DeFi 协议, 申购门槛低 (50 USDT), 适合小额撸毛。"
+      "risk_tags": [
+        "OKX Jumpstart",
+        "DeFi",
+        "中等额度"
+      ],
+      "ai_summary": "OKX Jumpstart, Solana 链 DeFi 协议, 申购门槛低 (50 USDT), 适合小额撸毛。",
+      "ido_url": "https://www.okx.com/jumpstart"
     },
     {
       "id": "monad_bybit",
@@ -74,8 +84,13 @@
       "ai_score": 75,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["Bybit Launchpad", "L1 概念", "高热度"],
-      "ai_summary": "Monad 是高性能 L1, 融资 2.25 亿, Bybit Launchpad, 申购额度 200-2000 USDT。"
+      "risk_tags": [
+        "Bybit Launchpad",
+        "L1 概念",
+        "高热度"
+      ],
+      "ai_summary": "Monad 是高性能 L1, 融资 2.25 亿, Bybit Launchpad, 申购额度 200-2000 USDT。",
+      "ido_url": "https://www.bybit.com/launchpad"
     }
   ]
 }

@@ -20,13 +20,17 @@
       "time_required": "10 分钟",
       "need_kyc": false,
       "platform": "Galxe",
-      "platform_url": "https://galxe.com/quest/scroll-phase2",
+      "platform_url": "https://galxe.com/",
       "project_twitter": "https://x.com/Scroll_ZKP",
       "source_kol": "DefiIgnas",
       "ai_score": 78,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["无 KYC", "10 分钟", "真奖励"],
+      "risk_tags": [
+        "无 KYC",
+        "10 分钟",
+        "真奖励"
+      ],
       "ai_summary": "Scroll 第 2 阶段空投, 奖励 100 ZK (≈$50), 10 分钟搞定, 不需 KYC。必撸。"
     },
     {
@@ -47,13 +51,17 @@
       "time_required": "1 小时",
       "need_kyc": false,
       "platform": "Layer3",
-      "platform_url": "https://layer3.xyz/quests/zksync-era",
+      "platform_url": "https://layer3.xyz/",
       "project_twitter": "https://x.com/zksync",
       "source_kol": "Route2FI",
       "ai_score": 65,
       "ai_verdict": "谨慎关注",
       "ai_verdict_color": "blue",
-      "risk_tags": ["1 小时", "需交互", "中等奖励"],
+      "risk_tags": [
+        "1 小时",
+        "需交互",
+        "中等奖励"
+      ],
       "ai_summary": "zkSync Era Layer3 任务, 1 小时可完成, 奖励 5-50 ZK 随机, 中等性价比。"
     },
     {
@@ -74,13 +82,17 @@
       "time_required": "30 分钟",
       "need_kyc": false,
       "platform": "Galxe",
-      "platform_url": "https://galxe.com/quest/linea-voyage",
+      "platform_url": "https://galxe.com/",
       "project_twitter": "https://x.com/LineaBuild",
       "source_kol": "DefiIgnas",
       "ai_score": 75,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["无 KYC", "30 分钟", "真奖励"],
+      "risk_tags": [
+        "无 KYC",
+        "30 分钟",
+        "真奖励"
+      ],
       "ai_summary": "Linea Voyage 任务, 3 天后截止, 30 分钟可完成, 奖励 50-200 LINEA。"
     },
     {
@@ -101,13 +113,17 @@
       "time_required": "5 分钟",
       "need_kyc": false,
       "platform": "Galxe",
-      "platform_url": "https://galxe.com/quest/mode-network",
+      "platform_url": "https://galxe.com/",
       "project_twitter": "https://x.com/ModeNetwork",
       "source_kol": "Route2FI",
       "ai_score": 72,
       "ai_verdict": "可参与",
       "ai_verdict_color": "green",
-      "risk_tags": ["5 分钟", "无 KYC", "简单"],
+      "risk_tags": [
+        "5 分钟",
+        "无 KYC",
+        "简单"
+      ],
       "ai_summary": "5 分钟可完成, 奖励 20 MODE (≈$30), 简单撸毛党必做。"
     }
   ]
