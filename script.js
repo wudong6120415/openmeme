@@ -36,25 +36,60 @@ function skeletonHTML(n) { let h = ''; for (let i = 0; i < n; i++) h += '<div cl
 function emptyHTML(msg, icon) { return `<div class="empty"><div class="empty-icon">${icon || '📭'}</div><div>${msg}</div></div>`; }
 function errorHTML(msg) { return `<div class="error">⚠ ${msg}</div>`; }
 
-// ========== 🆕 早期项目卡片 (完善版) ==========
+// ========== 🆕 早期项目卡片 (折叠版, 单页看完) ==========
 function earlyCardHTML(item) {
   const links = item.official_links || {};
   const ai = item.ai_analysis || {};
   const initial = (item.name || '?')[0].toUpperCase();
+  const itemId = item.id || 'project';
 
-  // 大白话发推 (亲切)
-  const tw = tweetUrl(
-    `🆕 撸毛情报 · ${item.name} ($${item.ticker})\n\n` +
-    `${item.one_liner}\n\n` +
-    `📍 ${item.stage_label}\n` +
-    `🎯 AI: ${ai.score || 60}/100 (${ai.verdict || '需核实'})\n\n` +
-    `撸毛路径见这里 👉 https://openmeme.art/#early\n\n` +
-    `#撸毛 #早期项目 @${X_HANDLE}`
-  );
+  // 人味推文 (5 个模板, 按阶段选)
+  function humanTweet() {
+    const name = item.name || '这个项目';
+    const ticker = item.ticker || '?';
+    const stage = item.stage || 'early';
+    const oneLiner = item.one_liner || '值得关注';
+
+    const templates = {
+      early: [
+        // 1. 激动型 (适合真早期)
+        "🆕 看到一个挺有意思的项目 · " + name + " ($" + ticker + ")\n\n" +
+        oneLiner + "\n\n" +
+        "刚看了下, " + (ai.pros && ai.pros[0] ? ai.pros[0].replace(/^[✓✗] /, '') : '技术挺硬') + " 👀\n\n" +
+        "想撸的先去关注官方 @",
+      ],
+      just_launched: [
+        // 2. 提醒型 (适合刚上线)
+        "🆕 " + name + " 刚上线没多久 (" + (item.timeline?.now || '刚') + ")\n\n" +
+        oneLiner + "\n\n" +
+        "已经有人上车了, 风险大, 但如果你想撸, 至少先看看官方推特搞清楚怎么参与.\n\n" +
+        "链接都在 👉 openmeme.art",
+      ],
+      tge_soon: [
+        // 3. 提醒型 (TGE 倒计时)
+        "⏰ " + name + " ($" + ticker + ") TGE 倒计时\n\n" +
+        (item.timeline?.mainnet_mint || item.timeline?.next || '近期') + "\n\n" +
+        oneLiner + "\n\n" +
+        "想参与的去官网看细则, 别错过. 链接 👉 openmeme.art",
+      ],
+      expansion: [
+        // 4. 推荐型 (扩展期)
+        "🔥 " + name + " ($" + ticker + ") 最近挺活跃的\n\n" +
+        oneLiner + "\n\n" +
+        (item.source_tweets && item.source_tweets[0] ? "他们最新推: \"" + item.source_tweets[0].text.slice(0, 80) + "...\"\n\n" : '') +
+        "想跟的去 openmeme.art 看详情 👇",
+      ]
+    };
+
+    const t = templates[stage] || templates.early;
+    return t[0] + "\n\n📌 openmeme.art/#early\n\n#撸毛 #早期项目 @ruoxi01";
+  }
+
+  const tw = tweetUrl(humanTweet());
 
   return `
-    <article class="early-card" data-cat="${item.category || 'nft'}">
-      <!-- 1. Header: Logo + 名字 + Ticker + 链 -->
+    <article class="early-card" data-cat="${item.category || 'nft'}" id="early-${itemId}">
+      <!-- 默认折叠: 概要 + AI 分 + 5 按钮 -->
       <div class="early-header">
         <div class="early-logo">${item.logo ? `<img src="${item.logo}" alt="${item.name}" onerror="this.outerHTML='<span>${initial}</span>'">` : initial}</div>
         <div class="early-titles">
@@ -65,7 +100,7 @@ function earlyCardHTML(item) {
         <div class="early-verdict ${ai.verdict_color || 'yellow'}">${ai.score || 60}<br><span style="font-size:10px; font-weight:400;">${ai.verdict || '需核实'}</span></div>
       </div>
 
-      <!-- 2. 4 关键指标 -->
+      <!-- 4 关键指标 (折叠也展示, 信息密度高) -->
       <div class="early-stats">
         <div class="early-stat">
           <div class="early-stat-label">🏷️ 类别</div>
@@ -76,8 +111,8 @@ function earlyCardHTML(item) {
           <div class="early-stat-value">${(item.chain || 'multi').toUpperCase()}</div>
         </div>
         <div class="early-stat">
-          <div class="early-stat-label">📅 当前</div>
-          <div class="early-stat-value">${(item.stage_label || '').replace(/^🟢 |^🆕 |^🚀 |^⏰ /, '')}</div>
+          <div class="early-stat-label">📅 状态</div>
+          <div class="early-stat-value">${(item.stage_label || '').replace(/^🟢 |^🆕 |^🚀 |^⏰ /, '').slice(0, 8)}</div>
         </div>
         <div class="early-stat">
           <div class="early-stat-label">💎 蓝筹</div>
@@ -85,80 +120,106 @@ function earlyCardHTML(item) {
         </div>
       </div>
 
-      <!-- 3. 项目背景 (大白话) -->
-      <div class="early-section">
-        <div class="early-section-title">📖 项目背景</div>
-        <div class="early-bg">${item.background || '—'}</div>
+      <!-- 展开/收起 按钮 -->
+      <div class="early-toggle" style="text-align:center; padding:8px; border-bottom:1px solid var(--border);">
+        <button class="early-toggle-btn" onclick="toggleEarly('${itemId}')" style="background:transparent; border:1px solid var(--border); color:var(--text-dim); padding:6px 16px; border-radius:6px; cursor:pointer; font-size:12px; transition:all 0.2s;">
+          📖 看详情 (项目背景/团队/AI/撸毛步骤)
+        </button>
       </div>
 
-      <!-- 4. 团队 -->
-      <div class="early-section">
-        <div class="early-section-title">👥 团队</div>
-        <div class="early-bg">${item.team || '—'}</div>
-      </div>
+      <!-- 详情区 (默认 hidden) -->
+      <div class="early-details" id="early-details-${itemId}" style="display:none;">
 
-      <!-- 5. 融资 / 背书 -->
-      <div class="early-section">
-        <div class="early-section-title">💰 融资 / 背书</div>
-        <div class="early-bg">${item.funding || '—'}</div>
-      </div>
-
-      <!-- 6. 时间表 -->
-      <div class="early-section">
-        <div class="early-section-title">📅 时间表</div>
-        <div class="early-timeline">
-          ${Object.entries(item.timeline || {}).map(([k, v]) => `<div class="early-timeline-row"><span>${k}</span><strong>${v}</strong></div>`).join('')}
+        <!-- 项目背景 -->
+        <div class="early-section">
+          <div class="early-section-title">📖 项目背景</div>
+          <div class="early-bg">${item.background || '—'}</div>
         </div>
-      </div>
 
-      <!-- 7. AI 分析 (大白话) -->
-      <div class="early-section">
-        <div class="early-section-title">🤖 AI 深度分析</div>
-        <div class="early-bg" style="border-left:3px solid var(--gold); padding-left:12px;">${ai.summary || '—'}</div>
-        <div class="early-pros-cons">
-          <div class="early-pros">
-            <div class="early-pc-title">✓ 优点</div>
-            ${(ai.pros || []).map(p => `<div>${p}</div>`).join('')}
-          </div>
-          <div class="early-cons">
-            <div class="early-pc-title">✗ 风险</div>
-            ${(ai.cons || []).map(c => `<div>${c}</div>`).join('')}
+        <!-- 团队 -->
+        <div class="early-section">
+          <div class="early-section-title">👥 团队</div>
+          <div class="early-bg">${item.team || '—'}</div>
+        </div>
+
+        <!-- 融资 -->
+        <div class="early-section">
+          <div class="early-section-title">💰 融资 / 背书</div>
+          <div class="early-bg">${item.funding || '—'}</div>
+        </div>
+
+        <!-- 时间表 -->
+        <div class="early-section">
+          <div class="early-section-title">📅 时间表</div>
+          <div class="early-timeline">
+            ${Object.entries(item.timeline || {}).map(([k, v]) => `<div class="early-timeline-row"><span>${k}</span><strong>${v}</strong></div>`).join('')}
           </div>
         </div>
-      </div>
 
-      <!-- 8. 怎么撸 (大白话步骤) -->
-      <div class="early-section">
-        <div class="early-section-title">🎯 怎么撸 (大白话步骤)</div>
-        <div class="early-steps">
-          ${(item.how_to_play || []).map(s => `<div class="early-step">${s}</div>`).join('')}
-        </div>
-      </div>
-
-      <!-- 9. 来源 (真推文) -->
-      ${item.source_tweets && item.source_tweets.length > 0 ? `
-      <div class="early-section">
-        <div class="early-section-title">📡 官方最新推文 (Scweet 真抓)</div>
-        ${item.source_tweets.slice(0, 2).map(t => `
-          <div class="early-tweet">
-            <div class="early-tweet-time">${t.timestamp}</div>
-            <div class="early-tweet-text">${t.text}</div>
-            <a href="${t.url}" target="_blank" rel="noopener" class="early-tweet-link">看原推 →</a>
+        <!-- AI 分析 -->
+        <div class="early-section">
+          <div class="early-section-title">🤖 AI 分析</div>
+          <div class="early-bg" style="border-left:3px solid var(--gold); padding-left:12px;">${ai.summary || '—'}</div>
+          <div class="early-pros-cons">
+            <div class="early-pros">
+              <div class="early-pc-title">✓ 优点</div>
+              ${(ai.pros || []).map(p => `<div>${p}</div>`).join('')}
+            </div>
+            <div class="early-cons">
+              <div class="early-pc-title">✗ 风险</div>
+              ${(ai.cons || []).map(c => `<div>${c}</div>`).join('')}
+            </div>
           </div>
-        `).join('')}
-      </div>
-      ` : ''}
+        </div>
 
-      <!-- 10. 4 按钮 (大白话) -->
+        <!-- 怎么撸 -->
+        <div class="early-section">
+          <div class="early-section-title">🎯 怎么撸 (大白话)</div>
+          <div class="early-steps">
+            ${(item.how_to_play || []).map(s => `<div class="early-step">${s}</div>`).join('')}
+          </div>
+        </div>
+
+        <!-- 来源推文 -->
+        ${item.source_tweets && item.source_tweets.length > 0 ? `
+        <div class="early-section">
+          <div class="early-section-title">📡 官方最新推文</div>
+          ${item.source_tweets.slice(0, 2).map(t => `
+            <div class="early-tweet">
+              <div class="early-tweet-time">${t.timestamp}</div>
+              <div class="early-tweet-text">${t.text}</div>
+              <a href="${t.url}" target="_blank" rel="noopener" class="early-tweet-link">看原推 →</a>
+            </div>
+          `).join('')}
+        </div>
+        ` : ''}
+      </div>
+
+      <!-- 4 按钮 (大白话, 折叠也展示) -->
       <div class="early-actions">
-        <a class="early-btn primary" href="${links.latest_tweet || links.twitter || '#'}" target="_blank" rel="noopener" title="看官方最新推文">📡 看官方推文</a>
-        <a class="early-btn" href="${tw}" target="_blank" rel="noopener" title="分享给撸毛人">𝕏 一键发推</a>
-        <a class="early-btn" href="${links.twitter || '#'}" target="_blank" rel="noopener" title="关注项目方">🔔 关注</a>
-        <a class="early-btn" href="${links.website || links.discord || links.rgb_protocol || links.tether_announce || '#'}" target="_blank" rel="noopener" title="看官网">🌐 官网</a>
+        <a class="early-btn primary" href="${links.latest_tweet || links.twitter || '#'}" target="_blank" rel="noopener">📡 看官方推文</a>
+        <a class="early-btn" href="${tw}" target="_blank" rel="noopener">𝕏 一键发推</a>
+        <a class="early-btn" href="${links.twitter || '#'}" target="_blank" rel="noopener">🔔 关注</a>
+        <a class="early-btn" href="${links.website || links.discord || links.tether_announce || links.docs || '#'}" target="_blank" rel="noopener">🌐 官网</a>
       </div>
     </article>
   `;
 }
+
+// 折叠/展开 切换函数
+function toggleEarly(itemId) {
+  const details = document.getElementById('early-details-' + itemId);
+  const btn = document.querySelector('#early-' + itemId + ' .early-toggle-btn');
+  if (!details) return;
+  if (details.style.display === 'none') {
+    details.style.display = 'block';
+    if (btn) btn.textContent = '🔼 收起详情';
+  } else {
+    details.style.display = 'none';
+    if (btn) btn.textContent = '📖 看详情 (项目背景/团队/AI/撸毛步骤)';
+  }
+}
+window.toggleEarly = toggleEarly;
 
 // ========== 🔥 Meme 卡片 ==========
 function memeCardHTML(item, rank) {

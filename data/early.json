@@ -170,26 +170,25 @@
       "category": "btc",
       "stage": "expansion",
       "stage_label": "🟢 扩展期 (新增 6 个 Genesis Partner)",
-      "one_liner": "Bitcoin 上的 RGB 协议资产项目, 跟 6 个 BTC 生态项目合作",
-      "background": "RGB 是 Bitcoin 上的资产发行协议 (类似 ERC-20 但在 BTC L1). RGB Horse 是 RGB 协议的旗舰 NFT 项目, 跟 RK_Bitcoin/Justins 等 6 个 Genesis Partner 合作, 把 RGB 资产推到 BTC 社区. 对 BTC 信仰者来说, 这是'BTC 也能搞 NFT'的尝试.",
-      "team": "RGB Horse 团队, 与 RGB Protocol 核心开发者协作 (不是直接团队)",
-      "funding": "未公开融资",
+      "one_liner": "Bitcoin 上的 RGB 资产 launchpad + 交易平台, 帮 RGB 资产真正流通起来",
+      "background": "RGB 协议让 Bitcoin 也能发资产, 但一直缺个用户用的平台. DarkHorse (@RGBHorse) 做了 3 件事: 1) 帮项目方发 RGB 资产 (launchpad) 2) 用户交易/兑换 RGB 资产 3) 自托管钱包. 简单说就是 RGB 生态的 \"Uniswap + Pump.fun + MetaMask\" 组合. 现在还早, 距 Q4 公开 mint 还有几个月.",
+      "team": "DarkHorse 团队 (推特 @RGBHorse), 与 RGB Protocol 核心开发者协作",
+      "funding": "未公开融资, RGB Protocol 战略合作",
       "community": {
         "twitter": "@RGBHorse",
-        "twitter_followers": 12000,
+        "twitter_followers": "约 12K",
         "partners": [
           "@RK_Bitcoin",
-          "@Justins (Justin Sun?)",
-          "其他 4 个"
+          "其他 5 个 Genesis Partner (具体见推文)"
         ]
       },
       "timeline": {
-        "now": "🟢 6 个 Genesis Partner 公布",
-        "next": "Q4 2026 公开 mint",
-        "tge_token": "未发币"
+        "now": "🟢 6 个 Genesis Partner 公布 (扩展期)",
+        "next": "Q4 2026 公开 mint (预计)",
+        "TGE": "未公布"
       },
       "ai_analysis": {
-        "summary": "RGB 协议是 Bitcoin L1 的未来方向, 但项目本身还太早, 距 mint 还有几个月. 适合 BTC 信仰者长期布局.",
+        "summary": "RGB 协议是 Bitcoin 资产未来方向, DarkHorse 是 RGB 生态第一个用户级平台, 想象空间大但目前还早. 适合 BTC 信仰者早期布局, 不建议大资金.",
         "score": 60,
         "verdict": "观望",
         "verdict_color": "yellow",
@@ -213,10 +212,9 @@
         "4. 等 Q4 mint 公告, 准备好 BTC gas"
       ],
       "official_links": {
-        "website": "https://rgb.info",
+        "website": "https://x.com/RGBHorse",
         "twitter": "https://x.com/RGBHorse",
-        "latest_tweet": "https://x.com/RGBHorse/status/2106768539105505447",
-        "rgb_protocol": "https://rgb.info"
+        "latest_tweet": "https://x.com/RGBHorse/status/2106768539105505447"
       },
       "source_tweets": [
         {
